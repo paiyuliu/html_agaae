@@ -1,0 +1,1789 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Working with File Folders</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1071" />
+<meta name="date" content="2016-01-07T18:6:55Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Agile Product Lifecycle Management Getting Started Guide, Release 9.3.5" />
+<meta name="relnum" content="Release 9.3.5" />
+<meta name="partnum" content="E61151-02" />
+<meta name="docid" content="no_value_supplied" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="../../dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="prev" href="chapter_10.htm" title="Previous" type="text/html" />
+<link rel="next" href="chapter_12.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="header"><a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Go to primary content</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Agile Product Lifecycle Management Getting Started Guide</b><br />
+<b>Release 9.3.5</b><br />
+E61151-02</td>
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td style="text-align:center"><a href="chapter_10.htm"><img src="../../dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td style="text-align:center"><a href="chapter_12.htm"><img src="../../dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<div class="chapter"><a id="CHDBCEAD" name="CHDBCEAD"></a>
+<h1 class="chapter"><span class="secnum">11</span> Working with File Folders</h1>
+<p>Attachment file storage and retrieval is managed automatically by your Agile PLM system.</p>
+<div class="sect1"><a id="sthref593" name="sthref593"></a>
+<h2 class="sect1"><span class="secnum">11.1</span> What are File Folders?</h2>
+<p>Attachment files are stored in the Agile File Vault and each attachment file in the vault is associated with a numbered Agile file folder object. The concept is similar to the way in which you would file and store paper documents: sort the documents into file folders, label or number the file folders, and store them in a filing cabinet. There are two primary types of File Folders, regular File folders and Designs.</p>
+<p>The relationships between attachments files, file folders, and business objects is explained in detail in:</p>
+<ul>
+<li>
+<p><a href="chapter_10.htm#CHDDAIHA">"Attachment Files and Agile File Folders: an Analogy to Papers, Desks, and Vaults."</a></p>
+</li>
+<li>
+<p><a href="chapter_10.htm#CHDFIJGJ">"Agile Document Management: Even More Efficient than Doris."</a></p>
+</li>
+</ul>
+<div class="sect2"><a id="sthref594" name="sthref594"></a>
+<h3 class="sect2"><span class="secnum">11.1.1</span> Why Use and Modify File Folders Directly?</h3>
+<p>If you have the appropriate privileges, you can perform file maintenance actions on file folder objects directly. Updating and maintaining documents from the file folder object is useful when those documents are attached to many different business objects.</p>
+<p>For example, you can update and maintain a document that describes a company-wide procedure by checking out and checking in the associated file folder object. The procedure document (and its associated file folder) may appear on the attachments table on the <span class="bold">Attachments</span> tabs of many Agile business objects, but you do not need to open each of those business objects to update the procedure attachment.</p>
+<p>File folders can be managed and updated independently of other objects in the database. All attachment files are stored in the file vault, part of Agile File Manager.</p>
+<p>Examples of file folder content are:</p>
+<ul>
+<li>
+<p>Drawing files such as CAD drawings or scanned image files in viewable formats</p>
+</li>
+<li>
+<p>Web-based information in the form of URLs</p>
+</li>
+<li>
+<p>Specifications and other documents</p>
+</li>
+<li>
+<p>Non-viewable files, compressed (ZIP) files, and so on</p>
+</li>
+</ul>
+<p>It is generally a best practice to limit each file folder to a single, attachable file or URL; however, file folders can contain any number of files and URLs.</p>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref595" name="sthref595"></a>
+<h4 class="sect3"><span class="secnum">11.1.1.1</span> Advantages of File Folders</h4>
+<p>The file folder object was developed to manage documents and URLs that support your company's manufacturing, production, or specification processes. These are some specific advantages of file folder objects:</p>
+<ul>
+<li>
+<p>You can create, modify, or delete file folders. Like any other object in Agile, you can search for file folders and bookmark them.</p>
+</li>
+<li>
+<p>You can view, redline, and print files from the file folder.</p>
+</li>
+<li>
+<p>You can search for file folders by file folder attributes, including Filename or File Type, regardless of what business objects the file folders may be attached to.</p>
+<p>For more information about searching for attachment content, see <a href="chapter_8.htm#BABDEDGB">"Full Text Search for Content in Attachment Files."</a></p>
+</li>
+<li>
+<p>File folders can be sent to reviewers for approval without using the change control process. You can track who has received, reviewed, and accepted or rejected file folder content files.</p>
+</li>
+<li>
+<p>Files that are referenced in a file folder are subject to version control. On the <span class="bold">Attachments</span> tab, in the Folder Version field, if you edit the row and select <span class="bold">Latest Version</span>, the object always references the latest version of the file folder, even when the item's revision changes.</p>
+</li>
+<li>
+<p>File folders can be created by users manually and can also be created automatically. A file folder is created automatically when you attach a file or URL to an object; the file folder is generated, and it is already associated with the object. Now that the file folder exists, it can be associated with other objects.</p>
+<p>It may be useful to create a file folder object manually, for instance, when specifications and related design and drawing files are brought together before the part objects (that they describe) have been created in the Agile system. These are later associated with any object in Agile on each object's <span class="bold">Attachments</span> tab.</p>
+</li>
+<li>
+<p>With appropriate roles and privileges, files (2D and 3D) can be redlined from the <span class="bold">Files</span> tab of file folder object.</p>
+<p>See <a href="chapter_10.htm#CHDBJIGB">"Viewing and Redlining Attachment Files in the AutoVue for Agile Viewer."</a> There is additional information about marking up and redlining attachment files in the <span class="italic">Viewer Supplement</span>.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref596" name="sthref596"></a>
+<h2 class="sect1"><span class="secnum">11.2</span> Working with File Folders</h2>
+<p>The next sections describe tabs, buttons, actions, fields, and other user-interface elements that you encounter in your work with file folders.</p>
+<ul>
+<li>
+<p>A file folder's <span class="bold">Files</span> tab lists files and URLs, and you can add and remove files and URLs in the file folder. You can check out and check in file folders from here and then get and edit single attachment files. See <a href="#CHDJBIGF">"Working with the Files Tab of File Folders."</a></p>
+</li>
+<li>
+<p>A file folder's <span class="bold">Where Used</span> tab is populated automatically with a link to any business object that references the file folder on the object's <span class="bold">Attachments</span> tab.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref597" name="sthref597"></a>
+<h2 class="sect1"><span class="secnum">11.3</span> File Folder Tabs, Buttons and Menus</h2>
+<p>File folders are listed in a window (Java Client) or page (Web Client) with the following elements:</p>
+<ul>
+<li>
+<p><span class="bold">Tabs</span> on file folder objects include <span class="bold">Title Block</span>, <span class="bold">Files</span>, <span class="bold">Routing Slip</span>, <span class="bold">Relationships</span>, <span class="bold">Where Used</span>, and <span class="bold">History</span>. For information about the contents and operations of the <span class="bold">Files</span> tab, see <a href="#CHDJBIGF">"Working with the Files Tab of File Folders."</a></p>
+<p>For information about the contents and operations of the <span class="bold">Attachments</span> tab of objects that reference file folders, see <a href="chapter_10.htm#CHDIFFAI">"Working with the Attachments Tab of Business Objects."</a>.</p>
+</li>
+<li>
+<p><span class="bold">Buttons</span> on the main toolbar of file folder objects in both clients are <span class="bold">CheckOut</span>, <span class="bold">CheckIn</span>, <span class="bold">Cancel CheckOut</span>, and <span class="bold">Comment</span>.</p>
+<ul>
+<li>
+<p>Java Client buttons also include <span class="bold">Approve</span> and <span class="bold">Reject</span>.</p>
+<p>Additional <span class="bold">buttons</span> in Java Client are <span class="bold">Send, Print, Delete</span>, and <span class="bold">Add Bookmark</span>. A final button, <span class="bold">More</span>, is a drop-down menu offering these functions: <span class="bold">Subscribe</span>, <span class="bold">SaveAs</span>, <span class="bold">Sharing</span>, <span class="bold">Process Extensions</span>, <span class="bold">Mass Update</span>, and <span class="bold">Get All Files</span>.</p>
+</li>
+<li>
+<p>For Web Client, the <span class="bold">Approve</span> and <span class="bold">Reject</span> buttons are visible when you are listed as an approver or observer of the selected version.</p>
+</li>
+</ul>
+<p>For information about Checkout, Checkin, and Cancel Checkout, see <a href="#CHDJEBJB">"Getting and Revising Attachment Files and File Folders."</a></p>
+<p>For information about Approve, Reject, and Comment, see in <a href="#CHDHJHGG">"Routing and Reviewing File Folders."</a></p>
+<p>Subscription and sharing are discussed in <a href="chapter_5.htm#BABJCDGA">Chapter 5, "Working with Business Objects in Web Client,"</a> and <a href="chapter_6.htm#BABHEAIB">Chapter 6, "Working with Business Objects in Java Client."</a></p>
+<p>Mass update is covered in <a href="#CHDBHGIH">"Performing a Mass Update of a File Folder."</a></p>
+</li>
+<li>
+<p>Drop-down <span class="bold">menus</span> include:</p>
+<ul>
+<li>
+<p>The <span class="bold">Version</span> list shows the number of times a file has been checked out and checked back in, unless it was modified. By default, the most recent version is shown, but you can select an earlier version. Each time an attachment file is checked out and modified, a new version is created.</p>
+<p>If the most recent version is a checked out version, the version number is enclosed in brackets, for example, [4].</p>
+</li>
+<li>
+<p>The <span class="bold">Actions</span> drop-down menu in Web Client offers these actions to perform on the object: <span class="bold">Bookmark</span>, <span class="bold">Subscribe</span>, <span class="bold">Save As</span>, <span class="bold">Delete</span>, <span class="bold">Print</span>, <span class="bold">Purge Version</span>, <span class="bold">Version Browser</span>, <span class="bold">Copy URL to Clipboard,</span> <span class="bold">Mass Update</span>, <span class="bold">Print</span>, <span class="bold">Send</span>, <span class="bold">Sharing</span>, or <span class="bold">View All Versions</span>. Any existing process extensions are also listed.</p>
+<p>The <span class="bold">Actions</span> shortcut menu in Java Client opens when you right-click anywhere on the file folder object. It offers these actions to perform on the attachment: <span class="bold">Cut</span>, <span class="bold">Copy</span>, <span class="bold">Paste</span>, <span class="bold">Add Bookmark,</span> <span class="bold">Subscribe, Save As, Delete</span>, <span class="bold">Print, Send, Sharing, Process Extensions, Mass Update</span>, <span class="bold">Get All Files</span>, <span class="bold">Check Out, Check In,</span> and <span class="bold">Cancel Check Out</span>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="sect2"><a id="sthref598" name="sthref598"></a>
+<h3 class="sect2"><span class="secnum">11.3.1</span> File Folder Tabs</h3>
+<p>File folders include the following tabs. Some tabs may not be visible in your Agile system, depending on how your Agile administrator has configured Agile PLM.</p>
+<p>This table lists the tabs found on all file folder objects, with file folder-specific definitions.</p>
+<div class="tblruleformal"><a id="sthref599" name="sthref599"></a><a id="sthref600" name="sthref600"></a>
+<p class="titleintable">Table 11-1 File Folder object tabs</p>
+<table class="RuleFormal" title="File Folder object tabs" summary="File Folder object tabs and descriptions" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t2">Tab</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t2">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t2" headers="r1c1-t2">
+<p><span class="bold">Title Block</span></p>
+</td>
+<td style="text-align:left" headers="r2c1-t2 r1c2-t2">
+<p>Provides general information about the file folder, such as a description, the object number, approval status, and the date the file folder was last modified. Your administrator may have added <span class="bold">Page Two</span> and <span class="bold">Page Three</span> sections (which may be named differently) that contain additional information: class-specific and subclass-specific, respectively.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t2" headers="r1c1-t2">
+<p><span class="bold">Files</span></p>
+</td>
+<td style="text-align:left" headers="r3c1-t2 r1c2-t2">
+<p>Lists all the contents of the file folder object, and it is where you add and remove files and URLs in the file folder. For details about the <span class="bold">Files</span> tab, see <a href="#CHDJBIGF">"Working with the Files Tab of File Folders."</a></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t2" headers="r1c1-t2">
+<p><span class="bold">Changes</span></p>
+</td>
+<td style="text-align:left" headers="r4c1-t2 r1c2-t2">
+<p>Optional tab that is enabled when using Design File Change Orders (DFCOs) in Web Client. See <a href="chapter_12_a.htm#CHDFHJCA">Chapter 13, "Working with Design File Change Orders (DFCOs)."</a></p>
+<p>The File Folder object <span class="bold">Changes</span> tab displays a list of changes related to the File Folder that you are viewing. The changes are displayed in two tables. The information on this tab is filled in automatically.</p>
+<p>The upper table, Pending Changes, shows pending changes, including changes on hold. The lower table, Change History, shows published (released) and canceled changes.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t2" headers="r1c1-t2">
+<p><span class="bold">Routing Slip</span></p>
+</td>
+<td style="text-align:left" headers="r5c1-t2 r1c2-t2">
+<p>Lets you route the file folder for approval, and shows a signoff summary for the file folder; a record of which users have viewed and signed off on it. You can add or remove approvers and observers for the file folder object on this tab.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t2" headers="r1c1-t2">
+<p><span class="bold">Where Used</span></p>
+</td>
+<td style="text-align:left" headers="r6c1-t2 r1c2-t2">
+<p>Populated automatically with any business object that references the file folder on the object's <span class="bold">Attachments</span> tab. To open an object listed on the tab, click its Number link or Name link.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t2" headers="r1c1-t2">
+<p><span class="bold">History</span></p>
+</td>
+<td style="text-align:left" headers="r7c1-t2 r1c2-t2">
+<p>The <span class="bold">History</span> tab is a record of actions taken on the file folder and the users who performed those actions. The <span class="bold">History</span> tab is populated automatically.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref601" name="sthref601"></a>
+<h4 class="sect3"><span class="secnum">11.3.1.1</span> Where Used Tab, File Folder</h4>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The File Folder object <span class="bold">Where Used</span> tab is version-specific and displays the where-used status of the currently selected version.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>When you select a different version in the <span class="bold">Version</span> drop-down list, the Where Used table displays information about the selected version only.</p>
+<p>The Attachments table lists all the Agile business objects where the currently selected version of the File Folder object is attached, that is, all the Agile business objects that have the current version of the File Folder object listed on their <span class="bold">Attachments</span> tab.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref602" name="sthref602"></a>
+<h3 class="sect2"><span class="secnum">11.3.2</span> Buttons on the Files Tab</h3>
+<p>You need the appropriate privileges to add or remove files on the <span class="bold">Files</span> tab. The buttons on the <span class="bold">Files</span> tab are enabled or disabled, depending on your privileges and administrative settings. File Validation (Handle File Checksum) addresses some of these dependencies. If you have questions about your privileges, contact your Agile administrator.</p>
+<p>The buttons described in the following tables are available to users with the required privileges on Agile object pages. Many of the operations in this and subsequent tables are elaborated on later in this chapter.</p>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref603" name="sthref603"></a>
+<h4 class="sect3"><span class="secnum">11.3.2.1</span> Buttons on Files tab in Web Client</h4>
+<div class="tblruleformal"><a id="sthref604" name="sthref604"></a><a id="sthref605" name="sthref605"></a>
+<p class="titleintable">Table 11-2 Web Client Files tab buttons</p>
+<table class="RuleFormal" title="Web Client Files tab buttons" summary="Button on the Web Client Files tab and descriptions" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="16%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t4">Button</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t4">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t4" headers="r1c1-t4">
+<p><span class="bold">Get</span></p>
+</td>
+<td style="text-align:left" headers="r2c1-t4 r1c2-t4">
+<p>The <span class="bold">Get</span> button places copies of the selected, referenced files in a location of your choice.</p>
+<p>These copies are in native application formats. If you select more than one file, a ZIP file containing the selected files is created and placed in the folder or location of your choice.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t4" headers="r1c1-t4">
+<p><span class="bold">Open</span></p>
+</td>
+<td style="text-align:left" headers="r3c1-t4 r1c2-t4">
+<p>With a file or files selected, opens the file(s) in its native application, if possible.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t4" headers="r1c1-t4">
+<p><span class="bold">View</span></p>
+</td>
+<td style="text-align:left" headers="r4c1-t4 r1c2-t4">
+<p>Click the View Files button to view the selected files in the Viewer.</p>
+<p>Or, click the <span class="bold">View Files</span> button's drop-down arrow and select from the menu:</p>
+<ul>
+<li>
+<p><span class="bold">View</span> &ndash; view the files in the Viewer.</p>
+</li>
+<li>
+<p><span class="bold">Compare</span> &ndash; visually compare two files in a third compare viewer window.</p>
+</li>
+<li>
+<p><span class="bold">Overlay</span> &ndash; lets you lay other files over the current active file. (For more information, see <span class="italic">Viewer Supplement.</span>)</p>
+</li>
+<li>
+<p><span class="bold">Compare By Search</span> &ndash; find other files in the system, which you may want to (select from menu) cross probe, compare, or overlay (see above), without having to select two files from the same folder; that is, you could search and select one file in file-folder A and another file in file-folder B</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t4" headers="r1c1-t4">
+<p><span class="bold">Print</span></p>
+</td>
+<td style="text-align:left" headers="r5c1-t4 r1c2-t4">
+<p>With a file or files selected, prints the corresponding files. The Viewer is started in a separate browser window and begins the printing process.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t4" headers="r1c1-t4">
+<p><span class="bold">Remove</span></p>
+</td>
+<td style="text-align:left" headers="r6c1-t4 r1c2-t4">
+<p>Removes all selected files from the <span class="bold">Files</span> tab (the file folder object must be checked out). The <span class="bold">Remove</span> button is disabled if the file folder is checked in.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t4" headers="r1c1-t4">
+<p><span class="bold">Add</span></p>
+</td>
+<td style="text-align:left" headers="r7c1-t4 r1c2-t4">
+<p>Click the <span class="bold">Add</span> drop-down button to add a folder reference to the object. It can be a file or a URL. This button is disabled when the file folder is checked in.</p>
+<p>Click the <span class="bold">Add</span> button to open the File Upload Selector dialog.</p>
+<p>Or, click the <span class="bold">Add</span> button's drop-down arrow and select from the menu:</p>
+<ul>
+<li>
+<p><span class="bold">Files</span> &ndash; displays the File Upload Selector dialog, which lets you drag and drop the files you want to attach. You can also click <span class="bold">Browse for Files</span> button to browse your computer or network for the files you want. To add multiple files as a single file folder, click the <span class="bold">Add all files to a single file folder</span> button. If you select the <span class="bold">UnZip all zipped files after upload</span> check box, the ZIP file is unzipped and the contents are added as individual files.</p>
+<p>For more information about the Web Client File Uploader Selector, see <a href="chapter_10.htm#CHDHJGCB">"Web Client File Uploader Tools."</a>.</p>
+</li>
+<li>
+<p><span class="bold">URLs</span> &ndash; brings up the Add URLs dialog</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref606" name="sthref606"></a>
+<h4 class="sect3"><span class="secnum">11.3.2.2</span> Buttons on Files tab in Java Client</h4>
+<div class="tblruleformal"><a id="sthref607" name="sthref607"></a><a id="sthref608" name="sthref608"></a>
+<p class="titleintable">Table 11-3 Java Client Files tab buttons</p>
+<table class="RuleFormal" title="Java Client Files tab buttons" summary="Java Client Files tab buttons and descriptions" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="12%" />
+<col width="15%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t5">Button</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t5">Name</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t5">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t5" headers="r1c1-t5">
+<p><img src="img/chap11_html_m5f47cb7a.png" alt="Get Files button, Files tab, Java Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r2c1-t5 r1c2-t5">
+<p><span class="bold">Get Files</span></p>
+</td>
+<td style="text-align:left" headers="r2c1-t5 r1c3-t5">
+<p>Places copies of the files in the location of your choice. Click the drop-down arrow and select <span class="bold">Get files from selected attachments</span> or <span class="bold">Batch Get all files from this object</span>. These copies are in native application formats.</p>
+<p>Select the rows you want and then click the <span class="bold">Get Files from Selected Attachments</span> button to place a copy of the selected files in the directory folder or location of your choice. These copies are in native application formats.</p>
+<p>Or</p>
+<p>Click the button and select <span class="bold">Batch Get All Files from this Object</span> to place a copy of all the file folder's files in the folder or location of your choice. These copies are in native application formats.</p>
+<ul>
+<li>
+<p>If you selected more than one file, you are prompted to choose whether a ZIP file containing the selected files is created and placed in the folder or location of your choice.</p>
+</li>
+<li>
+<p>If you choose to create a ZIP file, you can fill in a ZIP file name; if you choose no ZIP file, the individual files are placed in the specified location.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t5" headers="r1c1-t5">
+<p><img src="img/chap11_html_ma127b68.png" alt="Open Files button, Files tab, Java Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r3c1-t5 r1c2-t5">
+<p><span class="bold">Open Files</span></p>
+</td>
+<td style="text-align:left" headers="r3c1-t5 r1c3-t5">
+<p>With a file or files selected, opens the file(s) in its native application, if possible.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t5" headers="r1c1-t5">
+<p><img src="img/chap11_html_m2c28e8f4.png" alt="Print Files button, Files tab, Java Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r4c1-t5 r1c2-t5">
+<p><span class="bold">Print Files</span></p>
+</td>
+<td style="text-align:left" headers="r4c1-t5 r1c3-t5">
+<p>With a file or files selected, prints the corresponding files. The Viewer is started in a separate browser window and begins the printing process.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t5" headers="r1c1-t5">
+<p><img src="img/chap11_html_m28b7cf1c.png" alt="View Files button, Files tab, Java Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r5c1-t5 r1c2-t5">
+<p><span class="bold">View Files</span></p>
+</td>
+<td style="text-align:left" headers="r5c1-t5 r1c3-t5">
+<p>Click the View Files button to view the selected files in the Viewer.</p>
+<p>Or, click the <span class="bold">View Files</span> button's drop-down arrow and select from the menu:</p>
+<ul>
+<li>
+<p><img src="img/chap11_html_m28b7cf1c.png" alt="View Files button, Files tab, Java Client" /> <span class="bold">View</span> <span class="italic">&ndash;</span> view the files in the Viewer.</p>
+</li>
+<li>
+<p><img src="img/chap11_html_m1731f4cd.png" alt="View Files, Cross Probe menu icon, Files tab, Java Client" /> <span class="bold">Cross Probe</span> <span class="italic">&ndash;</span> cross probe between PCB and layout ECAD files. (For more information, see <span class="italic">Viewer Supplement</span>.)</p>
+</li>
+<li>
+<p><img src="img/chap11_html_m4bd93f0e.png" alt="View Files, Compare menu icon, Files tab, Java Client" /> <span class="bold">Compare</span> <span class="italic">&ndash;</span> visually compare two files in a third compare viewer window.</p>
+</li>
+<li>
+<p><img src="img/chap11_html_m1f97255e.png" alt="View Files, Overlay menu icon, Files tab, Java Client" /> <span class="bold">Overlay</span> <span class="italic">&ndash;</span> lets you lay other files over the current active file. (For more information, see <span class="italic">Viewer Supplement.</span>)</p>
+</li>
+<li>
+<p><img src="img/chap11_html_6926de1d.png" alt="View Files, By Search menu icon, Files tab, Java Client" /> <span class="bold">By Search</span> <span class="italic">&ndash;</span> find other files in the system, which you may want to (select from menu) cross probe, compare, or overlay (see above) without having to select two files from the same folder; that is, you could search and select one file in file-folder A and another file in file-folder B. You can search for file folder objects or for any other object type with attachments.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t5" headers="r1c1-t5">
+<p><img src="img/chap11_html_m45a16046.png" alt="Edit button, Files tab, Java Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r6c1-t5 r1c2-t5">
+<p><span class="bold">Edit</span></p>
+</td>
+<td style="text-align:left" headers="r6c1-t5 r1c3-t5">
+<p>Modify the File Description field of the selected file or files, and any other editable, custom fields that your administrator has defined. The <span class="bold">Edit</span> button is disabled if the file folder is checked in.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t5" headers="r1c1-t5">
+<p><img src="img/chap11_html_5f68acbd.png" alt="Add Files button, Files tab, Java Client" /></p>
+<p><img src="img/chap11_html_m58b2860e.png" alt="Add URL button, Files tab, Java Client" /></p>
+<p><img src="img/chap11_html_m484682c9.png" alt="Add Scan button, Files tab, Java Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r7c1-t5 r1c2-t5">
+<p><span class="bold">Add Files</span></p>
+<p><span class="bold">Add URL</span></p>
+<p><span class="bold">Add Scan</span></p>
+</td>
+<td style="text-align:left" headers="r7c1-t5 r1c3-t5">
+<p>Click the <span class="bold">Add</span> drop-down menu button to add to the <span class="bold">Files</span> tab. It can be a file, URL, or you can scan a document to create an attachment.</p>
+<p>Click the <span class="bold">Add</span> button to open the File Uploader.</p>
+<p>Or, click the <span class="bold">Add</span> button's drop-down arrow and select from the menu:</p>
+<ul>
+<li>
+<p><span class="bold">Files</span> &ndash; displays the File Uploader dialog, which lets you drag and drop the files you want to attach. You can also click <span class="bold">Browse for Files</span> button to browse your computer or network for the files you want. To add multiple files as a single file folder, click the <span class="bold">Add all files to a single file folder</span> button. If you select the <span class="bold">UnZip all zipped files upon upload</span> check box, the ZIP file is unzipped and the contents are added as individual files.</p>
+<p><span class="bold">Note:</span> Selecting the <span class="bold">UnZip</span> check box is not recommended for very large files.</p>
+</li>
+<li>
+<p><span class="bold">URLs</span> &ndash; brings up the Add URLs dialog</p>
+</li>
+<li>
+<p><span class="bold">By Scan</span> &ndash; permit direct access to a file you want to scan. (Windows only, Java Client only) Runs a Windows application that scans documents using a TWAIN interface. The resulting images are added as file types that are specified by the user using Agile Scan; see <a href="chapter_10.htm#CHDEGHIC">"Scan Utility."</a></p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r8c1-t5" headers="r1c1-t5">
+<p><img src="img/chap11_html_2fbd3632.png" alt="Replace Files button, Files tab, Java Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r8c1-t5 r1c2-t5">
+<p><span class="bold">Replace Files</span></p>
+</td>
+<td style="text-align:left" headers="r8c1-t5 r1c3-t5">
+<p>Replaces a file that has been revised (the file folder object must be checked out). Click <span class="bold">Replace</span> to remove the file and add a new version of the file, and then check the folder in.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r9c1-t5" headers="r1c1-t5">
+<p><img src="img/chap11_html_61e51af3.png" alt="Remove Files button, Files tab, Java Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r9c1-t5 r1c2-t5">
+<p><span class="bold">Remove</span></p>
+</td>
+<td style="text-align:left" headers="r9c1-t5 r1c3-t5">
+<p>Removes all selected files from the <span class="bold">Files</span> tab (the file folder object must be checked out). The <span class="bold">Remove</span> button is disabled if the file folder is checked in.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r10c1-t5" headers="r1c1-t5">
+<p><img src="img/chap11_html_725dae56.png" alt="Handle File Checksum Error button, Files tab, Java Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r10c1-t5 r1c2-t5">
+<p><span class="bold">Handle File Checksum Error</span></p>
+</td>
+<td style="text-align:left" headers="r10c1-t5 r1c3-t5">
+<p>Shows whether files have been modified directly in the file server vault. For more information, see <a href="chapter_10.htm#CHDIIHJD">"Checksum File Validation"</a> (Handle File Checksum).</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="CHDJBIGF" name="CHDJBIGF"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">11.3.3</span> Working with the Files Tab of File Folders</h3>
+<p>You can use the <span class="bold">Files</span> tab of file folders to:</p>
+<ul>
+<li>
+<p>Add files and URLs to the file folder</p>
+</li>
+<li>
+<p>Delete files or URLs from the file folder</p>
+</li>
+<li>
+<p>"Get" a copy of an attachment file (but not revise it)</p>
+</li>
+<li>
+<p>With the file folder checked out, get a file for revision, and then replace the version of the file</p>
+</li>
+<li>
+<p>Print files</p>
+</li>
+<li>
+<p>View and redline an attachment file</p>
+</li>
+<li>
+<p>Open a file without being prompted to download it (Java Client only).</p>
+</li>
+</ul>
+<p><span class="bold">To display the Files tab of a file folder:</span></p>
+<ol>
+<li>
+<p>Open a file folder. (You may want to use a Quick Search for <span class="bold">FOLDER*</span>.)</p>
+<ul>
+<li>
+<p>In Web Client, click the folder number in the <span class="bold">Attachments</span> tab to open the folder object.</p>
+</li>
+<li>
+<p>In Java Client, double-click the folder number on the <span class="bold">Attachments</span> tab to open the folder object.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click the <span class="bold">Files</span> tab to display the contents of the file folder.</p>
+</li>
+</ol>
+<p><span class="bold">To open a file or files in a file folder in Web Client:</span></p>
+<ol>
+<li>
+<p>On the <span class="bold">Files</span> tab of the folder, click the file name of the file or files you want to open.</p>
+</li>
+<li>
+<p>If the file is a supported file format (see <span class="italic">Agile PLM Administrator Guide</span> for a list of supported file formats), the file opens in the Viewer. With the appropriate privileges, you can use all Viewer features, as described in <a href="chapter_10.htm#CHDBJIGB">"Viewing and Redlining Attachment Files in the AutoVue for Agile Viewer."</a></p>
+<p>If the file is not a supported file format, the attachment file opens in its native application, if possible.</p>
+</li>
+</ol>
+<p><span class="bold">To open a file or files in a file folder in Java Client:</span></p>
+<ol>
+<li>
+<p>On the <span class="bold">Files</span> tab of the folder, select the file or files you want to open.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Open Files</span> button. The attachment file opens in its native application, if possible.</p>
+</li>
+</ol>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref609" name="sthref609"></a>
+<h4 class="sect3"><span class="secnum">11.3.3.1</span> Fields on the Files Tab</h4>
+<p>The following table lists fields on the <span class="bold">Files</span> tab.</p>
+<div class="tblruleformal"><a id="sthref610" name="sthref610"></a><a id="sthref611" name="sthref611"></a>
+<p class="titleintable">Table 11-4 Fields on the Files tab</p>
+<table class="RuleFormal" title="Fields on the Files tab" summary="Files tab fields and descriptions" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="26%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t6">Field</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t6" headers="r1c1-t6">
+<p><img src="img/chap11_html_725dae56.png" alt="Has Checksum Error icon, Files tab, Java Client" /></p>
+<p>(Java Client)</p>
+</td>
+<td style="text-align:left" headers="r2c1-t6 r1c2-t6">
+<p>If a file has been modified directly in the file server vault, this icon appears in the field to indicate that the file <span class="bold">Has checksum error</span>. Click the icon to get information about the checksum error. See <a href="chapter_10.htm#CHDIIHJD">"Checksum File Validation"</a> (Handle File Checksum). (Java Client only)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t6" headers="r1c1-t6">
+<p><img src="img/chap11_html_1a9ad398.png" alt="Replace icon, Files tab" /></p>
+<p>(Web Client)</p>
+</td>
+<td style="text-align:left" headers="r3c1-t6 r1c2-t6">
+<p><span class="bold">Replace File</span></p>
+<p>The <span class="bold">Replace</span> icon is visible in Web Client only when the file folder is checked out.</p>
+<p>To replace a file, click the <span class="bold">Replace</span> icon in a file row to remove the file and replace it with the latest version of that file or another file. You are prompted to browse for the replacement file.</p>
+<p><span class="bold">Note:</span> The checkin files must have the same file extension as the checkout files.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t6" headers="r1c1-t6">
+<p><img src="img/chap11_html_m36315c5b.png" alt="Has Been Redlined icon, Java Client" /> (Java Client)</p>
+<p>or</p>
+<p><img src="img/chap11_html_2398b735.png" alt="Has Been Redlined icon, Web Client" /> (Web Client)</p>
+</td>
+<td style="text-align:left" headers="r4c1-t6 r1c2-t6">
+<p>This icon appears in the field if the file <span class="bold">Has been redlined</span>.</p>
+<p>The <span class="bold">Do Redlining</span> icon will appear here from the file folder level for any file type that is listed in the Supported File Types and Valid Model File Type settings in Agile Administrator. Both of these cases allow ad-hoc viewing and redlining.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t6" headers="r1c1-t6">
+<p><span class="bold">File Name</span></p>
+</td>
+<td style="text-align:left" headers="r5c1-t6 r1c2-t6">
+<p>The name of the file.</p>
+<ul>
+<li>
+<p>In Java Client, the files table row must be selected to print, open, get, or view the file.</p>
+</li>
+<li>
+<p>In Web Client, click the file name to view the file in the Viewer.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t6" headers="r1c1-t6">
+<p><span class="bold">File Path</span></p>
+</td>
+<td style="text-align:left" headers="r6c1-t6 r1c2-t6">
+<p>Can be manually set.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t6" headers="r1c1-t6">
+<p><span class="bold">File Type</span></p>
+</td>
+<td style="text-align:left" headers="r7c1-t6 r1c2-t6">
+<p>The format of the file.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r8c1-t6" headers="r1c1-t6">
+<p><span class="bold">File Size</span></p>
+</td>
+<td style="text-align:left" headers="r8c1-t6 r1c2-t6">
+<p>The size of the file, in bytes.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r9c1-t6" headers="r1c1-t6">
+<p><span class="bold">Last Viewed Date</span></p>
+</td>
+<td style="text-align:left" headers="r9c1-t6 r1c2-t6">
+<p>Date when the file was last viewed. (The <span class="bold">History</span> tab records detailed information about file viewing.)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r10c1-t6" headers="r1c1-t6">
+<p><span class="bold">Checkout Location</span></p>
+</td>
+<td style="text-align:left" headers="r10c1-t6 r1c2-t6">
+<p>Records where checked out files were placed during the check out procedure.</p>
+<p>If you are using the Java Client, then Agile uses <span class="bold">Checkout Location</span> to automatically locate and checkin the checked-out files.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r11c1-t6" headers="r1c1-t6">
+<p><span class="bold">File Description</span></p>
+</td>
+<td style="text-align:left" headers="r11c1-t6 r1c2-t6">
+<p>Description of the file.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r12c1-t6" headers="r1c1-t6">
+<p><span class="bold">Document Text</span></p>
+</td>
+<td style="text-align:left" headers="r12c1-t6 r1c2-t6">
+<p>If needed, this field will be filled in automatically by the Agile system.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r13c1-t6" headers="r1c1-t6">
+<p><img src="img/chap11_html_m72fb328c.png" alt="Master Thumbnail icon, Design object Files tab" /></p>
+<p>Master Thumbnail</p>
+<p>(Web Client)</p>
+</td>
+<td style="text-align:left" headers="r13c1-t6 r1c2-t6">
+<p>Only visible if Thumbnails are enabled.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref612" name="sthref612"></a>
+<h3 class="sect2"><span class="secnum">11.3.4</span> Opening and Viewing Contents of File Folders</h3>
+<p>This section includes the topics:</p>
+<ul>
+<li>
+<p><a href="#CHDIHEIH">"Web Client, Getting File Folder Files"</a></p>
+</li>
+<li>
+<p><a href="#CHDDDDHI">"Java Client, Getting File Folder Files"</a></p>
+</li>
+<li>
+<p><a href="#CHDGGFGB">"Java Client, Batch Get"</a></p>
+</li>
+</ul>
+<a id="CHDIHEIH" name="CHDIHEIH"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">11.3.4.1</span> Web Client, Getting File Folder Files</h4>
+<p>In Web Client, the process to get files from the file folder <span class="bold">Files</span> tab is the same process used to get files from a business object <span class="bold">Attachment</span> tab.</p>
+<p>The process is described in:</p>
+<ul>
+<li>
+<p><a href="chapter_10.htm#CHDIAJHF">"Getting Files in Web Client"</a></p>
+<ul>
+<li>
+<p><a href="chapter_10.htm#CHDCFJAG">"Web Client, Get Files using Microsoft IE"</a></p>
+</li>
+<li>
+<p><a href="chapter_10.htm#CHDDEBCC">"Web Client, Get Files using Firefox"</a></p>
+</li>
+<li>
+<p><a href="chapter_10.htm#CHDCGAHI">"Web Client, Get files using Chrome:"</a></p>
+</li>
+<li>
+<p><a href="chapter_10.htm#CHDEFABF">"Web Client, Get Files using Safari for Windows"</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="CHDDDDHI" name="CHDDDDHI"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">11.3.4.2</span> Java Client, Getting File Folder Files</h4>
+<p><span class="bold">To get copies of files from a file folder in Java Client:</span></p>
+<ol>
+<li>
+<p>Display the <span class="bold">Files</span> tab of the file folder.</p>
+</li>
+<li>
+<p>Select the rows of the files that you want to get.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Get Files</span> button.</p>
+<p>The Select Directory dialog opens.</p>
+</li>
+<li>
+<p>In the Select Directory dialog, specify the directory where you want to store the copies.</p>
+<p>If you selected more than one row, and you want to get the files together in one ZIP file, click <span class="bold">Download the files in one ZIP</span> file. Specify a <span class="bold">ZIP file name</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The files (or ZIP file) are copied to the specified directory.</p>
+<p>You will be prompted whether you want to open the file or files.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CHDGGFGB" name="CHDGGFGB"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">11.3.4.3</span> Java Client, Batch Get</h4>
+<p><span class="bold">To batch get copies of all the files from a file folder in Java Client:</span></p>
+<ol>
+<li>
+<p>Display the <span class="bold">Files</span> tab of the file folder.</p>
+</li>
+<li>
+<p>Click the button drop-down menu for <span class="bold">Get Files</span> and select <span class="bold">Batch Get All Files from this Object</span>.</p>
+</li>
+<li>
+<p>In the Select Directory dialog, specify the directory where you want to store the copies.</p>
+<p>To get the files together in one ZIP file, click <span class="bold">Download the files in one ZIP file</span>. Specify a <span class="bold">ZIP file name</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The files (or ZIP file) are copied to the specified directory.</p>
+<p>You will be prompted whether you want to open the file or files.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref613" name="sthref613"></a>
+<h2 class="sect1"><span class="secnum">11.4</span> Switching Between Versions</h2>
+<p>A version or revision can be selected from the version drop-down list on File Folder objects. Revisions (if set) are indicated to the right of the version.</p>
+<p><span class="bold">To switch between versions of a file folder from within the file folder in Web Client:</span></p>
+<ol>
+<li>
+<p>From the <span class="bold">Version</span> drop-down list at the top of the folder object, select the version/revision you want to view.</p>
+</li>
+</ol>
+<p><span class="bold">To switch between versions of a file folder from within the file folder in Java Client:</span></p>
+<ol>
+<li>
+<p>From the <span class="bold">Version</span> drop-down list at the top of the folder object, select the version/revision you want to view.</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+A version number in brackets, for example [4], indicates a version that has not yet been checked in. In this example, when version 3 was checked out, a pending version [4] was created. Selecting [4] in the version drop-down list lets you view and work with the pending version.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect1" -->
+<a id="CHDHJHGG" name="CHDHJHGG"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">11.5</span> Routing and Reviewing File Folders</h2>
+<p>The Default File Folders Workflow applies to all file folder objects that users create in the File Folders base class, which includes both the <span class="italic">File folders class</span> and the <span class="italic">Designs class</span>. This workflow has a read-only privilege along with a single Review status&mdash;a simple review-and-signoff&mdash;although the signoff can still be an approval or a rejection.</p>
+<p>Each Design object version has its own Routing Slip. Each version can have a different set of approvers and observers.</p>
+<p><span class="bold">To add Approvers or Observers:</span></p>
+<ol>
+<li>
+<p>Open the Design object.</p>
+</li>
+<li>
+<p>Select the <span class="bold">Routing Slip</span> tab.</p>
+</li>
+<li>
+<p>In the <span class="bold">Version</span> drop-down list, select a version.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Ensure that the selected version is check in. You cannot add Approvers to a version which is not yet checked in.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>Click the <span class="bold">Check In</span> button. The Add Reviewers /Remove Reviewers button is active once you check in the Design object.</p>
+</li>
+<li>
+<p>Click the Add Reviewers button. The Add Approvers and Observers dialog box opens.</p>
+</li>
+<li>
+<p>Select the approvers and observers you want to add. Enter a comment, if desired.</p>
+</li>
+<li>
+<p>If urgent, select the <span class="bold">Send notification as urgent</span> option.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p>Similarly, use the Remove Reviewers button to remove reviewers from a Design object.</p>
+<p><span class="bold">Approving or Rejecting a Design object:</span></p>
+<p>Approving or rejecting a Design object uses the same process as approving or rejecting any routable object. For detailed information, see:</p>
+<ul>
+<li>
+<p><a href="chapter_9.htm#BABCJFBG">"Approving Routable Objects."</a></p>
+</li>
+<li>
+<p><a href="chapter_9.htm#BABEHFCB">"Rejecting Routable Objects."</a></p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Important:</p>
+Approvals and rejections are version-specific. Your approval or rejection applies only to the selected version of the Design object.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref614" name="sthref614"></a>
+<h2 class="sect1"><span class="secnum">11.6</span> Printing Attachment Files</h2>
+<p>You must have the appropriate privileges to print an attachment file. If you have questions about your privileges, contact your Agile administrator.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+A "batch print" is simply printing the contents of a file folder that has multiple files. You still click the <span class="bold">Print</span> button and follow the sequence in Viewer.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><span class="bold">To print a file on the Attachments tab using the Viewer in Web Client:</span></p>
+<ol>
+<li>
+<p>With the <span class="bold">Attachments</span> tab displayed, select the row to print.</p>
+</li>
+<li>
+<p>Choose <span class="bold">More</span> &gt; <span class="bold">Print</span> from the tab menu.</p>
+</li>
+<li>
+<p>Click the file name link to open the file in the Viewer. In this case you would start the viewer print functions manually.</p>
+</li>
+<li>
+<p>If the file type is supported by the Viewer, the viewer opens and begins the printing process. Follow the instructions in the displayed dialog boxes to complete the printing process. When the printing process is complete, the Viewer automatically closes.</p>
+<p>Otherwise, Web Client starts the file's native application and opens the file so you can print it using that application's printing commands. Choose the <span class="bold">Print</span> command for that application.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+When you print from within the Viewer, watermarks and banners can appear in addition to the contents of the attached file. For more information, see <a href="#CHDGCEJH">"About Banners and Watermarks on the Printed Image."</a></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+</ol>
+<p>It is also possible to get a copy of the file, open it in its native application, and use the native application's print functions to print the file. The native application must be installed on your computer before you can print the file. Follow the usual printing procedures according to the application's documentation.</p>
+<p><span class="bold">To print a file on the Attachments tab using the Viewer in Java Client:</span></p>
+<ol>
+<li>
+<p>With the <span class="bold">Attachments</span> tab displayed, select one or more attachment rows to print.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Print</span> button.</p>
+<p>You can also select a file and click the <span class="bold">View</span> button; in this case you would start the viewer print functions manually.</p>
+</li>
+<li>
+<p>If the file type is supported by the Viewer, the viewer opens and begins the printing process. Follow the instructions in the displayed dialog boxes to complete the printing process. When the printing process is complete, the Viewer automatically closes.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+When you print from within the Viewer, watermarks and banners can appear in addition to the contents of the attached file. For more information, see <a href="#CHDGCEJH">"About Banners and Watermarks on the Printed Image."</a></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+</ol>
+<a id="CHDGCEJH" name="CHDGCEJH"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">11.6.1</span> About Banners and Watermarks on the Printed Image</h3>
+<p>When printed through the AutoVue for Agile viewer, the printed image has a banner above and below the image. The banner has six fields: top left, top center, top right, bottom left, bottom center, and bottom right.</p>
+<p>The banner labels and contents for each object class are set by the Agile administrator.</p>
+<p>In addition, the Agile administrator can choose to include a printed watermark on the printed image.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref615" name="sthref615"></a>
+<h2 class="sect1"><span class="secnum">11.7</span> Creating File Folders</h2>
+<p>There are two ways to create a file folder: automatically, when you attach a file or URL to a business object in the <span class="bold">Attachments</span> tab of the object, and manually, using the create object functions of Java Client and Web Client.</p>
+<p><span class="bold">To create a file folder manually:</span></p>
+<ol>
+<li>
+<p>Create the file folder using the <span class="bold">Create New</span> button in Web Client or the <span class="bold">New</span> button in Java Client.</p>
+</li>
+<li>
+<p>The file folder that you have created is an empty container, that is, it has no files in it. To add files to the file folder, see <a href="#CHDDBHJF">"Adding Attachment Files and URLs to File Folders."</a>.</p>
+</li>
+</ol>
+<p>For more information on creating business objects, see <a href="chapter_5.htm#BABIIJFC">"Creating Objects."</a></p>
+<div class="sect2"><a id="sthref616" name="sthref616"></a>
+<h3 class="sect2"><span class="secnum">11.7.1</span> Revising File Folders</h3>
+<p>Revising or editing a file folder object requires the appropriate modify privileges, just as editing any Agile object requires the appropriate modify privileges. In addition, you must also have privileges that allow you to check out and check in a file folder.</p>
+<p>To revise the <span class="bold">Files</span> tab, or the content of the file folder, you must check out the file folder, modify files, add files or remove files, and then check in the file folder. For details, see:</p>
+<ul>
+<li>
+<p><a href="#CHDDBHJF">"Adding Attachment Files and URLs to File Folders."</a></p>
+</li>
+<li>
+<p><a href="#CHDBFACG">"Deleting Attachment Files and URLs from File Folders."</a></p>
+</li>
+<li>
+<p><a href="#CHDJEBJB">"Getting and Revising Attachment Files and File Folders."</a></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDDBHJF" name="CHDDBHJF"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">11.8</span> Adding Attachment Files and URLs to File Folders</h2>
+<p>You must have the appropriate privileges to add attachment files to file folders. If you have questions about your privileges, contact your Agile administrator.</p>
+<p>Each time you add a file to the Agile system, it is copied into the Agile File Manager vault as an independent file with a unique numeric vault file name.</p>
+<p>You can also include a URL (Internet address) in a file folder. URL attachments point to Internet sites; they are not, themselves, documents on the Agile File Manager file server.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+When you check out a file folder, the <span class="bold">Version</span> field increments by 1, however, other users are still able to view the current version. When you check the file folder in, and it has been changed, the new version number holds. The system will not let an unchanged file folder be checked in. If you did not make a change to the file folder, complete the action by clicking <span class="bold">Cancel Checkout</span>, and the version number reverts to the previous numeral.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><span class="bold">Web Client</span> &ndash; When adding files to a file folder Files tab in Web Client, Agile PLM provides the Web Client file uploader tools, which are described in the following topics:</p>
+<ul>
+<li>
+<p><a href="chapter_10.htm#CHDHJGCB">"Web Client File Uploader Tools"</a></p>
+</li>
+<li>
+<p><a href="chapter_10.htm#CHDIJBDJ">"Web Client File Upload Selector"</a></p>
+</li>
+<li>
+<p><a href="chapter_10.htm#CHDEGJHG">"Web Client File Upload Manager"</a></p>
+</li>
+</ul>
+<p><span class="bold">Java Client</span> &ndash; When adding files to a file folder <span class="bold">Files</span> tab in Java Client, Agile provides a simple and easy-to-use file uploader. The Java Upload/Download tool lets you drag and drop the files you want from your desktop or from an open directory window to the file uploader window. The tool also has a <span class="bold">Browse</span> button so you can find the files you want in that manner.</p>
+<p>Deleting attachment files is covered in <a href="#CHDBFACG">"Deleting Attachment Files and URLs from File Folders."</a></p>
+<a id="CHDGJFHC" name="CHDGJFHC"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">11.8.1</span> Using the Java Upload/Download Tool</h3>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The Java Upload/Download tool is used in Java Client only.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>You can simultaneously add as many files as you like. When adding to the Files tab, the Java Upload/Download tool includes one check box; when selected, it will <span class="bold">Unzip all zipped files upon upload</span>. When you are ready, click <span class="bold">Upload</span>.</p>
+<p>When the upload is completed, depending on Agile PLM system settings, you may be prompted "Would you like to delete the uploaded files from your local disk?" which is useful if you have loaded a file onto your computer only to attach it to an Agile object. When you uploaded the file, Agile File Manager created a copy of the file that is always stored in the file vault.</p>
+<p>At any time before clicking <span class="bold">Upload</span>, you can <span class="bold">Cancel</span> the upload. Click <span class="bold">Close</span> to close the dialog.</p>
+<p><span class="bold">To add attachment files to the file folder Files tab using the Java Upload/Download Tool in Java Client:</span></p>
+<ol>
+<li>
+<p>Open the file folder you want and, if it is not already checked out, click the <span class="bold">Check Out</span> button.</p>
+</li>
+<li>
+<p>On the <span class="bold">Files</span> tab, select <span class="bold">Add</span> &gt; <span class="bold">Files</span>.</p>
+<p>The blank File Uploader window is displayed. The instruction "Drag Files Here" appears in the window.</p>
+</li>
+<li>
+<p>Open a directory window (for example, Microsoft Explorer) and size the window so that you can see both the File Uploader window and the directory window on your screen.</p>
+</li>
+<li>
+<p>Navigate to the directory you want.</p>
+</li>
+<li>
+<p>Select the file you want and drag it to the File Uploader window and drop it. The file name appears in the File Uploader window.</p>
+<ul>
+<li>
+<p>If you drag and drop a folder, all the files in the folder are added to the list in the File Uploader.</p>
+</li>
+<li>
+<p>You can also click the <span class="bold">Browse</span> button in the File Uploader window and browse for the file you want. When using the browse function:</p>
+<ul>
+<li>
+<p>Double-clicking on folder will open the folder's contents.</p>
+</li>
+<li>
+<p>Single clicking on folder and then clicking Open will add all contents of that folder (files and also contents of subfolders within that folder)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Continue locating and dragging as many files as you want. You can open additional directory windows if you choose.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+To remove any file from the download dialog box (for example, if you made a mistake and selected a file erroneously), click the file and press the Delete key on your keyboard.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>When you have selected the files you want, if desired, select the optional check box.</p>
+</li>
+<li>
+<p><span class="bold">Unzip all zipped files upon upload</span> &mdash; unzips ZIP files so that they are stored in their native format.</p>
+<p>If this option is deselected, a ZIP file is stored in its ZIP format.</p>
+</li>
+<li>
+<p>When you are done, click <span class="bold">Upload</span>.</p>
+<p>The files are added to the file folder's <span class="bold">Files</span> tab. The File Uploader window displays progress messages for each file as it is uploaded.</p>
+</li>
+<li>
+<p>When the files are uploaded, you are asked whether to delete the uploaded file from your local disk.</p>
+<ul>
+<li>
+<p><span class="bold">Yes</span> (default) &ndash; removes the copy of the file from the directory from which you selected it. This ensures that the correct version of the file is maintained in the Agile file vault and you do not have any out-of-date copies on your local disk. To view or update the file, use the Agile <span class="bold">Files</span> tab.</p>
+</li>
+<li>
+<p><span class="bold">No</span> &ndash; the copy of the file that you selected to add to the <span class="bold">Files</span> tab remains on your local disk.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When you are finished, remember to check in the file folder by clicking the <span class="bold">Check In</span> button.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref617" name="sthref617"></a>
+<h3 class="sect2"><span class="secnum">11.8.2</span> Adding URLs</h3>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If a URL is added to a single file folder (there are no other files or URLs in that file folder) and the file folder version remains at Version 1, you can select the URL row on the <span class="bold">Files</span> tab, click <span class="bold">Edit</span>, and then edit (modify) the URL. All the business objects that include the URL on their <span class="bold">Attachments</span> tab will display the newly edited URL.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><span class="bold">To add a URL to the Files tab in both Java Client and Web Client:</span></p>
+<ol>
+<li>
+<p>Open a file folder, and click the <span class="bold">Check Out</span> button to check out the file folder.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Files</span> tab to display its contents.</p>
+</li>
+<li>
+<p>Select <span class="bold">Add</span> &gt; <span class="bold">URLs</span>. The URL dialog appears with rows for up to five URLs.</p>
+</li>
+<li>
+<p>Enter a URL and description. URLs must include the http syntax.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The URL field is prepopulated with the text string <span class="bold">http://</span> to streamline this process.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>To verify that you have typed the correct URL, click <span class="bold">Preview</span>. A new browser window opens using the URL you have entered.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> in Java Client or <span class="bold">Add</span> in Web Client. The URL is added to the <span class="bold">Files</span> tab.</p>
+</li>
+<li>
+<p>Click <span class="bold">Check In</span> to check in the file folder.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref618" name="sthref618"></a>
+<h3 class="sect2"><span class="secnum">11.8.3</span> Editing the Files Table</h3>
+<p>When a file folder is checked out, you can modify the editable fields on the <span class="bold">Files</span> tab.</p>
+<p><span class="bold">To edit the files table in Java Client:</span></p>
+<ol>
+<li>
+<p>Open the file folder you want and, if it is not already checked out, click the <span class="bold">Check Out</span> button.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Files</span> tab to display it.</p>
+</li>
+<li>
+<p>Select the rows you want to edit, and click the <span class="bold">Edit</span> button.</p>
+<p>The Edit dialog appears.</p>
+</li>
+<li>
+<p>Make the desired modifications and click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If a URL is added to a single file folder (there are no other files or URLs in that file folder) and the file folder version remains at Version 1, you can select the URL row on the <span class="bold">Files</span> tab, click <span class="bold">Edit</span>, and then edit (modify) the URL. All the business objects that include the URL on their <span class="bold">Attachments</span> tab will display the newly edited URL.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>If there are multiple files or URLs on the <span class="bold">Files</span> tab, or the file folder has been advanced from Version 1, you will not be able to edit the URL. However, if the file folder is checked out, you can delete the URL row from the table and use <span class="bold">Add</span> &gt; <span class="bold">URLs</span> to add a new URL row.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+In the Web Client, the Files tab is displayed in edit mode. Make the desired modifications and click <span class="bold">Save</span>.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDBFACG" name="CHDBFACG"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">11.9</span> Deleting Attachment Files and URLs from File Folders</h2>
+<p>When you delete a referenced attachment file, Agile removes the file from the File Management vault. The outside file at its original location is untouched; only the Agile copy in the vault is deleted.</p>
+<p>Each time you use an outside file to create a referenced attachment file, it is copied into the File Management vault as an independent file with a unique numeric vault file name. This is true even if you add the same outside file to several different file folders. You can delete the file from one file folder without affecting any of the copies.</p>
+<p>You must have the appropriate privileges to delete files and URLs from the <span class="bold">Files</span> tab. If you have questions about your privileges, contact your Agile administrator.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If the file you want to delete has been checked out from the <span class="bold">Attachments</span> tab of the business object that references it, (unless you have sufficient privileges) you cannot delete it from the file folder until it has been checked back in on the <span class="bold">Attachments</span> tab.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><span class="bold">To delete files and URLs from a file folder in Web Client:</span></p>
+<ol>
+<li>
+<p>On the <span class="bold">Files</span> tab of the checked-out file folder, select the files and URLs that you want to delete.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Remove</span> button or press the <span class="bold">Delete</span> key.</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Be sure to use the <span class="bold">Remove</span> button on the <span class="bold">Files</span> tab. <span class="italic">Do not</span> use the <span class="bold">Delete</span> command on the <span class="bold">Actions</span> menu. This deletes the <span class="italic">entire object you are working with</span>, not just the attachment.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><span class="bold">To delete files and URLs from a file folder in Java Client:</span></p>
+<ol>
+<li>
+<p>On the <span class="bold">Files</span> tab of the checked-out file folder, select the files and URLs that you want to delete.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Delete</span> button.</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Be sure to use the <span class="bold">Delete Attachments</span> button on the <span class="bold">Files</span> tab. <span class="italic">Do not</span> use the <span class="bold">Delete</span> command on the <span class="bold">File</span> menu and <span class="italic">do not</span> use the <span class="bold">Delete Object</span> button in the object window toolbar. This deletes the <span class="italic">entire object you are working with</span>, not just the attachment.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect1" -->
+<a id="CHDBIGEA" name="CHDBIGEA"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">11.10</span> Purging Unused File Folder Versions</h2>
+<p>If you have the appropriate privileges, you can purge checked-in file folder versions that are not referenced by any Agile object. Purging a file folder version removes from the File Management vault all the files checked in for that version. The version number is also removed from the file folder drop-down list.</p>
+<p>Purging a file folder version and deleting attachment files have similar results because both actions remove files from the Agile file vault. These actions differ in the following ways:</p>
+<ul>
+<li>
+<p>When deleting files or URLs from a file folder, the file folder must be checked out. While the file folder is checked out you can selectively delete or replace files and URLs in that checked-out file folder version. When you check in the file folder version, any files or URLs you deleted are removed from the File Management vault. For more information, see <a href="#CHDBFACG">"Deleting Attachment Files and URLs from File Folders."</a></p>
+</li>
+<li>
+<p>Purging an unused file folder version action can be performed only to a checked-in file folder version. The checked-in file folder version cannot be referenced by any Agile object and it cannot contain any redlined files. Purging a file folder version removes all the files and URLs in that version from the Agile File Management vault.</p>
+</li>
+</ul>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref619" name="sthref619"></a>
+<h3 class="sect2"><span class="secnum">11.10.1</span> Why Purge Unused File Folder Versions?</h3>
+<p>Mary has checked out the Version 5 file attachment from an Item object <span class="bold">Attachments</span> tab. Mary works on her local copy of the file, and then checks in the Version 6 file attachment for the Item object. After she has checked in, Mary realizes that the file she checked in is incorrect. She checks out the attachment again, replaces it with the correct file and checks in Version 7. The incorrect file in file folder Version 6 remains in the file vault. Even though Version 6 can be considered only an historical document, and the Item attachment table no longer points to Version 6, Mary would like to remove Version 6 completely because it is incorrect.</p>
+<p><span class="bold">To remove an unused file folder version:</span></p>
+<ol>
+<li>
+<p>Before you begin, you can verify that the file folder version you want to purge is not referenced by any other Agile object, on an <span class="bold">Attachments</span> tab or a <span class="bold">Content</span> tab.</p>
+<ol>
+<li>
+<p>Navigate to the file folder object and click the <span class="bold">Where Used</span> tab.</p>
+</li>
+<li>
+<p>In the <span class="bold">Version</span> drop-down list, select the version you want to purge.</p>
+<p>If the Where Used table for the selected version is empty, the file folder version is not in use.</p>
+</li>
+<li>
+<p>If the Where Used table for the selected version lists one or more objects, if you have the appropriate privileges, you can modify those objects so they use a different file folder version:</p>
+<p>Navigate to each object and edit the <span class="bold">Attachments</span> tab or the <span class="bold">Content</span> tab of the object to select a version of the file folder other than the version you want to purge. You can choose an earlier version, a more recent version, or the latest version (providing the version you want to purge is not the latest version).</p>
+</li>
+</ol>
+</li>
+<li>
+<p>With the file folder object open, from the <span class="bold">Version</span> drop-down list, select the version you want to purge.</p>
+</li>
+<li>
+<p>From the Web Client <span class="bold">Actions</span> menu or the Java Client <span class="bold">More...</span> menu, select <span class="bold">Purge Version</span>.</p>
+</li>
+<li>
+<p>Confirm the prompt.</p>
+<p>Agile PLM checks whether the selected file folder version meets the requirements that allow it to be purged:</p>
+<ul>
+<li>
+<p>If the selected file folder version is in use (on an Agile object <span class="bold">Attachments</span> tab or <span class="bold">Content</span> tab, or on the <span class="bold">Affected Files</span> tab of a DFCO) or if the file folder version has been incorporated to an item object, then Agile PLM displays a warning message and the file folder version is not purged.</p>
+<p>For information about the <span class="bold">Affected Files</span> tab, see <a href="chapter_12_a.htm#CHDFHJCA">Chapter 13, "Working with Design File Change Orders (DFCOs)."</a></p>
+</li>
+<li>
+<p>If the selected file folder version contains redlined files, then Agile PLM displays a warning message and the file folder version is not purged.</p>
+</li>
+<li>
+<p>If the selected file folder version is checked out, then Agile PLM displays a warning message and the file folder version is not purged.</p>
+</li>
+</ul>
+<p>If the file folder version meets the requirements, it is purged. All files and URLs are removed from the Agile File Management vault and the version number is removed from the file folder's <span class="bold">Version</span> drop-down list.</p>
+<p>The Purge Version menu selection is disabled if:</p>
+<ul>
+<li>
+<p>The user does not have the Purge Version privilege.</p>
+</li>
+<li>
+<p>The latest version of the file folder is zero (0).</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="CHDJEBJB" name="CHDJEBJB"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">11.11</span> Getting and Revising Attachment Files and File Folders</h2>
+<p>If you have searched and found an attachment file that you are interested in, then you may want to read it, revise it, or print it, among other possibilities. To print the file, see <a href="chapter_10.htm#CHDBFICE">"Printing Attachment Files."</a></p>
+<p>To read the file without revising it (or, to revise the file as you want without other people being able to access your revised version through Agile), or to review the contents of a file folder without revising it, then you will just perform a "Get" procedure, as described below.</p>
+<p>You must have the appropriate privileges to check out and check in a file folder and to cancel a checkout, whether you are performing the operation at the file folder itself or from the Attachments tab of a business object. If you have questions about your privileges, contact your Agile administrator. If you are going to work with file folders often, it may be appropriate that you be assigned the File Folder Administrator or File Folder Manager role.</p>
+<div class="sect2"><a id="sthref620" name="sthref620"></a>
+<h3 class="sect2"><span class="secnum">11.11.1</span> Getting Attachment Files or File Folders</h3>
+<p>You can copy files on the <span class="bold">Files</span> tab of a File Folder object or a Design object to the directory of your choice. This is called <span class="italic">getting</span> a file. You can get as many copies as you like. To revise an attached file and make the version public, you must check the File Folder object out, make changes, and check it back in. This is covered in <a href="#CHDHJAFA">"Checkout and Checkin to Revise Attachment Files or File Folders."</a></p>
+<p>Several users can get the same attachment files simultaneously. You can get files that are checked out. Also, you can get a file even though the application used to create that file is not installed on your computer.</p>
+<p>You must have the appropriate privileges to get a copy of the file. If you have questions about your privileges, contact your Agile administrator.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+When you get an attached file, the date stamp on your copy of the file reflects the date that you got the file, not the date that the file was attached or saved.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref621" name="sthref621"></a>
+<h4 class="sect3"><span class="secnum">11.11.1.1</span> Web Client, Getting Files</h4>
+<p>In Web Client, the process to get files from the file folder <span class="bold">Files</span> tab is the same process used to get files from a business object <span class="bold">Attachment</span> tab.</p>
+<p>The process is described in:</p>
+<ul>
+<li>
+<p><a href="chapter_10.htm#CHDIAJHF">"Getting Files in Web Client"</a></p>
+<ul>
+<li>
+<p><a href="chapter_10.htm#CHDCFJAG">"Web Client, Get Files using Microsoft IE"</a></p>
+</li>
+<li>
+<p><a href="chapter_10.htm#CHDDEBCC">"Web Client, Get Files using Firefox"</a></p>
+</li>
+<li>
+<p><a href="chapter_10.htm#CHDCGAHI">"Web Client, Get files using Chrome:"</a></p>
+</li>
+<li>
+<p><a href="chapter_10.htm#CHDEFABF">"Web Client, Get Files using Safari for Windows"</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref622" name="sthref622"></a>
+<h4 class="sect3"><span class="secnum">11.11.1.2</span> Java Client, Get Files</h4>
+<p><span class="bold">To get copies of attachment files from a file folder object in Java Client:</span></p>
+<ol>
+<li>
+<p>Display the <span class="bold">Files</span> tab of the file folder.</p>
+</li>
+<li>
+<p>Select the rows of the files that you want to get.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Get Files</span> button.</p>
+<p>In the Select Directory dialog, specify the directory where you want to store the copies.</p>
+<p>If you selected more than one file, and you want to get the files together in one ZIP file, click <span class="bold">Download the files in one ZIP file</span>. Specify a <span class="bold">ZIP file name</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The files (or ZIP file) are copied to the specified directory.</p>
+<p>You will be prompted whether you want to open the file or files.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref623" name="sthref623"></a>
+<h4 class="sect3"><span class="secnum">11.11.1.3</span> Java Client, Batch Get</h4>
+<p><span class="bold">To batch get copies of all the files from a file folder in Java Client:</span></p>
+<ol>
+<li>
+<p>Display the <span class="bold">Files</span> tab of the file folder.</p>
+</li>
+<li>
+<p>Click the button drop-down menu for <span class="bold">Get Files</span> and select <span class="bold">Batch Get All Files from this Object</span>.</p>
+</li>
+<li>
+<p>In the Select Directory dialog, specify the directory where you want to store the copies.</p>
+<p>To get the files together in one ZIP file, click <span class="bold">Download the files in one ZIP file</span>. Specify a <span class="bold">ZIP file name</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>. The files (or ZIP file) are copied to the specified directory.</p>
+<p>You will be prompted whether you want to open the file or files.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CHDHJAFA" name="CHDHJAFA"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">11.11.1.4</span> Checkout and Checkin to Revise Attachment Files or File Folders</h4>
+<p>There are several factors that determine how you check out an attachment file for modification and check it back in, and how you check out a file folder for revision and check it back in. To revise an attachment file means, of course, to alter the contents of the file itself. To revise a file folder means making structural changes to the file folder's contents, such as adding a file, deleting a file, replacing one file with another, or editing the File Description.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+When you download a file for revision, you simply get a copy of the file, make your revisions, and replace the original file when you are checking it back in.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>A file folder can contain one file or multiple files. All the files are stored in the file vault, part of Agile File Manager, each file identified with its file folder. To modify a file in the file vault, you must first check out its file folder.</p>
+<p>When you check out a file folder, Agile PLM makes the attachment files available for modification by the Checkout User only&mdash;unlocks them&mdash;and renders the file folder inaccessible for modification by others. You can download and edit the file(s), which no one else can do until you either check in the folder or cancel the checkout.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Important:</p>
+To many people in manufacturing industries, to "check out a file" means a one-step operation in which the checked-out file is automatically downloaded to the user's computer and, in Agile PLM, when you check out a file from an Agile business object Attachments tab, the checked-out file is automatically download to the user's computer. However, in Agile PLM File Folders, think of <span class="bold">CheckOut</span> as synonymous with <span class="italic">unlocking</span> a file, making it available to only the file folder Checkout User for modification. After modifying and replacing the referenced file(s), <span class="bold">CheckIn</span> is synonymous with <span class="italic">locking</span> the file in the file vault.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>Once you have modified an attachment file and checked a containing folder back in, every user who views objects that reference that file, from the same or another file folder object, will see the modified version of the file, provided the user accesses the Latest Version of the folder object.</p>
+<p>The ability for users to check out File Folders can be controlled by privileges associated to criteria based on attributes of the File Folder. For example, the "Approval Status" attribute can be used for controlling check out, when Routing Slip approvals on File Folders are used. See <span class="italic">Agile PLM Administrator's Guide</span> for more details on defining criteria and privilege masks.</p>
+<p>By default, only you or a user with "file folder administration" privileges can check in a file folder that you checked out, or cancel a checkout.</p>
+<p>The following procedure works from a file folder's <span class="bold">Files</span> tab. For information about checking out from a business object Attachments tab, see <a href="chapter_10.htm#CHDDHGBB">"Web Client, Checking Out Attachment Files"</a> and <a href="chapter_10.htm#CHDDDGBJ">"Java Client, Checking Out Attachment Files."</a></p>
+<p><span class="bold">To check out a file folder and get attachment files for modification:</span></p>
+<ol>
+<li>
+<p>Open a file folder.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Check Out</span> button.</p>
+<p>In Java Client and Web Client, "[Checked out]" appears at the upper-right portion of the object page.</p>
+<p>The <span class="bold">Version</span> number of the folder is advanced, from the latest previous version to the next number. If the checkout is canceled, the version number will revert.</p>
+<p>On the <span class="bold">Title Block</span> tab of the file folder, the checkout information is filled in, for example, Checkout User and Checkout Date.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Files</span> tab. The files in the file folder are listed (URLs are listed too).</p>
+</li>
+<li>
+<p>To change the file folder itself, click the <span class="bold">Add</span> &gt; <span class="bold">Files</span> or <span class="bold">Add</span> &gt; <span class="bold">URLs</span> button.</p>
+<p>To change the contents of attachment file(s), having checked the folder out, now select the files you want and click the <span class="bold">Get</span> button.</p>
+</li>
+<li>
+<p>Revise and save the files.</p>
+</li>
+<li>
+<p>Return to the checked-out file folder from which you got the attachment file you have modified.</p>
+</li>
+<li>
+<p>Replace the file on the Files tab with the file you modified, using the appropriate instructions below for either Java Client or Web Client.</p>
+<p>When you have completed all your modifications (Replace, Add, Delete, and Edit) click the <span class="bold">Check In</span> button. The file folder is checked in, and the version increments.</p>
+</li>
+</ol>
+<p><span class="bold">Web Client, replace files:</span></p>
+<ol>
+<li>
+<p>In the file row you want to replace, click the <span class="bold">Replace</span> button.</p>
+</li>
+<li>
+<p>The Browse to Replace File dialog appears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Browse</span> button to navigate to the directory you want and select the file.</p>
+</li>
+<li>
+<p>When you are done, click <span class="bold">Replace</span>.</p>
+</li>
+</ol>
+<p><span class="bold">Java Client, replace files:</span></p>
+<ol>
+<li>
+<p>Select the row to enable the <span class="bold">Replace File</span> button.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Replace File</span> button.</p>
+</li>
+<li>
+<p>The Select File dialog appears.</p>
+</li>
+<li>
+<p>Select the modified file or navigate to the directory you want and select the file.</p>
+</li>
+<li>
+<p>Click <span class="bold">Open</span> to complete the replacement process.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+From the <span class="bold">Files</span> tab of the file folder, you can choose to replace a file at any time the file folder is checked out.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>The modified file writes over the previous version of the file.</p>
+</li>
+</ol>
+<p>Checking in a file folder increases the version number of the attachment.</p>
+<p>When you check out a file folder and get an attachment file, a copy of the attachment file is stored in a specified directory. When you check the file folder in, the files remain in the directory until you delete them manually.</p>
+<p>If you placed the file on the network or in a shared drive or directory (during the Get operation), you can check in the file from any computer that provides access to that drive or directory. If you place the file into a directory that is not a shared directory, it must be checked in from that same computer. See your Microsoft documentation for more information about shared directories.</p>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref624" name="sthref624"></a>
+<h4 class="sect3"><span class="secnum">11.11.1.5</span> Canceling Checkouts</h4>
+<p>When you want to discard edits to files on a file folder that you checked out, you can cancel the checkout.</p>
+<p>A checkout can be canceled only by the user who checked out the attachment, or by a user with necessary "file folder administration" privileges. If you have questions about your privileges, contact your Agile administrator.</p>
+<p>When you cancel a checkout, copies of the attachment files remain in the checkout directory you selected, but the original files are once more available to be checked out from the <span class="bold">Files</span> tab. Any edits you make to the remaining copies of the files do <span class="italic">not</span> appear in the public versions of the file (the versions of the file stored in the file vault).</p>
+<p><span class="bold">To cancel a file folder object checkout:</span></p>
+<ol>
+<li>
+<p>Display the file folder object.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Cancel Checkout</span> button.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CHDDFIBA" name="CHDDFIBA"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">11.11.1.6</span> Ad Hoc Redlining or Marking Up of Attachment Files from the File Folder</h4>
+<p>The other method to mark up or redline an attachment file is called "ad hoc redlining" in which the attachment is approached through the <span class="bold">Files</span> tab of the file folder.</p>
+<p><span class="bold">To ad hoc redline or mark up an attachment file from a File Folder object in the Web Client:</span></p>
+<ol>
+<li>
+<p>On the <span class="bold">Files</span> tab of a file folder object, click the <span class="bold">Redline</span> button (or <span class="bold">Has Been Redlined</span> button) on the row of the file you want to redline. (This button is available only when the file folder is checked in.)</p>
+</li>
+<li>
+<p>Use the tools described in the viewer online Help to redline the attachment. To view online Help, choose <span class="bold">Help</span> &gt; <span class="bold">Content</span> in the menu bar.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Ad hoc markups are saved against and associated with the version of the file folder object.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+</ol>
+<p><span class="bold">To ad hoc redline or mark up an attachment file from a file folder object in the Java Client:</span></p>
+<ol>
+<li>
+<p>On the <span class="bold">Files</span> tab of the file folder object, select a file you want to redline.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Do Redlining</span> button.</p>
+</li>
+<li>
+<p>When the Viewer opens in redline mode, click the <span class="bold">Markup</span> button. (This button is available only when markups are allowed.)</p>
+</li>
+<li>
+<p>Use the tools described in the viewer online Help to redline the attachment. To view online Help, choose <span class="bold">Help</span> &gt; <span class="bold">Content</span> in the menu bar.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Ad hoc markups are saved against and associated with the version of the file folder object in the Agile system.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+</ol>
+<p>For more information about the Viewer, see <span class="italic">Viewer Supplement</span>.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref625" name="sthref625"></a>
+<h2 class="sect1"><span class="secnum">11.12</span> Other File Folder Operations</h2>
+<p>You can perform a mass update of a file folder in both Web Client and Java Client.</p>
+<a id="CHDBHGIH" name="CHDBHGIH"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">11.12.1</span> Performing a Mass Update of a File Folder</h3>
+<p>You can remove or replace a file-folder attached to multiple objects simultaneously. For example, if File Folder 2 is created, and File Folder 1 becomes obsolete, you can replace the attachment of File Folder 1 with File Folder 2 on all of the objects that include a reference to File Folder 1.</p>
+<ul>
+<li>
+<p>Remove a file folder reference from all objects or from some objects that reference the file folder.</p>
+</li>
+<li>
+<p>Replace a file folder reference in all objects or in some objects that reference the file folder.</p>
+</li>
+<li>
+<p>Add a file folder to the <span class="bold">Attachments</span> tab of multiple specified objects.</p>
+</li>
+</ul>
+<p><span class="bold">To perform a bulk file folder operation in Web Client:</span></p>
+<ol>
+<li>
+<p>Open the file folder that you want to remove, replace, or add.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Actions</span> &gt; <span class="bold">Mass Update</span>.</p>
+</li>
+<li>
+<p>Specify whether you want to add file, remove file, replace file, or replace version, and click <span class="bold">Continue</span>.</p>
+</li>
+<li>
+<p>Select the version of the file folder on which you want to perform the bulk operation.</p>
+</li>
+<li>
+<p>Using the wizard search tools, find and select the objects you want to be affected by this bulk operation.</p>
+</li>
+<li>
+<p>Select the attachment files you want to include in the operation, and click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+<p><span class="bold">To perform a bulk file folder operation in Java Client:</span></p>
+<ol>
+<li>
+<p>Open the file folder that you want to remove, replace, or add.</p>
+</li>
+<li>
+<p>Right-click and choose <span class="bold">Mass Update</span>.</p>
+</li>
+<li>
+<p>Select the version of the file folder on which you want to perform the bulk operation.</p>
+</li>
+<li>
+<p>Select the attachment files you want to include in the operation, and click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>Specify whether you want to add, remove, replace the file folder or replace the version of the file folder, and click <span class="bold">Next</span>.</p>
+</li>
+<li>
+<p>Depending on which function you selected in step 5 above, use the wizard search tools to find and select the objects you want to be affected by this bulk operation or, select the objects you want to be affected from the displayed list.</p>
+</li>
+<li>
+<p>Click <span class="bold">Finish</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center"><a href="chapter_10.htm"><img src="../../dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td style="text-align:center"><a href="chapter_12.htm"><img src="../../dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo"><img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /> <a href="../../dcommon/html/cpyr.htm"><br />
+<span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2010, 2016,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span></a></td>
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

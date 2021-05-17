@@ -1,0 +1,3358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Working with Business Objects in Web Client</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1071" />
+<meta name="date" content="2016-01-07T18:6:48Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Agile Product Lifecycle Management Getting Started Guide, Release 9.3.5" />
+<meta name="relnum" content="Release 9.3.5" />
+<meta name="partnum" content="E61151-02" />
+<meta name="docid" content="no_value_supplied" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="../../dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="prev" href="chapter_4.htm" title="Previous" type="text/html" />
+<link rel="next" href="chapter_6.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="header"><a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Go to primary content</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Agile Product Lifecycle Management Getting Started Guide</b><br />
+<b>Release 9.3.5</b><br />
+E61151-02</td>
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td style="text-align:center"><a href="chapter_4.htm"><img src="../../dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td style="text-align:center"><a href="chapter_6.htm"><img src="../../dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<div class="chapter"><a id="BABJCDGA" name="BABJCDGA"></a>
+<h1 class="chapter"><span class="secnum">5</span> Working with Business Objects in Web Client</h1>
+<p>This chapter describes working with business objects in Agile Web Client, including the actions of creating, modifying, printing, emailing, and deleting business objects.</p>
+<a id="BABIIJFC" name="BABIIJFC"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.1</span> Creating Objects</h2>
+<p>To create an object, you must be assigned the Create privilege for the kind of object that you want to create. See your Agile administrator.</p>
+<p>In Web Client, you can create a business object in these ways:</p>
+<ul>
+<li>
+<p>use the <span class="bold">Create New</span> menu to choose a base class and a class from the expanded lists.</p>
+</li>
+<li>
+<p>if you have an object open, use the <span class="bold">Actions</span> &gt; <span class="bold">Save As</span> command.</p>
+</li>
+</ul>
+<p>You can also create some objects as you add them to an Agile table. For example, you can create an item to add it to the <span class="bold">BOM</span> tab of a parent item or to the <span class="bold">Affected Items</span> tab of a change.</p>
+<p>There are some options to create objects from "within" another object. For example, from within an item, the <span class="bold">Actions</span> menu includes <span class="bold">Create Change, Create PSR</span>, <span class="bold">Create QCR</span>, and <span class="bold">Create Declaration</span>. From within a manufacturer, you can choose <span class="bold">Create Manufacturer Part</span>.</p>
+<p>Once you create an object, that item exists until you delete it. If you create a new object and then you decide that you do not want to keep it, be sure to delete the object; otherwise, the new object is still in the database and the object's identifier (such as the item number) cannot be reused. See <a href="appendix_a.htm#CHDEDBBG">Appendix A, "Deleting Agile Objects."</a></p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Although all characters are supported within Agile PLM, and should not create issues within Agile's clients, it is recommended that you avoid using the following characters when creating objects, due to issues that could potentially arise in integrations or custom applications written on the SDK.
+<p>, comma . period (dot) : colon ; semicolon = equal sign</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="CACCEBEA" name="CACCEBEA"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">5.1.1</span> Actions Menu</h3>
+<p>An important feature for working with objects in Web Client is the <span class="bold">Actions</span> menu (Web Client). Generally, objects in Web Client have an <span class="bold">Actions</span> button that opens a drop-down list of available actions.</p>
+<div class="tblruleformal"><a id="sthref247" name="sthref247"></a><a id="sthref248" name="sthref248"></a>
+<p class="titleintable">Table 5-1 Actions menu commands</p>
+<table class="RuleFormal" title="Actions menu commands" summary="Web Client Actions menu commands" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t3">Command</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t3">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t3" headers="r1c1-t3">
+<p><span class="bold">Save As</span></p>
+</td>
+<td style="text-align:left" headers="r2c1-t3 r1c2-t3">
+<p>Creates a new object based on the current object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t3" headers="r1c1-t3">
+<p><span class="bold">Delete</span></p>
+</td>
+<td style="text-align:left" headers="r3c1-t3 r1c2-t3">
+<p>Deletes the object (a "soft delete"). For more information about deleting objects, see <a href="appendix_a.htm#CHDEDBBG">Chapter 10113616, "Deleting Agile Objects."</a></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t3" headers="r1c1-t3">
+<p><span class="bold">Print</span></p>
+</td>
+<td style="text-align:left" headers="r4c1-t3 r1c2-t3">
+<p>Choose either <span class="bold">All Tabs</span> or the tabs you want. The list of tabs changes with the current object's class.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t3" headers="r1c1-t3">
+<p><span class="bold">Copy URL to Clipboard</span></p>
+</td>
+<td style="text-align:left" headers="r5c1-t3 r1c2-t3">
+<p>In Web Client, copies the URL of the object to the clipboard, so it can be pasted elsewhere.</p>
+<p>For Internet Explorer: the URL is copied when you click the action; the prompt indicates it is copied.</p>
+<p>For Firefox: when you click the action, a popup displays the URL, manual <span class="bold">Ctrl+C</span> copies the URL.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t3" headers="r1c1-t3">
+<p><span class="bold">Incorporate</span> and <span class="bold">Unincorporate</span></p>
+</td>
+<td style="text-align:left" headers="r6c1-t3 r1c2-t3">
+<p>Available for items: incorporation locks the checkout and check-in capabilities of file folders on the <span class="bold">Attachments</span> tab of the item. This important capability is available only on the <span class="bold">More</span> menu. For more information about incorporating, see the <span class="italic">Product Collaboration User Guide</span>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t3" headers="r1c1-t3">
+<p><span class="bold">Bookmark</span> or <span class="bold">Add Bookmark</span></p>
+</td>
+<td style="text-align:left" headers="r7c1-t3 r1c2-t3">
+<p>Saves a pointer to the object on your <span class="bold">My Bookmarks</span> folder (or "Favorites") list.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r8c1-t3" headers="r1c1-t3">
+<p><span class="bold">Send</span></p>
+</td>
+<td style="text-align:left" headers="r8c1-t3 r1c2-t3">
+<p>Opens the address book and lets you select one or more users to send the object to, including a comment. A notification is then sent to the designated users with a link to the object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r9c1-t3" headers="r1c1-t3">
+<p><span class="bold">Share</span> or <span class="bold">Sharing</span></p>
+</td>
+<td style="text-align:left" headers="r9c1-t3 r1c2-t3">
+<p>Opens a page linked to the current object that lets you share the object or delete an existing share. For more information, see <a href="#BABCDHFD">"Sharing Objects with Other Users."</a></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r10c1-t3" headers="r1c1-t3">
+<p><span class="bold">Subscribe</span> or <span class="bold">Subscriptions</span></p>
+</td>
+<td style="text-align:left" headers="r10c1-t3 r1c2-t3">
+<p>Allows user to subscribe to receive a notification when certain attributes change. Offers a list of subscriptions for the current object: Lifecycle Phase Change or Status Change, Add File, Delete File, Checkin File, Checkout File, and Cancel Checkout File. See <a href="#BABFFBDJ">"Subscribing to Objects."</a></p>
+<p><span class="bold">Note:</span> Subscribe capabilities are not available for Report objects or for User Group objects.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r11c1-t3" headers="r1c1-t3">
+<p><span class="bold">Export</span></p>
+</td>
+<td style="text-align:left" headers="r11c1-t3 r1c2-t3">
+<p>Opens the Export wizard in Web Client (even if you have activated it from Java Client).</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r12c1-t3" headers="r1c1-t3">
+<p><span class="bold">Process Extensions</span></p>
+</td>
+<td style="text-align:left" headers="r12c1-t3 r1c2-t3">
+<p>Offers a list of currently available process extensions, which have been created by your administrator.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r13c1-t3" headers="r1c1-t3">
+<p><span class="bold">Audit Status</span></p>
+</td>
+<td style="text-align:left" headers="r13c1-t3 r1c2-t3">
+<p>Audits the remaining statuses in the object's workflow to test whether the workflow can advance through those statuses.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r14c1-t3" headers="r1c1-t3">
+<p><span class="bold">Audit Release</span></p>
+</td>
+<td style="text-align:left" headers="r14c1-t3 r1c2-t3">
+<p>Audits the remaining statuses in the object's workflow to test whether the workflow can be released per the existing conditions in the statuses.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r15c1-t3" headers="r1c1-t3">
+<p><span class="bold">View Workflows</span></p>
+</td>
+<td style="text-align:left" headers="r15c1-t3 r1c2-t3">
+<p>Shows eligible workflows for this (routable) object, in visual form. Offers drop-down list to select another workflow to view.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r16c1-t3" headers="r1c1-t3">
+<p><span class="bold">Create New</span></p>
+</td>
+<td style="text-align:left" headers="r16c1-t3 r1c2-t3">
+<p>Creates a new change order with the open item (part or document) already added to the <span class="bold">Affected Items</span> tab.</p>
+<p>Select the change type from the list of available change subclasses.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r17c1-t3" headers="r1c1-t3">
+<p><span class="bold">Create Change Order</span></p>
+</td>
+<td style="text-align:left" headers="r17c1-t3 r1c2-t3">
+<p>Creates a new Design File Change Order (DFCO) with the open file folder (Design or File Folder) already added to the <span class="bold">Affected Files</span> tab.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r18c1-t3" headers="r1c1-t3">
+<p><span class="bold">Create Product Service Report</span>, <span class="bold">Create Quality Change Request</span></p>
+</td>
+<td style="text-align:left" headers="r18c1-t3 r1c2-t3">
+<p>Creates a new PSR or QCR with the open item already added to the <span class="bold">Affected Items</span> tab.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r19c1-t3" headers="r1c1-t3">
+<p><span class="bold">Create Declaration</span></p>
+</td>
+<td style="text-align:left" headers="r19c1-t3 r1c2-t3">
+<p>Create a new Declaration with the open item already added to the <span class="bold">Affected Items</span> tab.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect2" -->
+<a id="BABDBBCE" name="BABDBBCE"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">5.1.2</span> Creating Objects in Web Client Using the Create New Command</h3>
+<p>The process for creating new business objects in Web Client involves two main steps: creating an empty object and then filling in the object tabs with information specific to the object.</p>
+<p><span class="bold">To create and complete an object in Web Client:</span></p>
+<ol>
+<li>
+<p>Click the <span class="bold">Create</span> <span class="bold">New</span> button on the main toolbar.</p>
+<p>Or, use the keyboard shortcut Ctrl + Shift + C to display the menu.</p>
+</li>
+<li>
+<p>From the drop-down menu that opens, choose the base class for the business object you want to create. Any base class with two classes expands to offer choices in all possible child classes (thus, <span class="bold">Transfer Order</span> will offer Content Transfer Order but not Automated Transfer Order). The Create New dialog opens.</p>
+</li>
+<li>
+<p>Follow the instructions on-screen to complete the creation process. The actions required may include:</p>
+<ol>
+<li>
+<p>Select the type (subclass) you want from the drop-down list. Depending on which type is selected, additional fields appear in the dialog.</p>
+</li>
+<li>
+<p>The object number may be automatically selected for you. The autonumber format and sequence are determined by the Agile administrator. The administrator also determines whether using autonumbers is required or optional.</p>
+</li>
+<li>
+<p>Complete any required fields. Required fields are indicated by an * asterisk. The Create New actions cannot be completed with any required fields empty.</p>
+</li>
+<li>
+<p>Additional fields that are not required (not marked by an * asterisk) may also appear in the dialog. You can complete the additional fields now. If non-required fields are empty, the Create New action can be completed.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+<li>
+<p>The newly created object appears in the content pane, with the first tab (<span class="bold">Cover Page</span>, <span class="bold">Title Block</span>, or <span class="bold">General Information</span> tab) showing. The tab is in edit mode and can be updated immediately.</p>
+</li>
+<li>
+<p>Fill in information on the tab and click <span class="bold">Save</span>.</p>
+<p>Fill in information on the item tabs, as necessary. Some tabs are completed automatically, such as the <span class="bold">Changes</span>, <span class="bold">Where Used</span>, and <span class="bold">History</span> tabs. You do not enter information on these tabs.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref249" name="sthref249"></a>
+<h3 class="sect2"><span class="secnum">5.1.3</span> Creating an Object Using Save As</h3>
+<p>Using the Save As feature is a quick way to create an object that is similar to an existing object.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+In general, you should not use Save As to create an object in a different class or subclass from the original object. The different classes or subclasses may not have the same tabs or defined fields, and you may lose access to some data in the newly created object.
+<p>For example, parts generally have a <span class="bold">BOM</span> tab. By default, documents do not. When you save a part as a document, you cannot view the part's BOM in the resulting document unless your Agile administrator has configured your system to permit documents to have BOMs.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><span class="bold">To create an object using Save As in Web Client:</span></p>
+<ol>
+<li>
+<p>Select and open an existing business object.</p>
+</li>
+<li>
+<p>From the <span class="bold">Actions</span> menu, choose <span class="bold">Save As</span>. A dialog appears with the heading: "Save [object] [ID number] As..." with defaults naming the object and number.</p>
+</li>
+<li>
+<p>The two fields in the dialog are Subclass and (Auto)Number. You can choose an available subclass from the drop-down list, and fill in an ID number manually if you want.</p>
+</li>
+<li>
+<p>Depending on the selected object type, the Save As dialog may display additional required fields. Complete any required fields.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>. The new object is created and opens automatically.</p>
+</li>
+<li>
+<p>Make any appropriate modifications to the tabs.</p>
+</li>
+</ol>
+<p>If the Agile administrator has set the appropriate preferences, fields in the optional <span class="bold">Page Two</span> and <span class="bold">Page Three</span> sections are copied to the new object. For information about the behavior of <span class="bold">Page Two</span> and <span class="bold">Page Three</span> fields in your Agile system, see your Agile administrator.</p>
+<p>Save As copies data from a field in the existing object to the same field in the new object. If a field or list value in the existing object is not available in the new object, then that field or list value is not copied to the new object.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Because <span class="bold">Page Three</span> data applies to a specific subclass only, if you use Save As to create a new business object in a different subclass, the <span class="bold">Page Three</span> data is <span class="italic">not</span> copied to the new object.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref250" name="sthref250"></a>
+<h4 class="sect3"><span class="secnum">5.1.3.1</span> Site Change Order Save As Limitations</h4>
+<p>You cannot initiate Save As from a non-Site Change Order (SCO) change object to create an SCO object, nor can you initiate Save As from an SCO object to create a non-SCO change object. Because Site Change Orders (SCOs) affect only site-specific information, and other types of changes are not limited to site-specific information (for example, ECOs and MCOs), SCOs can be Save-As-created only from another SCO. The Site Change Order's site-specific only usage makes it incompatible with other change types when using the Save As feature.</p>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref251" name="sthref251"></a>
+<h4 class="sect3"><span class="secnum">5.1.3.2</span> Design File Change Order (DFCO) Save As Limitations</h4>
+<p>A change order subclass can have the <span class="bold">Affected Items</span> tab enabled (example: ECO) or it can have the <span class="bold">Affected Files</span> tab enabled (example: DFCO), but it cannot have both tabs enabled in the same subclass. Therefore, when you Save As a change order subclass that has Affected Items, you cannot choose a different subclass that has Affected Files. Likewise, when you Save As a change order subclass that has Affected Files, you cannot choose a different subclass that has Affected Items.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" -->
+<a id="BABDIJDD" name="BABDIJDD"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">5.1.4</span> Adding Objects to Tables</h3>
+<p>Agile PLM Web Client provides several methods of adding objects to a table:</p>
+<ul>
+<li>
+<p>Add button command on the table which lets you choose objects to add by:</p>
+<ul>
+<li>
+<p>Typing the object number, which also provides suggestions of objects that match what you have typed so far. <a href="#BABHEABG">"Adding Objects to Tables by Type-ahead Search."</a></p>
+</li>
+<li>
+<p>Performing a quick search to locate and select the objects you want. See <a href="#BABHADDD">"Adding Objects to Tables by Quick Search."</a></p>
+</li>
+<li>
+<p>Creating a new object. See <a href="#BABGFDBD">"Adding Objects to Tables by Create New."</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Copy and Paste</p>
+<p>Select objects in a similar table or the search results table, copy them (Ctrl-C) and then paste them (Ctrl-V) into the table.</p>
+<p>See <a href="#BABHDHAB">"Adding Objects to Tables by Copy and Paste."</a></p>
+</li>
+<li>
+<p>Drag and Drop</p>
+<p>Select objects in the Navigation pane <span class="bold">(</span><span class="bold">My Bookmarks</span>, <span class="bold">Recently Visited</span>, <span class="bold">NAVIGATOR</span> drawer), and then drag and drop them onto the table.</p>
+<p>See <a href="#BABIAIJB">"Adding Objects to Tables by Drag and Drop."</a></p>
+</li>
+<li>
+<p>Execute a search to find objects to add to a table.</p>
+<p>See <a href="#BABCBECH">"Adding Objects to Tables by Custom Search."</a></p>
+</li>
+</ul>
+<a id="BABHEABG" name="BABHEABG"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.1.4.1</span> Adding Objects to Tables by Type-ahead Search</h4>
+<p><span class="bold">To add rows to a table in Web Client by type-ahead search:</span></p>
+<ol>
+<li>
+<p>Click the object tab to display the table you want.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Add</span> button. The add object palette appears.</p>
+</li>
+<li>
+<p>In the text entry field, type the numbers or names of the objects you want to add, separated by semicolons. For example:</p>
+<p>P00487; P00259; P00264</p>
+</li>
+<li>
+<p>Or, you can also use the Web Client Type-Ahead search feature:</p>
+<ol>
+<li>
+<p>If you type a partial object number, Agile PLM displays a list of objects that match the text typed so far.</p>
+</li>
+<li>
+<p>Use the arrow up and arrow down keys to highlight the object you want.</p>
+</li>
+<li>
+<p>Press the right arrow key to select the object.</p>
+<p>Repeat the steps above to select multiple objects to add.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Press the Enter key to add the objects to the table and close the palette.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BABHADDD" name="BABHADDD"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.1.4.2</span> Adding Objects to Tables by Quick Search</h4>
+<p><span class="bold">To add rows to a table in Web Client by Quick Search:</span></p>
+<ol>
+<li>
+<p>Click the object tab to display the table you want.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Add</span> button. The add object palette appears.</p>
+</li>
+<li>
+<p>You can use any of these methods to select the objects to add to the table.</p>
+<ol>
+<li>
+<p>Click the <span class="bold">Search to Add</span> button to open the Search palette.</p>
+</li>
+<li>
+<p>Enter the search string text in the text field, and click the <span class="bold">Launch Search</span> button. The search results are displayed in the palette table.</p>
+</li>
+<li>
+<p>Click, Ctrl-click, and Shift-click to select the row or rows you want to add and then press Enter. The selected objects are added to the table.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>When you are done adding objects to the table, press the Escape key to close the palette.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BABGFDBD" name="BABGFDBD"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.1.4.3</span> Adding Objects to Tables by Create New</h4>
+<p>You can add to a table an object that has not been created yet.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If the Create to Add option is not available for the table in which you are working, the <span class="bold">Create to Add</span> button does not appear in the object addition palette.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><span class="bold">To add a non-existing object to a table in Web Client:</span></p>
+<ol>
+<li>
+<p>Click the tab to display the table you want in the content pane.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Add</span> button. The object addition palette appears.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Create to Add</span> button.</p>
+<p>The Create New dialog appears.</p>
+</li>
+<li>
+<p>In the Create New dialog, use the <span class="bold">Type</span> drop-down list to select the type (subclass) of object you want to create.</p>
+</li>
+<li>
+<p>Complete any required fields.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add</span>.</p>
+<p>The newly created object is added to the table.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BABIAIJB" name="BABIAIJB"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.1.4.4</span> Adding Objects to Tables by Drag and Drop</h4>
+<p>To add objects by drag and drop, you drag objects from the left navigation pane and drop them into an object table in the content pane. You can drag from:</p>
+<ul>
+<li>
+<p>The <span class="bold">My Bookmarks</span> list in the <span class="bold">FOLDERS</span> drawer</p>
+</li>
+<li>
+<p>The <span class="bold">Recently Visited</span> list in the <span class="bold">FOLDERS</span> drawer</p>
+</li>
+<li>
+<p>The <span class="bold">NAVIGATOR</span> drawer &ndash; Click the <span class="bold">Navigator</span> button in any table, including search results tables, to populate the <span class="bold">NAVIGATOR</span> drawer.</p>
+</li>
+</ul>
+<p><span class="bold">To add rows to a table in Web Client by drag and drop:</span></p>
+<ol>
+<li>
+<p>In the content pane, click the object tab to display the table to which you want to add.</p>
+</li>
+<li>
+<p>In the left navigation pane, click just to the left of an object link to select it.</p>
+</li>
+<li>
+<p>Use Ctrl-click and Shift-click to select multiple objects in the navigation pane.</p>
+</li>
+<li>
+<p>Drag the selected objects onto the table in the content pane.</p>
+<p>The cursor becomes a box with a number, indicating the number of objects you are dragging.</p>
+</li>
+<li>
+<p>When the cursor is over the table in the content pane, release the mouse button to drop the objects.</p>
+</li>
+<li>
+<p>Respond to any warnings or errors.</p>
+<p>The objects are added to the table.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BABHDHAB" name="BABHDHAB"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.1.4.5</span> Adding Objects to Tables by Copy and Paste</h4>
+<p><span class="bold">To add rows to a table in Web Client by using copy and paste:</span></p>
+<p>You can copy objects to paste from the <span class="bold">My Bookmarks</span> or <span class="bold">Recently Visited</span> list in the left navigation pane, or you can copy objects to paste from any object tab table.</p>
+<p>When you paste into a table, only the appropriate objects will be pasted into the table. For example, a BOM table includes only item objects. If you select and copy some item objects and change objects in a search results table, and paste the objects into the BOM table, only the items objects are successfully added to the table.</p>
+<ol>
+<li>
+<p>Copy the objects you want to paste:</p>
+<ul>
+<li>
+<p>Search Results table &ndash; Execute a search. In the search results table, select the rows you want, and then choose <span class="bold">Copy</span> in the <span class="bold">More</span> menu.</p>
+</li>
+<li>
+<p>Object tab &ndash; In an object table tab (for example, the BOM table tab), select the rows you want to copy, and then choose <span class="bold">Copy</span> in the <span class="bold">More</span> menu.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the content pane, open the object into which you want to paste.</p>
+</li>
+<li>
+<p>Click the tab into which you want to paste.</p>
+</li>
+<li>
+<p>In the tab <span class="bold">More</span> menu, choose <span class="bold">Paste</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="BABCBECH" name="BABCBECH"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.1.4.6</span> Adding Objects to Tables by Custom Search</h4>
+<p>In Web Client, you can use the search features to find objects that you want to add to a table.</p>
+<ul>
+<li>
+<p>From the top pane, execute a Quick Search or a Custom Search. In the search results table, select the rows you want and use the <span class="bold">More</span> &gt; <span class="bold">Copy</span> command. Then, display the target table in the content pane and use <span class="bold">More</span> &gt; <span class="bold">Paste</span> to add the selected objects to the table. See <a href="#BABHDHAB">"Adding Objects to Tables by Copy and Paste."</a></p>
+</li>
+<li>
+<p>From the top pane, execute a Quick Search or a Custom Search. In the search results table, click the <span class="bold">Navigator</span> button to populate the <span class="bold">NAVIGATOR</span> drawer. Then, drag and drop objects from the <span class="bold">NAVIGATOR</span> drawer to the table in the content pane. See <a href="#BABIAIJB">"Adding Objects to Tables by Drag and Drop."</a></p>
+</li>
+</ul>
+<p>In addition, you can open a custom search palette, which lets you view the tab table in the content pane while you search for and select the objects you want to add to the table.</p>
+<p><span class="bold">To open a Custom Search palette to find objects to add to a table:</span></p>
+<ol>
+<li>
+<p>In the content pane, click a tab to display the table to which you want to add.</p>
+</li>
+<li>
+<p>On the keyboard, press Ctrl + Shift + X. The custom search palette appears. The tab table remains visible in the content pane behind the palette.</p>
+</li>
+<li>
+<p>In the search palette, define a Basic search or an Advanced search. Execute the search. For more information about defining searches, see <a href="chapter_8.htm#BABHHIBG">Chapter 8, "Finding Agile Data with Searches."</a></p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+In the upper left corner of the custom search palette, click the down arrow icon to collapse the entire palette; click the right arrow icon to expand the palette again.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>Select one or more search results rows.</p>
+</li>
+<li>
+<p>Click <span class="bold">More</span> &gt; <span class="bold">Copy</span> in the search palette.</p>
+</li>
+<li>
+<p>Put the focus in the content pane table by clicking in the content pane or by selecting a table row, and then choose <span class="bold">Paste</span> in the <span class="bold">More...</span> menu.</p>
+<p>The objects are pasted into the content pane table.</p>
+</li>
+<li>
+<p>You can execute multiple searches to find and select additional objects.</p>
+</li>
+<li>
+<p>Press the Escape key on the keyboard to close the custom search palette.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref252" name="sthref252"></a>
+<h4 class="sect3"><span class="secnum">5.1.4.7</span> Adding Objects to Tables from Excel by Copy and Paste</h4>
+<p>You can copy data from various cells in an Excel sheet and paste them into a table. This feature is functional in all tables where <span class="bold">Add</span> button opens a search box with <span class="bold">Search to Add</span> and <span class="bold">Create to Add</span> buttons.</p>
+<p><span class="bold">To add rows from Excel to table by copy and paste:</span></p>
+<ol>
+<li>
+<p>In the Excel spreadsheet, select data that you want added to an object in Web Client.</p>
+</li>
+<li>
+<p>In the Web Client, open the object into which you want to add the selected data.</p>
+</li>
+<li>
+<p>Click the tab in which you want to add the data.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add</span>. The search box with <span class="bold">Create to Add</span> and <span class="bold">Search to Add</span> buttons is displayed.</p>
+</li>
+<li>
+<p>Press Ctrl + V keys. The selected data from the Excel spreadsheet is pasted in the Search box.</p>
+</li>
+<li>
+<p>Press the Enter key. The selected data with its complete records is added as rows in the table.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref253" name="sthref253"></a>
+<h4 class="sect3"><span class="secnum">5.1.4.8</span> Editing and Modifying Tables</h4>
+<p>Editing and modifying Web Client tables includes the following actions:</p>
+<ul>
+<li>
+<p>Adding one or more rows to a table</p>
+<p>See <a href="#BABGEBBH">"Editing Table Cells in Web Client."</a></p>
+</li>
+<li>
+<p>Removing one or more rows from a table</p>
+</li>
+<li>
+<p>Editing table fields</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<a id="BABGEBBH" name="BABGEBBH"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.1.4.9</span> Editing Table Cells in Web Client</h4>
+<p><span class="bold">To edit a table in Web Client:</span></p>
+<ol>
+<li>
+<p>Display the table you want to edit in the content pane.</p>
+</li>
+<li>
+<p>To begin editing a table, double-click in any editable cell.</p>
+<p>The table enters edit mode and the <span class="bold">Save</span> and <span class="bold">Cancel</span> buttons become active (not grayed).</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If the table is read-only, an error message is displayed in the table tab. If the cell you double-clicked is not editable, an error message to that effect appears in the table tab.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>Make the required changes in each field. Navigate to other fields by clicking the field, pressing the Tab key, or using the arrow keys.</p>
+</li>
+<li>
+<p>When you are finished, click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect3" -->
+<a id="CACDHGCE" name="CACDHGCE"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.1.4.10</span> Using Fill-Up and Fill-Down in Web Client Tables</h4>
+<p>From the tab <span class="bold">More</span> menu button, Web Client provides the following Fill-Up and Fill-Down table editing commands:</p>
+<ul>
+<li>
+<p>Fill-down</p>
+</li>
+<li>
+<p>Fill-down (selected cells)</p>
+</li>
+<li>
+<p>Fill-up</p>
+</li>
+<li>
+<p>Fill-up (selected cells)</p>
+</li>
+</ul>
+<p><span class="bold">To Fill-down or Fill-up:</span></p>
+<ol>
+<li>
+<p>If the table is not already in edit mode, then enter table edit mode:</p>
+<p>Double-click any editable cell of the table. The table enters edit mode and the <span class="bold">Save</span> and <span class="bold">Cancel</span> buttons become active. To navigate from one cell to another, press the Tab key to move to the next editable field, use the arrow keys, or click in a cell.</p>
+</li>
+<li>
+<p>Select one cell in the column. The selected cell is highlighted.</p>
+<ul>
+<li>
+<p>To fill-down, choose <span class="bold">More</span> &gt; <span class="bold">Fill-down</span> in the tab menu or use the Ctrl + Shift + D keyboard shortcut.</p>
+<p>The contents of the highlighted cell are copied down the column into all the cells below the highlighted cell.</p>
+</li>
+<li>
+<p>To fill-up, choose <span class="bold">More</span> &gt; <span class="bold">Fill-up</span> in the tab menu or use the Ctrl + Shift + U keyboard shortcut.</p>
+<p>The contents of the highlighted cell are copied up the column into all the cells above the highlighted cell.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><span class="bold">To Fill-down or Fill-up selected cells only:</span></p>
+<ol>
+<li>
+<p>If the table is not already in edit mode, then enter table edit mode:</p>
+<p>Double-click any editable cell of the table. The table enters edit mode and the <span class="bold">Save</span> and <span class="bold">Cancel</span> buttons become active. To navigate from one cell to another, press the Tab key to move to the next editable field, use the arrow keys, or click in a cell.</p>
+</li>
+<li>
+<p>Select two or more cells in the column. Use Shift-click to select contiguous cells. Use Ctrl-click to select non-contiguous cells. The selected cells are highlighted.</p>
+<ul>
+<li>
+<p>To fill-down, choose <span class="bold">More</span> &gt; <span class="bold">Fill-down (selected cells)</span> in the tab menu or use the Ctrl + Shift + D keyboard shortcut.</p>
+<p>The content of the upper-most highlighted cell is copied down the column into only the highlighted cells below the up-most highlighted cell.</p>
+</li>
+<li>
+<p>To fill-up, choose <span class="bold">More</span> &gt; <span class="bold">Fill-up (selected cells)</span> in the tab menu or use the Ctrl + Shift + U keyboard shortcut.</p>
+<p>The content of the lower-most highlighted cell is copied up the column into only the highlighted cells above the lower-most highlighted cell.</p>
+</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref254" name="sthref254"></a>
+<h2 class="sect1"><span class="secnum">5.2</span> Modifying Date and Time Fields</h2>
+<p>In Web Client, you can modify date fields by using the calendar tool, and also by typing in the field.</p>
+<div class="sect2"><a id="sthref255" name="sthref255"></a>
+<h3 class="sect2"><span class="secnum">5.2.1</span> Using the Calendar to Modify Date Fields</h3>
+<p><span class="bold">To use the calendar tool in Web Client:</span></p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The Agile administrator can configure Date fields to include both the date and the time or to include only the date. The time setting fields are not displayed in the calendar tool of a date field that is configured to include only the date.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<ol>
+<li>
+<p>In a date field, click the <span class="bold">Launch Calendar</span> icon to open the calendar (if it is enabled).</p>
+</li>
+<li>
+<p>Double-clicking a date enters it directly into the field and closes the calendar.</p>
+<p>By default, Agile PLM sets the time to 12:00:00 am.</p>
+<p>The default time format is "12 hours" with am and pm.</p>
+</li>
+<li>
+<p>To select a specific time:</p>
+<ul>
+<li>
+<p>Enter the time in the Time: field, and choose AM or PM.</p>
+</li>
+<li>
+<p>Double-click the date you want. The date and time are entered in the field and the calendar closes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To switch to a different month, click the <span class="bold">Previous Month</span> and <span class="bold">Next Month</span> buttons.</p>
+</li>
+<li>
+<p>To switch to a different year, click the <span class="bold">Previous Year</span> and <span class="bold">Next Year</span> buttons.</p>
+</li>
+<li>
+<p>Press Escape to close the calendar without selecting a date.</p>
+</li>
+</ol>
+<div class="figure"><a id="sthref256" name="sthref256"></a>
+<p class="titleinfigure">Figure 5-1 Calendar tool</p>
+<img src="img/chap5_html_7158d4a2.png" alt="calendar tool, Web Client" /><br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref257" name="sthref257"></a>
+<h3 class="sect2"><span class="secnum">5.2.2</span> Manually Modifying Date and Time Fields</h3>
+<p><span class="bold">To edit the date and time:</span></p>
+<ol>
+<li>
+<p>Select the date and time you want to change.</p>
+</li>
+<li>
+<p>Enter the new date in the format specified in your user profile.</p>
+<p>The default format is mm-dd-yyyy.</p>
+</li>
+<li>
+<p>Press the Spacebar.</p>
+</li>
+<li>
+<p>Enter the time in the format specified in your user profile. This step is optional; if you do not enter a time, by default the time displays midnight in the specified format.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Web Client does not accept the new date without a space between the date and time.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>Press the Tab key or the Enter key.</p>
+</li>
+</ol>
+<p><span class="bold">To edit just the time stamp:</span></p>
+<ol>
+<li>
+<p>Select the time you want to change.</p>
+</li>
+<li>
+<p>Enter the new time in the hh:mm:ss format.</p>
+</li>
+<li>
+<p>Press the Tab key or the Enter key.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABDJDJC" name="BABDJDJC"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.3</span> Selecting Users or User Groups to Modify a Field</h2>
+<p>In Web Client, whenever you see the address book icon button, you can click that button to launch the address book palette. The address book palette lets you search for and select users or user groups to populate the field that you are currently modifying.</p>
+<p>The available address book palette search methods are dependent on the properties of the specific field that you are modifying. For example, if a user group is not a valid entry for the field that you are modifying, the search for <span class="bold">User Groups</span> option is not available. You may be limited to selecting only one user or only one user group, depending on the properties of the field that you are modifying.</p>
+<p>The address book palette provides the following search methods:</p>
+<ul>
+<li>
+<p>Search for a user</p>
+</li>
+<li>
+<p>Search for a user in a specific user group</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The <span class="bold">Search within a User Group</span> option becomes available when the number of user groups in the Agile PLM system exceeds 200.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>Search for a user group</p>
+</li>
+</ul>
+<p><span class="bold">To search for users:</span></p>
+<ol>
+<li>
+<p>Click the address book icon button to open the address book palette.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Users</span> in the address book palette drop-down list.</p>
+</li>
+<li>
+<p>Type the user object search criteria that you want to use.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Execute a Quick Search</span> button.</p>
+</li>
+<li>
+<p>In the palette search results table, select the user row or rows you want to add:</p>
+<ul>
+<li>
+<p>Double-click a row.</p>
+</li>
+<li>
+<p>Select one or more rows and drag them to the field that you are modifying.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Press the Escape key to close the address book palette.</p>
+</li>
+</ol>
+<p><span class="bold">To search for a user within a user group:</span></p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The <span class="bold">Search within a User Group</span> option becomes available when the number of user groups in the Agile PLM system exceeds 200.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<ol>
+<li>
+<p>Click the address book icon button to open the address book palette.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Search within a user group</span> in the address book palette drop-down list.</p>
+</li>
+<li>
+<p>In the <span class="bold">Select a user group to search within</span> popup, type the name of the user group you want or click the <span class="bold">Search</span> button to search for a group.</p>
+</li>
+<li>
+<p>When you have selected a user group, click <span class="bold">OK</span> in the popup.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Agile PLM adds the group name to the address book palette drop-down list. Agile PLM continues to add group names to the palette drop-down list until the number of groups equals twenty. As additional groups are added to the list, Agile PLM removes the oldest entries from the drop-down list. A maximum of twenty groups that you recently selected for the <span class="bold">Search within a user group</span> option remain on the drop-down list.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>Alternately, you can use the address book palette drop-down list to select one of the user groups that you have selected recently.</p>
+</li>
+<li>
+<p>Type the user object search criteria that you want to use.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Execute a Quick Search</span> button. The search is restricted to the members of the selected group.</p>
+</li>
+<li>
+<p>In the palette search results table, select the user row or rows you want:</p>
+<ul>
+<li>
+<p>Double-click a row.</p>
+</li>
+<li>
+<p>Select one or more rows and drag them to the field that you are modifying.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Press the Escape key to close the address book palette.</p>
+</li>
+</ol>
+<p><span class="bold">To search for a user group:</span></p>
+<ol>
+<li>
+<p>Click the address book icon button to open the address book palette.</p>
+</li>
+<li>
+<p>Choose <span class="bold">User Groups</span> in the address book palette drop-down list.</p>
+</li>
+<li>
+<p>Type the user group object search criteria that you want to use.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Execute a Quick Search</span> button.</p>
+</li>
+<li>
+<p>In the palette search results table, select the user group row or rows you want:</p>
+<ul>
+<li>
+<p>Double-click a row.</p>
+</li>
+<li>
+<p>Select one or more rows and drag them to the field that you are modifying.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Press the Escape key to close the address book palette.</p>
+</li>
+</ol>
+<p><span class="bold">To search for users or user groups by job function:</span></p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The ability to search by job function is available in the address book only when selecting users or user groups as routable object reviewers.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<ol>
+<li>
+<p>Click the address book icon button to open the address book palette.</p>
+</li>
+<li>
+<p>Choose a specific job function in the address book palette drop-down list.</p>
+<p>Job functions appear in the drop-down list below the user groups.</p>
+<p>Your search is limited to only those user objects and user group objects that include the selected job function in their <span class="bold">Job Function(s)</span> attribute.</p>
+</li>
+<li>
+<p>Type the search criteria that you want to use.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Execute a Quick Search</span> button.</p>
+<p>The search results include both users and user groups that have been assigned the selected job function.</p>
+</li>
+<li>
+<p>In the palette search results table, select the row or rows you want to add:</p>
+<ul>
+<li>
+<p>Double-click a row.</p>
+</li>
+<li>
+<p>Select one or more rows and drag them to the field that you are modifying.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Press the Escape key to close the address book palette.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref258" name="sthref258"></a>
+<h2 class="sect1"><span class="secnum">5.4</span> Modifying List Fields</h2>
+<p>In Web Client, when you click the <span class="bold">Edit</span> button to edit a business object use one of these methods to modify a list field:</p>
+<p><span class="bold">To modify a list field:</span></p>
+<ol>
+<li>
+<p>Click the drop-down list button to display the list entries.</p>
+</li>
+<li>
+<p>Select an entry from the list.</p>
+</li>
+</ol>
+<p><span class="bold">To modify a MultiList field:</span></p>
+<ol>
+<li>
+<p>Click the MultiList select button to display the palette of list entries.</p>
+</li>
+<li>
+<p>Select one or more list entries:</p>
+<ul>
+<li>
+<p>Double-click a row to add the entry to the list field.</p>
+</li>
+<li>
+<p>Or, select a row, drag it to the list field, and drop it.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Press Escape to close the palette.</p>
+</li>
+</ol>
+<p>If the attribute for the list field includes a large number of list entries, the Agile administrator may choose to configure Agile PLM Web Client to display the editable list with search display.</p>
+<p><span class="bold">To modify a search display list field:</span></p>
+<ol>
+<li>
+<p>Click the list field search button to display the search palette.</p>
+</li>
+<li>
+<p>In the search palette, enter a search string and click the <span class="bold">Execute a Quick Search</span> button.</p>
+</li>
+<li>
+<p>In the search results table, double-click a row to add the entry to the list field.</p>
+<p>Or, select a row, drag it to the list field, and drop it.</p>
+</li>
+<li>
+<p>Press Escape to close the palette.</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+For list fields that contain more than 250 list entries, Web Client automatically displays the entries in search display.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>For information about configuring list fields, see <span class="italic">Agile PLM Administrator Guide</span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDIFFBC" name="CHDIFFBC"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.5</span> Viewing the Contents of LargeText Fields</h2>
+<p>LargeText attributes are fields on the Page Two and Page Three tabs that can contain a large number of characters (between the minimum of 4000 and the maximum of 2,000,000) and HTML formatting. By default, the number of characters limit is set to 60,000. (By comparison, MultiText fields can contain a maximum of 4000 characters.)</p>
+<p>For information about LargeText attribute property settings, see <span class="italic">Agile PLM Administrator Guide</span>.</p>
+<p>On the Web Client <span class="bold">Title Block</span> tab or <span class="bold">Cover Page</span> tab, a LargeText field displays the first 4000 characters of the content.</p>
+<ul>
+<li>
+<p>Use the scroll bar to view more content in the field.</p>
+</li>
+<li>
+<p>If there is additional content in a non-journal LargeText field, then the message</p>
+<p><code dir="ltr">Select the expand icon to see the complete field content</code></p>
+<p>is displayed at the bottom of the scroll area.</p>
+</li>
+<li>
+<p>If there is additional content in a journal LargeText field, then the message</p>
+<p><code dir="ltr">Select the expand icon to see the complete field content. Only the most recent journal entry is shown.</code></p>
+<p>is displayed at the bottom of the scroll area.</p>
+</li>
+</ul>
+<p><span class="bold">To view the LargeText field content:</span></p>
+<ol>
+<li>
+<p>Click the <span class="bold">Launch the Large Text Palette</span> button to the right of the LargeText field. The LargeText palette opens.</p>
+</li>
+<li>
+<p>Use the scroll bar to view more content in the palette.</p>
+</li>
+<li>
+<p>Use the palette window controls in the upper-right corner of the palette window to control how the palette is displayed:</p>
+<ul>
+<li>
+<p>Minimize</p>
+</li>
+<li>
+<p>Maximize</p>
+</li>
+<li>
+<p>Restore Original Size</p>
+</li>
+<li>
+<p>Escape (small <span class="bold">x</span>) closes the palette, or press the Escape key on the keyboard.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you have the appropriate privileges, you can click the <span class="bold">Edit</span> button or <span class="bold">Add</span> button on the palette to open the LargeText editor. See <a href="#BABCFDBF">"Modifying LargeText Fields."</a></p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABCFDBF" name="BABCFDBF"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">5.6</span> Modifying LargeText Fields</h2>
+<p>LargeText fields can include HTML-formatted text and images. Agile PLM provides a WYSIWYG (What You See Is What You Get) editor that produces standards-compliant HTML code. With the HTML editor, you can enter text in the editing area and format that text in a few simple clicks of the toolbar buttons without knowing the details of HTML syntax.</p>
+<p>When the LargeText field is saved, a content filter ensures that the correct enabled HTML tags are included.</p>
+<p>LargeText fields can be configured two ways:</p>
+<ul>
+<li>
+<p>Include Journal Entry property = No</p>
+<p>When journal entry is disabled, the LargeText field is edited as a single document. Once you have entered content into the LargeText field, you can edit and revise that content, provided you have the necessary Read and Modify privileges.</p>
+</li>
+<li>
+<p>Include Journal Entry property = Yes</p>
+<p>When journal entry is enabled, users can add successive content entries to the LargeText field. Each entry includes the name of the user who added it, and the date and time it was added. This allows you to create a running commentary or discussion. Journal entries cannot be edited.</p>
+<p>LargeText journal fields display the journal entries in the order in which they were entered, either Youngest First (most recent) or Oldest First. Default is Youngest First.</p>
+</li>
+</ul>
+<p>See the following topics for detailed information about modifying LargeText fields:</p>
+<ul>
+<li>
+<p><a href="#BABJCFBC">"LargeText Field HTML Editor"</a></p>
+</li>
+<li>
+<p><a href="#BABJJCBF">"Modifying LargeText Journal Fields"</a></p>
+</li>
+<li>
+<p><a href="#BABJIGIA">"Modifying LargeText Non-journal Fields"</a></p>
+</li>
+<li>
+<p><a href="#BABJEIDE">"Comparing Historical LargeText Field Edits"</a></p>
+</li>
+<li>
+<p><a href="#BABHFABC">"Viewing LargeText Field Redline Edits"</a></p>
+</li>
+</ul>
+<a id="BABJCFBC" name="BABJCFBC"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.6.1</span> LargeText Field HTML Editor</h3>
+<p>The following table describes all the available HTML editing functions. The Agile administrator can enable or disable each HTML editor toolbar button for each LargeText field. Disabled HTML editor button are inactive and appear greyed out.</p>
+<div class="tblruleformal"><a id="sthref259" name="sthref259"></a><a id="sthref260" name="sthref260"></a>
+<p class="titleintable">Table 5-2 HTML Editor toolbar</p>
+<table class="RuleFormal" title="HTML Editor toolbar " summary="HTML editing features, LargeTxt field, Web Client" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="25%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t16">Toolbar Buttons</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t16">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_source.png" alt="Display Source Code button, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r2c1-t16 r1c2-t16">
+<p><span class="bold">Source</span></p>
+<p>View or edit the HTML source code of the LargeText field contents.</p>
+<p>To return to the WISYIWYG view, click the <span class="bold">Source</span> button again.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_cut-copy-paste.png" alt="Cut Copy Paste buttons, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r3c1-t16 r1c2-t16">
+<ul>
+<li>
+<p><span class="bold">Cut</span></p>
+<p>Cut the selected text to the clipboard.</p>
+</li>
+<li>
+<p><span class="bold">Copy</span></p>
+<p>Copy the selected text to the clipboard.</p>
+</li>
+<li>
+<p><span class="bold">Paste</span></p>
+<p>Past the clipboard content, including formatting.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_paste-text.png" alt="Paste as plain text button, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r4c1-t16 r1c2-t16">
+<p><span class="bold">Paste as plain text</span></p>
+<p>Paste the clipboard content without formatting.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_paste-from-word.png" alt="Paste from Word button, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r5c1-t16 r1c2-t16">
+<p><span class="bold">Paste from Word</span></p>
+<p>Paste clipboard content copied from Microsoft Word or similar applications, including formatting.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_undo-redo.png" alt="Undo, Redo buttons, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r6c1-t16 r1c2-t16">
+<p><span class="bold">Undo</span>, <span class="bold">Redo</span></p>
+<p><span class="bold">Undo</span> the most recently performed action.</p>
+<p><span class="bold">Redo</span> the most recent undo operation.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_para-format.png" alt="Paragraph Formats list button, LargeText editor Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r7c1-t16 r1c2-t16">
+<p><span class="bold">Paragraph Format</span></p>
+<ol>
+<li>
+<p>Position the cursor in the paragraph you want to format.</p>
+</li>
+<li>
+<p>Click the Paragraph Format button and choose a format from the drop-down list.</p>
+</li>
+</ol>
+<p>Paragraph formats are predefined combinations of formatting options that provide a uniform text presentation.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r8c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_font.png" alt="Font size drop-down list button, LgTxt editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r8c1-t16 r1c2-t16">
+<p><span class="bold">Font Name</span></p>
+<p>You can apply a font to the entire editable document, to a paragraph, or to a text fragment.</p>
+<ol>
+<li>
+<p>Select the text to which the font will be applied.</p>
+</li>
+<li>
+<p>Click the Font button and select a font from the drop-down list.</p>
+</li>
+<li>
+<p>To change the font of the text you enter, select a font from the drop-down list and then begin typing.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r9c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_font-size.png" alt="Font size drop-down list button, LgTxt editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r9c1-t16 r1c2-t16">
+<p><span class="bold">Font Size</span></p>
+<p>You can apply a different font size to the selected text fragment.</p>
+<ol>
+<li>
+<p>Select the text to which the font size will be applied.</p>
+</li>
+<li>
+<p>Click the Font Size button and select a font size from the drop-down list.</p>
+</li>
+<li>
+<p>To change the font size of the text you enter, select a font size from the drop-down list and then begin typing.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r10c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_text-color.png" alt="Text Color button, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r10c1-t16 r1c2-t16">
+<p><span class="bold">Text Color</span></p>
+<p>Change the color of the selected text.</p>
+<ol>
+<li>
+<p>Select the text to which the text color will be applied.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Text Color</span> button and choose a color from the color palette.</p>
+</li>
+<li>
+<p>For more color choices, click the <span class="bold">More Colors</span> link in the color palette and then select a color in the Select Color dialog. Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r11c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_text-bkgrnd-color.png" alt="Text Backgroud Color button, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r11c1-t16 r1c2-t16">
+<p><span class="bold">Background Color</span></p>
+<p>Change the background color of the selected text.</p>
+<ol>
+<li>
+<p>Select the text to which the background color will be applied.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Background Color</span> button and choose a color from the color palette.</p>
+</li>
+<li>
+<p>For more color choices, click the <span class="bold">More Colors</span> link in the color palette and then select a color in the Select Color dialog. Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r12c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_format-basic.png" alt="Bold Italic Underline buttons, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r12c1-t16 r1c2-t16">
+<p>Basic text formatting: <span class="bold">Bold</span>, <span class="bold">Italic</span>, <span class="bold">Underline</span>.</p>
+<ol>
+<li>
+<p>Select the text to which the text format will be applied.</p>
+</li>
+<li>
+<p>Click the appropriate button for each text format you wish to apply: <span class="bold">Bold</span>, <span class="bold">Italic</span>, and <span class="bold">Underline</span>.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r13c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_format-extended.png" alt="StrikeThrough Subscript Superscript LgTxt editor WebClient" /></p>
+<br /></td>
+<td style="text-align:left" headers="r13c1-t16 r1c2-t16">
+<p>Extended text formatting: <span class="bold">Strike Through</span>, <span class="bold">Subscript</span>, <span class="bold">Superscript</span>.</p>
+<ol>
+<li>
+<p>Select the text to which the text format will be applied.</p>
+</li>
+<li>
+<p>Click the appropriate button for each text format you wish to apply: <span class="bold">Strike Through</span>, <span class="bold">Subscript</span>, and <span class="bold">Superscript</span>.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r14c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_remove-formatting.png" alt="Remove Formatting button, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r14c1-t16 r1c2-t16">
+<p><span class="bold">Remove Format</span></p>
+<p>Remove all text formatting from the selected text.</p>
+<ol>
+<li>
+<p>Select the text to which the text formats will be removed.</p>
+</li>
+<li>
+<p>Click the Remove Format button.</p>
+</li>
+</ol>
+<p>The following text formats are removed: Font Name, Font Size, Text Color, Background Color, Bold, Italic, Underline, Strike Through, Subscript, and Superscript.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r15c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_lists.png" alt="Numbered Bulleted list buttons LargeText editor Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r15c1-t16 r1c2-t16"><br />
+<span class="bold">Insert/Remove Numbered List</span><br />
+<span class="bold">Insert/Remove Bulleted List</span>
+<ol>
+<li>
+<p>To create a list, either select one or more paragraphs, or place the cursor in a paragraph.</p>
+</li>
+<li>
+<p>Click a list button. The paragraphs become list items.</p>
+</li>
+<li>
+<p>Press Enter to create another list item.</p>
+</li>
+<li>
+<p>To remove a list, select one or more list items and click the list button.</p>
+</li>
+<li>
+<p>To customize the list properties, right-click in the list to display the context menu, and choose List Properties.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r16c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_indentation.png" alt="Decrease Increase indent buttons LgTxt editor Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r16c1-t16 r1c2-t16"><br />
+<span class="bold">Decrease Indent (outdent)</span><br />
+<span class="bold">Increase Indent (indent)</span>
+<p>Place the cursor in a paragraph. Click the indent or outdent button to increase or decrease the indent by one tab length.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r17c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_blockquote.png" alt="Blockquote button, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r17c1-t16 r1c2-t16">
+<p><span class="bold">Block Quote</span></p>
+<p>Block quote is used for long quotations that are distinguished from the main text by both left and right indentation</p>
+<p>To add a block quotation, either select one or more paragraphs, or place the cursor in a paragraph.and then click the <span class="bold">Block Quote</span> button.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r18c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_text-alignment.png" alt="Text alignmen buttons, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r18c1-t16 r1c2-t16">
+<p>Text Alignment: Place the cursor in the paragraph and click the alignment button. Click again to remove the alignment.</p>
+<p><span class="bold">Align Left</span>: Aligns the paragraph text at the left margin.</p>
+<p><span class="bold">Center</span>: Aligns the paragraph text symmetrically in the center between the two margins.</p>
+<p><span class="bold">Align Right</span>: Aligns the paragraph text at the right margin.</p>
+<p><span class="bold">Justify</span>: Aligns the paragraph text to both the left and right margins.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r19c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_url-link-unlink.png" alt="Link, Unlink buttons, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r19c1-t16 r1c2-t16">
+<p>URL <span class="bold">Link</span> and <span class="bold">Unlink</span></p>
+<p>Link:</p>
+<ol>
+<li>
+<p>Place the curser where the URL is to be inserted.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Link</span> button to display the Link dialog.</p>
+</li>
+<li>
+<p>Select a <span class="bold">Link Type</span> and <span class="bold">Protocol</span>, or accept the default settings.</p>
+</li>
+<li>
+<p>In the <span class="bold">URL</span> field, enter the URL address.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.</p>
+</li>
+</ol>
+<p>Unlink:</p>
+<ol>
+<li>
+<p>Place the cursor in the link text.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Unlink</span> button. The link is converted to plain text.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r20c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_image.png" alt="Image insert button, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r20c1-t16 r1c2-t16">
+<p><span class="bold">Image</span></p>
+<p>To insert an image, click the <span class="bold">Image</span> button to display the Image Properties dialog.</p>
+<p><span class="bold">Image Info</span> tab:</p>
+<ol>
+<li>
+<p>In the <span class="bold">URL</span> field, enter the external address of the image, for example <code dir="ltr">http://example.com/image1.jpg</code>.</p>
+</li>
+<li>
+<p>In the <span class="bold">Alternate Text</span> field, enter a brief text description of the image for use by applications such as screen readers.</p>
+</li>
+<li>
+<p><span class="bold">Width</span>: Image width in pixels. Default is the size of the original image.</p>
+</li>
+<li>
+<p><span class="bold">Height</span>: Image height in pixels. Default is the size of the original image.</p>
+</li>
+<li>
+<p><span class="bold">Border</span>: Specify an optional border around the image in pixels.</p>
+</li>
+<li>
+<p><span class="bold">Hspace</span>: Specify a horizontal space or margin in pixels between the image or image border and the surrounding document elements.</p>
+</li>
+<li>
+<p><span class="bold">Vspace</span>: Specify a vertical space or margin in pixels between the image or image border and the surrounding document elements.</p>
+</li>
+<li>
+<p><span class="bold">Alignment</span>: Select an optional alignment, either left or right.</p>
+</li>
+<li>
+<p>The <span class="bold">Preview</span> pane displays a preliminary view of the image with the formatting options applied.</p>
+</li>
+</ol>
+<p><span class="bold">Link</span> tab:</p>
+<p>Use the Link tab to assign a link to the image, thus converting the image into a clickable link.</p>
+<p>First, use the Image Info tab to insert an image into the document.</p>
+<p>Then, on the <span class="bold">Link</span> tab, enter a URL address.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r21c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_table.png" alt="Table insert edit button, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r21c1-t16 r1c2-t16">
+<p><span class="bold">Table</span></p>
+<ol>
+<li>
+<p>To create a table, click the <span class="bold">Table</span> button to display the Table Properties dialog, and then configure the table properties.</p>
+</li>
+<li>
+<p><span class="bold">Rows</span>: Enter the number of rows (required property).</p>
+</li>
+<li>
+<p><span class="bold">Columns</span>: Enter the number of columns (required property).</p>
+</li>
+<li>
+<p><span class="bold">Width</span>: Define the width of the table by pixels (example: 500) or by percentage of the editing area (example: 75%).</p>
+</li>
+<li>
+<p><span class="bold">Height</span>: the height of the table in pixels (optional).</p>
+</li>
+<li>
+<p><span class="bold">Headers</span>: You can apply header formats to First Row, First Column or Both (optional).</p>
+</li>
+<li>
+<p><span class="bold">Border size</span>: thickness of the table border in pixels.</p>
+</li>
+<li>
+<p><span class="bold">Alignment</span>: the alignment of the table on the page; Left, Center, or Right.</p>
+</li>
+<li>
+<p><span class="bold">Cell spacing</span>: in pixels, the space between individual cells and the space between cells and table borders.</p>
+</li>
+<li>
+<p><span class="bold">Cell padding</span>: in pixels, the space between the cell border and the cell contents.</p>
+</li>
+<li>
+<p><span class="bold">Caption</span>: the table title displayed above the table.</p>
+</li>
+<li>
+<p><span class="bold">Summary</span>: Enter a brief text description of the table for use by applications such as screen readers.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r22c1-t16" headers="r1c1-t16">
+<p>Table context menu</p>
+</td>
+<td style="text-align:left" headers="r22c1-t16 r1c2-t16">
+<p><span class="bold">To modify properties of an existing table</span>:</p>
+<ol>
+<li>
+<p>Right-click in the table to display the table context menu and select a menu item:</p>
+</li>
+<li>
+<p><span class="bold">Delete Table</span>: Delete the entire table and its contents.</p>
+</li>
+<li>
+<p><span class="bold">Table Properties</span>: Displays the Table Properties dialog. With the exception of the rows and columns, you can modify the configuration options.</p>
+</li>
+<li>
+<p><span class="bold">Row</span> &ndash; Displays the row submenu:</p>
+<p><span class="bold">Insert Row Before</span>: insert a new row before the row containing the cursor.</p>
+<p><span class="bold">Insert Row After</span>: insert a new row after the row containing the cursor.</p>
+<p><span class="bold">Delete Rows</span>: Delete the selected rows or the row containing the cursor.</p>
+</li>
+<li>
+<p><span class="bold">Column</span> &ndash; Displays the column submenu:</p>
+<p><span class="bold">Insert Column Before</span>: insert a new column before the column containing the cursor.</p>
+<p><span class="bold">Insert Column After</span>: insert a new column after the column containing the cursor.</p>
+<p><span class="bold">Delete Columns</span>: Delete the selected columns or the column containing the cursor.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r23c1-t16" headers="r1c1-t16">
+<p>Table context menu, <span class="bold">Cell</span> submenu</p>
+</td>
+<td style="text-align:left" headers="r23c1-t16 r1c2-t16">
+<p><span class="bold">To modify cell properties of an existing table, right-click in the table and choose Cell to display the cell submenu:</span></p>
+<p><span class="bold">Insert Cell Before</span>: insert a new cell before the cell containing the cursor.</p>
+<p><span class="bold">Insert Cell After</span>: insert a new cell after the cell containing the cursor.</p>
+<p><span class="bold">Delete Cells</span>: Delete the selected rows or the row containing the cursor.</p>
+<p><span class="bold">Merge Cells</span>: To merge multiple cells into one, select two or more cells and then choose the <span class="bold">Merge Cells</span> menu item.</p>
+<p><span class="bold">Merge Right</span>: Merges the cell containing the cursor with the cell on its right. The contents of both cells are joined.</p>
+<p><span class="bold">Merge Down</span>: Merges the cell containing the cursor with the cell below it. The contents of both cells are joined.</p>
+<p>S<span class="bold">plit Cell Horizontally</span>: Split the cell containing the cursor into two cells, creating a new cell to the right. The cell content appears in the original cell on the left.</p>
+<p><span class="bold">Split Cell Vertically</span>: Split the cell containing the cursor into two cells, creating a new cell below. The cell content appears in the original upper cell.</p>
+<p><span class="bold">Cell Properties</span>: Opens the Cell Properties dialog.</p>
+<ul>
+<li>
+<p><span class="bold">Width</span>: Enter a number for the width of the cell in pixels or percent. Choose pixels or percent from the drop-down list.</p>
+</li>
+<li>
+<p><span class="bold">Height</span>: The height of the cells in pixels.</p>
+</li>
+<li>
+<p><span class="bold">Cell Type:</span> From the drop-down list, choose Data cell or Header cell.</p>
+</li>
+<li>
+<p><span class="bold">Word Wrap</span>: Disable (No) or Enable (Yes, default) word wrapping in the cell.</p>
+</li>
+<li>
+<p><span class="bold">Rows Span</span>: Enter a numeric value to set the <code dir="ltr">rowspan</code> attribute. This setting stretches the row downward over several rows.</p>
+</li>
+<li>
+<p><span class="bold">Columns Span</span>: Enter a numeric value to set the <code dir="ltr">colspan</code> attribute. This setting stretches the cell to the right over several columns.</p>
+</li>
+<li>
+<p><span class="bold">Horizontal Alignment</span>: From the drop-down list, select the horizontal alignment of the cell contents: <span class="bold">Left</span>, <span class="bold">Center</span>, or <span class="bold">Right</span>.</p>
+</li>
+<li>
+<p><span class="bold">Vertical Alignment</span>: From the drop-down list, select the vertical alignment of the cell contents: <span class="bold">Top</span>, <span class="bold">Middle</span>, <span class="bold">Bottom</span>, or <span class="bold">Baseline</span>.</p>
+</li>
+<li>
+<p><span class="bold">Background Color</span>: The color of the cell background. Click <span class="bold">Choose</span> and select a color in the Select Color dialog.</p>
+</li>
+<li>
+<p><span class="bold">Border Color</span>: The color of the cell border. Click <span class="bold">Choose</span> and select a color in the Select Color dialog.</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r24c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_horizontal-line.png" alt="Horizontal Line button, LargeText editor, Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r24c1-t16 r1c2-t16">
+<p><span class="bold">Insert Horizontal Line</span></p>
+<p>Click the <span class="bold">Insert Horizontal Line</span> button to insert a horizontal line (also called a horizontal rule) into the document at the cursor location.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r25c1-t16" headers="r1c1-t16">
+<p><img src="img/btn_lgtxt_special-character.png" alt="Special Character insert button LargeText editor Web Client" /></p>
+<br /></td>
+<td style="text-align:left" headers="r25c1-t16 r1c2-t16">
+<p><span class="bold">Insert Special Character</span></p>
+<ol>
+<li>
+<p>Click the <span class="bold">Insert Special Character</span> button to open the Select Special Character dialog.</p>
+</li>
+<li>
+<p>Select a character by clicking it.</p>
+</li>
+<li>
+<p>Or, navigate to the character you want with the up, down, left, and right arrow keys, and then press Enter.</p>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect2" -->
+<a id="BABJJCBF" name="BABJJCBF"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.6.2</span> Modifying LargeText Journal Fields</h3>
+<p>When a LargeText field is configured to allow journal entries, and you have the appropriate privileges, then you can add a journal entry to the LargeText journal field. Once you have saved your entry, it cannot be edited.</p>
+<p><span class="bold">To modify a LargeText journal field:</span></p>
+<ol>
+<li>
+<p>Click the <span class="bold">Launch the Large Text Palette</span> button to display the LargeText palette.</p>
+</li>
+<li>
+<p>In the palette, click the <span class="bold">Add</span> button. The HTML editor buttons are displayed with the text entry field below.</p>
+</li>
+<li>
+<p>Enter text and format the text as desired. Refer to <a href="#BABJCFBC">"LargeText Field HTML Editor"</a> for more information about the HTML editor.</p>
+</li>
+<li>
+<p>When you are done, click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The modification of a LargeText field is independent from the modification of the business object. A LargeText field can be modified at any time, regardless of whether the Title Block is in edit mode.
+<p>If the Title Block is in edit mode, and you modify a LargeText field and save those modifications, the LargeText field modifications are not discarded if you then cancel the Title Block edit session.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect2" -->
+<a id="BABJIGIA" name="BABJIGIA"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.6.3</span> Modifying LargeText Non-journal Fields</h3>
+<p>When a LargeText field is configured to disallow journal entries, and you have the appropriate privileges, then you can edit and revise the LargeText field. Once you have saved your document, you can update or revise it, providing you have the appropriate privileges.</p>
+<p><span class="bold">To modify a LargeText non-journal field:</span></p>
+<ol>
+<li>
+<p>Click the <span class="bold">Launch the Large Text Palette</span> button to display the LargeText palette.</p>
+</li>
+<li>
+<p>In the palette, click the <span class="bold">Edit</span> button. The HTML editor buttons are displayed with the text entry field below.</p>
+</li>
+<li>
+<p>Enter text and format the text as desired. Refer to <a href="#BABJCFBC">"LargeText Field HTML Editor"</a> for more information about the HTML editor.</p>
+</li>
+<li>
+<p>When you are done, click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The modification of a LargeText field is independent from the modification of the business object. A LargeText field can be modified at any time, regardless of whether the Title Block is in edit mode.
+<p>If the Title Block is in edit mode, and you modify a LargeText field and save those modifications, the LargeText field modifications are not discarded if you then cancel the Title Block edit session.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect2" -->
+<a id="BABJEIDE" name="BABJEIDE"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.6.4</span> Comparing Historical LargeText Field Edits</h3>
+<p>You can view the difference between LargeText field edits on the business object <span class="bold">History</span> tab.</p>
+<p><span class="bold">To compare LargeText field edits</span>:</p>
+<ol>
+<li>
+<p>Open the business object and click the <span class="bold">History</span> tab.</p>
+</li>
+<li>
+<p>In the History table <span class="bold">Details</span> column, click the <span class="bold">View</span> link to display the LargeText palette showing content saved for that modification.</p>
+</li>
+<li>
+<p>In the History table <span class="bold">Details</span> column, click one of the Compare links to display the Difference Between Edits window.</p>
+<ul>
+<li>
+<p><span class="bold">Incremental</span> &ndash; compares the content saved for that modification against the previously saved modification.</p>
+</li>
+<li>
+<p><span class="bold">Latest</span> &ndash; compares the content saved for that modification against the most current saved content.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Follow the instructions in the Difference Between Edits window to display descriptions of the differences:</p>
+<ul>
+<li>
+<p>Added text is shown in a green background.</p>
+</li>
+<li>
+<p>Removed text is shown in red background.</p>
+</li>
+<li>
+<p>Formatted text is shown with a blue underline and tooltip.</p>
+</li>
+<li>
+<p>Click the changed text to see a detailed description.</p>
+</li>
+<li>
+<p>Use the left and right arrow keys to review the edits sequentially.</p>
+</li>
+<li>
+<p>Use the <span class="bold">First</span> and <span class="bold">Last</span> links in the Difference Between Edits window to go to the first change or to go to the last change.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When you are finished, close the window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABHFABC" name="BABHFABC"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.6.5</span> Viewing LargeText Field Redline Edits</h3>
+<p>If the LargeText non-journal field has been configured to be change controlled, you can view the redline edits on the ECO object Title Block redline tab. LargeText journal fields cannot be change controlled. For more information, see <span class="italic">Agile PLM Administrator Guide</span>.</p>
+<ol>
+<li>
+<p>Open the ECO object, and click the <span class="bold">Affected Items</span> tab to display it.</p>
+</li>
+<li>
+<p>In the Affected Items table, select the affected item row.</p>
+</li>
+<li>
+<p>In the redline pane below the Affected Items table, click the Title Block redline tab to display the Title Block redlines.</p>
+</li>
+<li>
+<p>If the LargeText field has been redline edited, then the <span class="bold">Show Changes</span> button appears to the right of the LargeText field.</p>
+<p>Click the <span class="bold">Show Changes</span> button. The Difference Between Edits window opens.</p>
+</li>
+<li>
+<p>Follow the instructions in the Difference Between Edits window to display descriptions of the differences:</p>
+<ul>
+<li>
+<p>Added text is shown in a green background.</p>
+</li>
+<li>
+<p>Removed text is shown in red background.</p>
+</li>
+<li>
+<p>Formatted text is shown with a blue underline and tooltip.</p>
+</li>
+<li>
+<p>Click the changed text to see a detailed description.</p>
+</li>
+<li>
+<p>Use the left and right arrow keys to review the edits sequentially.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When you are finished, close the window.</p>
+</li>
+</ol>
+<p>For more information about change controlled attributes, see <span class="italic">Agile PLM Product Collaboration User Guide</span>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref261" name="sthref261"></a>
+<h2 class="sect1"><span class="secnum">5.7</span> Printing Object Tabs</h2>
+<p>You can print information from any tabbed object.</p>
+<p>Attachments are printed from their native applications or the Viewer. For more information, see <a href="chapter_10.htm#CHDBFICE">"Printing Attachment Files."</a></p>
+<p><span class="bold">To print an object in Web Client:</span></p>
+<ol>
+<li>
+<p>Open the object.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Print</span> from the <span class="bold">Actions</span> menu. The Print Options dialog appears.</p>
+</li>
+<li>
+<p>Indicate whether you want to print all tabs or just the current tab.</p>
+<p>If you choose <span class="bold">All tabs</span>, specify whether you want the printout to include all levels (for example, of the BOM).</p>
+</li>
+<li>
+<p>Print the object by using one of the following options:</p>
+<ul>
+<li>
+<p>Click the <span class="bold">Preview</span> button in the Print Options dialog to view a preview of the printout in a separate window. Click the <span class="bold">Print</span> button in the preview window to open the Print dialog. Click <span class="bold">Cancel</span> to close the preview window.</p>
+</li>
+<li>
+<p>Click <span class="bold">Print</span> in the Print Options dialog. A preview of the printout appears in a separate window and a Print dialog box opens.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In the Print dialog, make sure the appropriate print options are selected and click <span class="bold">Print</span>.</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The <span class="bold">Structure</span> tab of Design objects is not supported for printing.
+<p>LargeText fields are not supported for printing. See <a href="#CHDIFFBC">"Viewing the Contents of LargeText Fields."</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref262" name="sthref262"></a>
+<h2 class="sect1"><span class="secnum">5.8</span> Emailing Objects</h2>
+<p>You can email any Agile object to another user listed in the Agile address book. Email is sent to the email address specified in the Agile user profile. The email contains a URL that links to the mailed object, and the recipient can click the URL to view the object in Agile PLM.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+The Agile administrator sets your user profile <span class="bold">Preferred Client</span> preference to determine whether you receive links to Web Client or Java Client.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><span class="bold">To email an Agile object in Web Client:</span></p>
+<ol>
+<li>
+<p>Open the object.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Actions</span> &gt; <span class="bold">Send</span>. The Send dialog appears.</p>
+</li>
+<li>
+<p>Type the names you want, separated by a semicolon. Or, click the address book icon button to open the address book palette to search for the names you want.</p>
+</li>
+<li>
+<p>Enter any comments in the <span class="bold">Comments</span> field.</p>
+</li>
+<li>
+<p>Click <span class="bold">Send</span> to mail the object.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref263" name="sthref263"></a>
+<h2 class="sect1"><span class="secnum">5.9</span> Smart URL Quick Access to Objects, Files, and Searches</h2>
+<p>You can generate quick access URLs that provide direct pointers to either Agile objects or to Agile attachment files.</p>
+<p>These quick access URLs can be pasted into other applications or files such as spreadsheet files, word processing files, a company Intranet web page or WIKI page, or into an email.</p>
+<p>For information about quick access to Agile objects using quick access URLs, see:</p>
+<ul>
+<li>
+<p><a href="#CHDIADGH">"Agile-Generated Quick Access Object Smart URLs."</a></p>
+</li>
+<li>
+<p><a href="#CHDEIBGB">"Using Quick Access Object Smart URLs."</a></p>
+</li>
+<li>
+<p><a href="#CHDBEIAA">"Formats for User-Generated Smart Object URLs."</a></p>
+</li>
+</ul>
+<p>For information about quick access to attachment files using attachment quick access URLs, see:</p>
+<ul>
+<li>
+<p><a href="chapter_10.htm#CEGJABDF">"Smart URL Quick Access to Files."</a></p>
+</li>
+</ul>
+<p>For information about quick access to searches using search quick access Smart URLs, see:</p>
+<ul>
+<li>
+<p><a href="chapter_8.htm#CHDJBIBB">"Smart URL Quick Access to Searches"</a></p>
+</li>
+</ul>
+<a id="CHDIADGH" name="CHDIADGH"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.9.1</span> Agile-Generated Quick Access Object Smart URLs</h3>
+<p>From Web Client, you can generate Agile PLM object quick access URLs from the Web Client Actions menu.</p>
+<p><span class="bold">To generate an Agile PLM object quick access URL</span>:</p>
+<ol>
+<li>
+<p>Login to Agile PLM Web Client and open the desired object.</p>
+</li>
+<li>
+<p>In the Actions menu, choose <span class="bold">Copy URL to Clipboard</span>.</p>
+</li>
+</ol>
+<p>The URL is copied to your clipboard. You can then paste it into another application or file, such as a word processing file, a spreadsheet file, or an email.</p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDEIBGB" name="CHDEIBGB"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.9.2</span> Using Quick Access Object Smart URLs</h3>
+<p>When a user clicks a Quick Access Smart Object URL, the user actions are the same whether the URL is an Agile-generated quick access URL or a user-generated Smart Object URL:</p>
+<ol>
+<li>
+<p>The user clicks the URL and the Agile PLM Web Client login screen is displayed in a browser window.</p>
+</li>
+<li>
+<p>The user enters the respective login information.</p>
+</li>
+<li>
+<p>Upon successful login, Agile PLM searches for the object specified in the link.</p>
+</li>
+</ol>
+<p>(If the object is not found, then Agile PLM displays an error and returns to the user's Home page.)</p>
+<p>When the object is found, Agile PLM verifies that the user has the appropriate privileges to read the object and displays the first tab of the object, for example, the <span class="bold">Title Page</span>. If the Smart URL specifies a specific tab, then that tab is displayed.</p>
+<p>See also <a href="chapter_10.htm#CEGGBAIC">"Accessing Attachment Files using Quick Access URLs,"</a>and <a href="chapter_8.htm#CHDJFJEG">"Formats for User-Generated Smart Object URLs for Searches."</a></p>
+</div>
+<!-- class="sect2" -->
+<a id="CHDBEIAA" name="CHDBEIAA"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.9.3</span> Formats for User-Generated Smart Object URLs</h3>
+<p>The Agile Smart Object URL feature is designed to enable effective collaboration through email, spreadsheets, documents, WIKIs, and so forth. Users or automated tools can generate smart readable URLs that point to a specific object in Agile PLM, that open a specific attachment file, and that open a search page in Agile PLM.</p>
+<p>Smart URLs can specify a specific tab, revision, or version to display when the object opens in Agile PLM.</p>
+<p>By using the Smart URL formats, a user does not need to log into Agile PLM to generate the object URL. Automated tools can also use this format to generate object URLs.</p>
+<p>Smart Object URLs can be used for objects available from Web Client.</p>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref264" name="sthref264"></a>
+<h4 class="sect3"><span class="secnum">5.9.3.1</span> Smart Object URL Format</h4>
+<p>You can generate Smart Object URLs by using the following formats:</p>
+<br />
+<code dir="ltr">http://server:port/&lt;VirtualPath&gt;/object/&lt;ObjectType&gt;/&lt;ObjectName&gt;</code><br />
+<br />
+<code dir="ltr">http://server:port/&lt;VirtualPath&gt;/object/&lt;ObjectType&gt;/&lt;ObjectName&gt;</code><br />
+<code dir="ltr">[/tab/&lt;TabName&gt;]</code><br />
+<br />
+<code dir="ltr">http://server:port/&lt;VirtualPath&gt;/object/&lt;ObjectType&gt;/&lt;ObjectName&gt;</code><br />
+<code dir="ltr">[/Rev/&lt;RevChange&gt;][/tab/&lt;TabName&gt;]</code><br />
+<br />
+<code dir="ltr">http://server:port/&lt;VirtualPath&gt;/object/&lt;ObjectType&gt;/&lt;ObjectName&gt;</code><br />
+<code dir="ltr">[/Version/&lt;VerNum&gt;][/tab/&lt;TabName&gt;]</code><br />
+<p>where the URL has the following representation:</p>
+<div class="tblruleformal"><a id="sthref265" name="sthref265"></a><a id="sthref266" name="sthref266"></a>
+<p class="titleintable">Table 5-3 Smart Object URL parameters</p>
+<table class="RuleFormal" title="Smart Object URL parameters" summary="Object Quick Access URL Format interpretation" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="22%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t21">Parameter</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t21">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t21" headers="r1c1-t21">
+<p>server</p>
+<p>port</p>
+<p>VirtualPat</p>
+</td>
+<td style="text-align:left" headers="r2c1-t21 r1c2-t21">
+<p>Server, port, and VirtualPath identify the Agile PLM instance</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t21" headers="r1c1-t21">
+<p>object</p>
+</td>
+<td style="text-align:left" headers="r3c1-t21 r1c2-t21">
+<p>The text "object" indicates to Agile PLM that the URL is an object URL.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t21" headers="r1c1-t21">
+<p>ObjectType</p>
+</td>
+<td style="text-align:left" headers="r4c1-t21 r1c2-t21">
+<p>ObjectType refers to the subclass (type) of object, for example, ECO, Part, Manufacturer, File Folder, Project, Activity, or Discussion</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t21" headers="r1c1-t21">
+<p>ObjectName</p>
+</td>
+<td style="text-align:left" headers="r5c1-t21 r1c2-t21">
+<p>ObjectName refers to the unique identifier for the object. Depending on the object class, the unique identifier is either an object number or a name.</p>
+<p><span class="bold">Note:</span> Manufacturer Parts are a special class of objects that are uniquely identified by two parameters: a Manufacturer Name and a Manufacturer Part Number. Therefore, a URL referring to a specific Manufacturer Part uses the following format:</p>
+<br />
+<code dir="ltr">http: //server:port/VirtualPath/object/ObjectType/</code><br />
+<code dir="ltr">MfrName/MfrPart_Number</code></td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t21" headers="r1c1-t21">
+<p>Rev</p>
+</td>
+<td style="text-align:left" headers="r6c1-t21 r1c2-t21">
+<p>The text "Rev" indicates to Agile PLM that the URL opens a specific Rev (revision) of the object</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t21" headers="r1c1-t21">
+<p>RevChange</p>
+</td>
+<td style="text-align:left" headers="r7c1-t21 r1c2-t21">
+<p>RevChange refers to the unique identifier (number) of the Change object that released the Rev you wish to display when the object opens in Agile PLM.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r8c1-t21" headers="r1c1-t21">
+<p>Version</p>
+</td>
+<td style="text-align:left" headers="r8c1-t21 r1c2-t21">
+<p>The text "Version" indicates to Agile PLM that the URL opens a specific Version of the object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r9c1-t21" headers="r1c1-t21">
+<p>VerNum</p>
+</td>
+<td style="text-align:left" headers="r9c1-t21 r1c2-t21">
+<p>VerNum refers to the object version number (1, 2, 3, and so on) that you wish to display when the object opens in Agile PLM.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r10c1-t21" headers="r1c1-t21">
+<p>tab</p>
+</td>
+<td style="text-align:left" headers="r10c1-t21 r1c2-t21">
+<p>The text "tab" indicates to Agile PLM that the URL opens the object and displays a specific object tab</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r11c1-t21" headers="r1c1-t21">
+<p>TabName</p>
+</td>
+<td style="text-align:left" headers="r11c1-t21 r1c2-t21">
+<p>TabName refers to the name of the tab that is displayed when the object opens in Agile PLM.</p>
+<p><span class="bold">Note:</span> TabNmae uses the API name. For information about API names, see <span class="italic">Agile PLM Administrator Guide</span>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<p>Agile PLM identifies and handles special tags (such as %20) added to URLs to handle special characters (such as spaces and other special characters such as asterisk "*") in the unique identifier of an object. For example:</p>
+<p><code dir="ltr">http://server:port/VirtualPath/object/Manufacturer/Philips%20Semiconductor</code></p>
+<p>This URL resolves to the manufacturer "Philips Semiconductor".</p>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref267" name="sthref267"></a>
+<h4 class="sect3"><span class="secnum">5.9.3.2</span> Examples of Quick Access Object Smart URLs</h4>
+<p>Smart URLs for pointing to Agile objects use the following formats.</p>
+<p><span class="bold">Open the latest revision or version of an object:</span></p>
+<p><code dir="ltr">http://server:port/VirtualPath/object/ObjectType/ObjectName</code></p>
+<p>Opens the latest revision or version of the object displaying the <span class="bold">Title Block</span> tab or the <span class="bold">General Info</span> tab.</p>
+<br />
+<code dir="ltr">http://server:port/VirtualPath/object/Part/P00348</code><br />
+<br />
+<code dir="ltr">http://server:port/VirtualPath/object/File Folder/F00045</code><br />
+<br />
+<code dir="ltr">http://server:port/VirtualPath/object/</code><br />
+<code dir="ltr">manufacturer part/Green%20Star/349-280</code><br />
+<p><span class="bold">Open displaying a specific tab an object:</span></p>
+<p><code dir="ltr">http: //server:port/VirtualPath/object/ObjectType/ObjectName/tab/TabName</code></p>
+<p>Optionally, you can specify an object tab to display. Opens the latest revision or version of the object and displays the tab specified by TabName. If the tab TabName is disabled, or there is no such tab, then the object opens and displays the Title Block tab or the General Info tab instead.</p>
+<br />
+<code dir="ltr">http://server:port/VirtualPath/object/Part/P00243/tab/BOM</code><br />
+<br />
+<code dir="ltr">http://server:port/VirtualPath/object/File Folder/F00045/tab/Files</code><br />
+<br />
+<code dir="ltr">http://server:port/VirtualPath/object/manufacturer part/</code><br />
+<code dir="ltr">Green%20Star/349-280/tab/Where Used</code><br />
+<p><span class="bold">Open a specific revision of an object:</span></p>
+<p>Optionally, if the object has a Revision (Rev) or a Version, you can specify the specific Rev or Version to open:</p>
+<br />
+<code dir="ltr">http://server:port/VirtualPath/object/ObjectType/ObjectName/</code><br />
+<code dir="ltr">Rev/RevChange/tab/TabName</code><br />
+<p>Opens the object displaying the revision created by the Change object RevChange. For example, item revisions are created by ECOs; Published Price revision are created by PCOs.</p>
+<p>Example:</p>
+<p><code dir="ltr">http://server:port/VirtualPath/object/Parts/P00243/Rev/C00548/tab/BOM</code></p>
+<p>Opens Parts object number P00243 at the revision created by ECO C00548, and displays the BOM tab of that revision.</p>
+<p><span class="bold">Open a specific version of an object:</span></p>
+<br />
+<code dir="ltr">http://server:port/VirtualPath/object/ObjectType/ObjectName/</code><br />
+<code dir="ltr">Version/VerNum/tab/TabName</code><br />
+<p>Opens the object and displays the object version specified by VerNum.</p>
+<p>Example:</p>
+<br />
+<code dir="ltr">http://server:port/VirtualPath/object/File Folder/</code><br />
+<code dir="ltr">FOLDER00856/Version/3/tab/Files</code><br />
+<p>Opens File Folder object number FOLDER00856 at version 3, and displays the Files tab of that version.</p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABGIHJF" name="BABGIHJF"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.10</span> Discussion Objects</h2>
+<p>A Discussion can be created from the main toolbar <span class="bold">Create</span> menu, or from a business object's <span class="bold">Discussions</span> tab. Discussions are integrated into the Product Portfolio Management solution, and are also applicable to the Product Cost Management solution; however, discussions can be created and modified in the same manner as any Agile PLM object, and their utility can be applied to the other Agile PLM solutions, Product Collaboration, Product Governance &amp; Compliance, and Product Quality Management.</p>
+<p>Discussions are always created and viewed in Web Client. To access a discussion while using Java Client, you can search to locate an existing discussion and open the object, which will open the Web Client. Or you can simply open the Web Client and proceed from there, including creating discussions.</p>
+<p>The following objects classes have a <span class="bold">Discussions</span> tab: Sourcing s, Request for Quote, RFQ Responses, Activities, and Gates. See <span class="italic">Product Portfolio Management User Guide</span> and <span class="italic">Product Cost Management User Guide</span> for information about using discussions in those solutions.</p>
+<div class="sect2"><a id="sthref268" name="sthref268"></a>
+<h3 class="sect2"><span class="secnum">5.10.1</span> Creating and Viewing Discussions</h3>
+<p><span class="bold">To create a discussion:</span></p>
+<ol>
+<li>
+<p>Start at the <span class="bold">Create New</span> menu (see <a href="#BABDBBCE">"Creating Objects in Web Client Using the Create New Command"</a>).</p>
+</li>
+<li>
+<p>In the Create New Discussion dialog, fill in the information.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>. The new Discussion object appears in the Web Client content pane.</p>
+</li>
+</ol>
+<p>To manage your discussions, you can use Web Client features such as Search and Bookmark.</p>
+<p>The discussion object includes:</p>
+<ul>
+<li>
+<p><span class="bold">Join</span> button, <span class="bold">Actions</span> menu.</p>
+<p>The Join action adds the user to the Notify List.</p>
+</li>
+<li>
+<p><span class="bold">Discussion</span> tab, which includes:</p>
+<ul>
+<li>
+<p>Discussion object information - type information, such as the discussion's ID number, Subject, Status, Priority, Subject, and Notify List.</p>
+</li>
+<li>
+<p><span class="bold">Message</span> table, which is a list of all the replies in the discussion.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="bold">Actions Items</span> tab of a discussion object includes:</p>
+<ul>
+<li>
+<p>Action Items table, which lists action items that have been associated with the discussion.</p>
+</li>
+<li>
+<p>Action Item navigation button: <span class="bold">Add</span>, <span class="bold">Remove</span>, <span class="bold">Accept</span>, <span class="bold">Decline</span>, <span class="bold">Mark Complete</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Additional tabs, if the Agile administrator has enabled them, for example, <span class="bold">Attachments</span>, <span class="bold">Relationships</span>, <span class="bold">History</span></p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref269" name="sthref269"></a>
+<h3 class="sect2"><span class="secnum">5.10.2</span> Adding To and Editing Discussions</h3>
+<p>When the owner/creator opens the Discussion object, he can click <span class="bold">Edit</span> to modify the <span class="bold">Page One</span>-type information. (A user must have sufficient privileges to edit discussion information.)</p>
+<p>Subsequent entries in the discussion are displayed in the <span class="bold">Messages</span> table with the most recent entry displayed in the first row of the <span class="bold">Messages</span> table.</p>
+<p><span class="bold">To enter a reply:</span></p>
+<ol>
+<li>
+<p>Click the <span class="bold">Reply</span> button in the first row of the <span class="bold">Messages</span> table.</p>
+</li>
+<li>
+<p>In the Reply to Discussion dialog, enter your reply in the <span class="bold">Message</span> field.</p>
+</li>
+<li>
+<p>If you have sufficient privileges, you can add or remove users in the <span class="bold">Notify List</span>.</p>
+</li>
+<li>
+<p>When you are finished, click <span class="bold">Send</span>.</p>
+</li>
+</ol>
+<p>Action Items can be created or deleted by users (on the Notify list) who have sufficient privileges.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABCDHFD" name="BABCDHFD"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.11</span> Sharing Objects with Other Users</h2>
+<p><span class="italic">Sharing</span> lets you grant one or more of your roles to another Agile user or user group for specific objects. The capability to share a given role requires being assigned the Grant privilege specific to that object. You can share only your assigned roles, that is, the roles that are listed in the <span class="bold">Roles</span> field on the <span class="bold">General Info</span> tab of your user profile, and the roles that are listed in the <span class="bold">Roles</span> field on the <span class="bold">General Info</span> tab of any groups of which you are a member.</p>
+<p>You cannot share roles that have been shared with you by another user, and you cannot share roles that have been shared with a user group to which you belong.</p>
+<p>When a role has been shared with a user (or members of a user group), each user can then perform actions permitted by the roles for that object only; a user does not "acquire" the role in any permanent or far-reaching way.</p>
+<p>A user's or user group's <span class="bold">Share</span> tab lists those objects for which the user has been granted "shared roles" by a different user. Click the <span class="bold">Share</span> tab in your user profile to see objects being shared with you and what role(s) allow and define your interaction with each object. If you belong to a user group, you can see objects being shared with you through the user group by opening the group object and clicking the <span class="bold">Share</span> tab.</p>
+<p><span class="bold">To share an object in Web Client:</span></p>
+<ol>
+<li>
+<p>Display the object.</p>
+</li>
+<li>
+<p>In the <span class="bold">Actions</span> menu, choose <span class="bold">Sharing</span>. The Share with Users dialog appears.</p>
+</li>
+<li>
+<p>Click <span class="bold">Add</span>. The Add Users dialog appears.</p>
+</li>
+<li>
+<p>In the <span class="bold">Users</span> field, type the names of the users you want, separated by semicolons. Or, click the address book icon button to launch the address book palette and search for and select the users or user groups you want.</p>
+</li>
+<li>
+<p>In the Roles field, type the name of the roles you want. Or click the <span class="bold">Launch the Palette</span> icon to launch the Roles palette to search for and select the roles you want.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>. The Add Users dialog now lists the share you just defined.</p>
+</li>
+<li>
+<p>To add more shares, click <span class="bold">Add</span> and repeat steps 4 through 6.</p>
+</li>
+<li>
+<p>To remove a share, select its row and click <span class="bold">Remove</span>.</p>
+</li>
+<li>
+<p>When you are finished, click <span class="bold">Close</span> in the Share with Users dialog.</p>
+<p>When you view the original object and choose <span class="bold">Actions</span> &gt; <span class="bold">Sharing</span>, it now shows you the complete list of users who have access to this object and the roles you specified.</p>
+</li>
+</ol>
+<p>To remove a shared object from the <span class="bold">Share</span> tab of your user profile, select the object and click <span class="bold">Remove</span>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="BABFFBDJ" name="BABFFBDJ"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.12</span> Subscribing to Objects</h2>
+<p><span class="italic">Subscribing</span> to an object sets you up to receive notification of events that happen to that object. For example, you might subscribe to a change to be notified when the change is released, or you might subscribe to an attachment to be notified when the attachment is checked in. You can also be notified when specified fields are modified. You select the events about which to be notified. To be notified when certain fields change, you specify those fields.</p>
+<p>You must have the Subscribe privilege for a specific object class to be able to subscribe to that class's objects. See your Agile administrator to be assigned additional privileges.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Subscribe capabilities are not available for Report objects or for User Group objects.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>On the <span class="bold">Subscription</span> tab of your user profile, you can view the objects to which you have subscribed. To cancel or remove a subscription, select the object, and click <span class="bold">Remove</span>.</p>
+<p>Subscription events trigger two types of notifications: Email and Inbox. Email notifications are sent only if your Receive Email Notification preference is set to Yes; this field is on the <span class="bold">Preferences</span> tab of your User Profile. The ability to edit user information is determined by your privileges.</p>
+<div class="sect2"><a id="sthref270" name="sthref270"></a>
+<h3 class="sect2"><span class="secnum">5.12.1</span> Subscribing to an Item or Price Revision</h3>
+<p>It is possible to subscribe to an item revision change and a price revision change. Since you cannot subscribe to a specific status change (for example, changed to Released) for a change that increments the revision of the Item (an ECO) or the Price object (a PCO), subscribing to the object itself (the part, document, or price) is the way you can be notified that the revision of the object has been modified by the release of an ECO or PCO.</p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref271" name="sthref271"></a>
+<h3 class="sect2"><span class="secnum">5.12.2</span> Subscribing to Attachments by Using the File Folder</h3>
+<p>To be notified of changes to a file folder, subscribe to its "check-in" events. The version number of File Folder objects automatically increments every time they are checked in. However, it is not possible to subscribe to file folder versions, which work differently than item revisions. So, subscribing to a file folder's Check-ins is the way you can be notified that the file folder has been altered; file folders are not subject to changes (objects from the various change classes).</p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref272" name="sthref272"></a>
+<h3 class="sect2"><span class="secnum">5.12.3</span> Subscribing to Objects</h3>
+<p><span class="bold">To subscribe to an object in Web Client:</span></p>
+<ol>
+<li>
+<p>Display the object.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Subscribe capabilities are not available for Report objects or for User Group objects.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>Choose <span class="bold">Actions</span> &gt; <span class="bold">Subscribe</span>. The Define Subscriptions page appears.</p>
+</li>
+<li>
+<p>Indicate whether you want to be notified when the subscribed object is modified by selecting the appropriate check boxes. You can select one or more:</p>
+<ul>
+<li>
+<p>Status Options:</p>
+<ul>
+<li>
+<p>Lifecycle Phase Change (or Status Change if it is a routable object)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Field Options:</p>
+<ul>
+<li>
+<p>Select from the displayed list of fields. The Agile administrator determines which fields are available for subscription.</p>
+</li>
+<li>
+<p>Revision Change (items and prices)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>File Options:</p>
+<ul>
+<li>
+<p>Add File</p>
+</li>
+<li>
+<p>Delete File</p>
+</li>
+<li>
+<p>Checkin File</p>
+</li>
+<li>
+<p>Checkout File</p>
+</li>
+<li>
+<p>Cancel Checkout File</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Subscribe</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref273" name="sthref273"></a>
+<h3 class="sect2"><span class="secnum">5.12.4</span> Subscription in Product Portfolio Management</h3>
+<p>The events you can subscribe to vary per object. Product Portfolio Management has the following Activity-specific subscription events that do not apply to other objects. You can subscribe to actions related to:</p>
+<ul>
+<li>
+<p>Discussions</p>
+</li>
+<li>
+<p>News</p>
+</li>
+<li>
+<p>Action Items</p>
+</li>
+<li>
+<p>Schedule</p>
+</li>
+<li>
+<p>Cost</p>
+</li>
+<li>
+<p>Health</p>
+</li>
+</ul>
+<p>The <span class="bold">Apply to all levels below</span> check box in activities and gates "pushes" a subscription to all subordinate objects. If you subscribe to an activity that has a schedule and select this check box, you will automatically subscribe to all of the activity's projects, phases, and tasks (that is, any object created in the preconfigured subclasses of Activities class). Because <span class="bold">Page Two</span> and <span class="bold">Page Three</span> fields can be defined differently for projects, phases, and tasks, any of the attributes that do not apply are ignored.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABICGCE" name="BABICGCE"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.13</span> Relationships and Dependencies Between Objects</h2>
+<p>This section includes the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABDEGIE">"What are Relationships?"</a></p>
+</li>
+<li>
+<p><a href="#BABCDGFI">"What are Revision-Specific Relationships?"</a></p>
+<ul>
+<li>
+<p><a href="#BABJIEII">"Relationships Tab"</a></p>
+</li>
+<li>
+<p><a href="#BABGJEBH">"Relationships Tab Views"</a></p>
+</li>
+<li>
+<p><a href="#BABJGBEH">"Relationship Tab Actions in Web Client"</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#BABGBDIF">"Adding Relationships to Objects"</a></p>
+<ul>
+<li>
+<p><a href="#BABIJCFH">"Selecting a Revision"</a></p>
+</li>
+<li>
+<p><a href="#BABDGBCF">"Accepting or Rejecting a New Revision"</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#BABFEDGI">"Editing the Relationships Table"</a></p>
+</li>
+<li>
+<p><a href="#BABBJAFG">"Removing Relationships"</a></p>
+</li>
+<li>
+<p><a href="#BABBCHCG">"What is a Relationship Rule?"</a></p>
+<ul>
+<li>
+<p><a href="#BABIBJIA">"Relationship Rule Guidelines"</a></p>
+</li>
+<li>
+<p><a href="#BABFCCJF">"Adding a Rule to a Relationship"</a></p>
+</li>
+<li>
+<p><a href="#BABCJJCB">"Editing a Relationship Rule"</a></p>
+</li>
+<li>
+<p><a href="#BABDDDIG">"Removing a Relationship Rule"</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#BABFIDFG">"Relationships in PQM"</a></p>
+</li>
+</ul>
+<a id="BABDEGIE" name="BABDEGIE"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">5.13.1</span> What are Relationships?</h3>
+<p>You can associate objects to each other by using the <span class="bold">Relationships</span> tab. A relationship between two Agile objects is bi-directional and is displayed on the <span class="bold">Relationships</span> tab of both objects.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+In Agile PPM, relationships are called <span class="italic">deliverables</span> and are managed on the PPM object <span class="bold">Contents</span> tab. For more information about the PPM <span class="bold">Contents</span> tab, see <span class="italic">Agile Product Portfolio Management User Guide</span>.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>Specifying a rule for a relationship defines how the related Agile objects affect each other. For example, you can define a relationship rule so that ECO_100 affects ECR_250. When ECO 100 reaches the Implemented status, ECR_250 is promoted to the Complete status automatically.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Rules are optional; you can create a relationship between two objects without specifying a rule.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>A relationship is created when you add an object to a table in the <span class="bold">Relationships</span> tab of another object. The classes of objects that can reference each other on a <span class="bold">Relationships</span> tab are:</p>
+<ul>
+<li>
+<p>All object classes, except Reports and Action Items.</p>
+</li>
+<li>
+<p>For Agile PPM Projects classes, relationships are named <span class="italic">deliverables</span> and are included on the <span class="bold">Content</span> tab.</p>
+</li>
+</ul>
+<p>The Agile administrator configures the Agile PLM system to enable the <span class="bold">Relationships</span> tab for each object class, making it visible. If you find that you want to create a relationship between objects and those tabs are not visible, see the Agile administrator.</p>
+<p>Once you create relationships between objects, you can also create an advanced search for such relationships. See <a href="chapter_8.htm#BABFIAGD">"Relationship Searches."</a></p>
+<p>A relationship without a rule is a simpler, less dynamic instance of object-to-object relationship; it simply lists references to other objects. It can be thought of as "bi-directional" information, because relationships without rules do not trigger events.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABCDGFI" name="BABCDGFI"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.13.2</span> What are Revision-Specific Relationships?</h3>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Revision-specific relationships are available to you only if the Agile administrator has configured Agile PLM to enable revision-specific relationship capabilities. The revision-specific columns on the <span class="bold">Relationships</span> tab (<span class="bold">Revision</span>, <span class="bold">Change</span>, <span class="bold">Track Impact</span>, and <span class="bold">Impacted</span>) must be visible, and you must have the appropriate privileges for those attributes. These revision-specific attributes can be enabled for specific object classes as needed, that is, some object classes may have revision-specific relationships enabled while the remaining object classes do not.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>Revision-specific relationships allow you to select a specific revision for a Part object, Document object, or Published Price object in a relationship. The following conditions apply to revision-specific relationships:</p>
+<ul>
+<li>
+<p>Both objects in the relationship must be enabled for revision-specific relationships. For example, to create a revision-specific relationship between a Part object and an ECO, the Revision, Change, Track Impact and Impacted attributes must be enabled on the Relationships tables of both objects. This allows you to select a Part revision in the Relationships table of either the Part object or in the Relationships table of the ECO object.</p>
+</li>
+<li>
+<p>Multiple revisions are allowed for the same revision-specific object, each revision with its own row in the Relationships table.</p>
+</li>
+<li>
+<p>If a relationship is created between a revision-specific object that is configured for revision-specific relationships and any object that is not configured for revision-specific relationships, then the revision selected for the relationship is ALL by default. You cannot select a specific revision for this relationship.</p>
+</li>
+<li>
+<p>Revision-specific relationships are available to you only if the Agile administrator has configured Agile PLM to enable revision-specific relationship capabilities. The revision-specific columns on the <span class="bold">Relationships</span> tab (<span class="bold">Revision</span>, <span class="bold">Change</span>, <span class="bold">Track Impact</span> and <span class="bold">Impacted</span>) must be visible, and you must have the appropriate privileges for those attributes. These revision-specific attributes can be enabled for specific object classes as needed, that is, some object classes may have revision-specific relationships enabled while the remaining object classes do not.</p>
+</li>
+<li>
+<p>Revision-specific relationships allow you to select a specific revision for a Part object, Document object, or Published Price object in a relationship.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<a id="BABJIEII" name="BABJIEII"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.13.3</span> Relationships Tab</h3>
+<p>By default, the Relationships table for each object class displays the following columns. The Agile administrator may enable additional columns. If you have questions about the configuration of the <span class="bold">Relationships</span> tabs in your Agile system, see the Agile administrator.</p>
+<div class="tblruleformal"><a id="sthref274" name="sthref274"></a><a id="sthref275" name="sthref275"></a>
+<p class="titleintable">Table 5-4 Relationships tab columns</p>
+<table class="RuleFormal" title="Relationships tab columns" summary="Relationships tab columns, Web Client" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="21%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t27">Default attribute</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t27">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t27" headers="r1c1-t27">
+<p><span class="bold">Criteria Met</span></p>
+</td>
+<td style="text-align:left" headers="r2c1-t27 r1c2-t27">
+<p>If the relationship has a rule, the <span class="bold">Criteria Met</span> icon in this column indicates that the criteria specified in the rule has been met.</p>
+<p>Web Client:</p>
+<ul>
+<li>
+<p><img src="img/chap5_html_m47c24ed.png" alt="Criteria Met" /> &ndash; Criteria Met</p>
+</li>
+<li>
+<p><img src="img/chap5_html_m37baa53d.png" alt="Pending" />&ndash; Pending</p>
+</li>
+<li>
+<p>(empty) - Rule not specified</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t27" headers="r1c1-t27">
+<p><span class="bold">Name</span></p>
+</td>
+<td style="text-align:left" headers="r3c1-t27 r1c2-t27">
+<p>The object name or object number that uniquely identifies the related object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t27" headers="r1c1-t27">
+<p><span class="bold">Description</span></p>
+</td>
+<td style="text-align:left" headers="r4c1-t27 r1c2-t27">
+<p>The description that appears in the <span class="bold">Description</span> field of the related object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t27" headers="r1c1-t27">
+<p><span class="bold">Current Status</span></p>
+</td>
+<td style="text-align:left" headers="r5c1-t27 r1c2-t27">
+<p>The current workflow status or lifecycle phase of the related object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t27" headers="r1c1-t27">
+<p><span class="bold">Rule</span></p>
+</td>
+<td style="text-align:left" headers="r6c1-t27 r1c2-t27">
+<p>The rule defined for the relationship. If no rule is defined, this column is blank.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t27" headers="r1c1-t27">
+<p><span class="bold">Type</span></p>
+</td>
+<td style="text-align:left" headers="r7c1-t27 r1c2-t27">
+<p>The object type (or subclass) of the related object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+For Design object relationships only, a Version-specific relationship can be created.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<div class="tblruleformal"><a id="sthref276" name="sthref276"></a><a id="sthref277" name="sthref277"></a>
+<p class="titleintable">Table 5-5 Relationships tab revision-specific attribute columns</p>
+<table class="RuleFormal" title="Relationships tab revision-specific attribute columns" summary="Relationships tab default columns" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t29">Revision-specific attribute</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t29">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t29" headers="r1c1-t29">
+<p><span class="bold">Revision</span></p>
+</td>
+<td style="text-align:left" headers="r2c1-t29 r1c2-t29">
+<p>This attribute enables the association of the relationship with a specific object revision.</p>
+<p>When this attributes is enabled, the <span class="bold">More</span> menu selections <span class="bold">Accept New Revisions</span> and <span class="bold">Reject New Revisions</span> are enabled.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t29" headers="r1c1-t29">
+<p><span class="bold">Change</span></p>
+</td>
+<td style="text-align:left" headers="r3c1-t29 r1c2-t29">
+<p>This read-only attribute shows the change (ECO, MCO, or PCO) associated with the selected revision in the Revision cell. Click the change number to navigate to the change object.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t29" headers="r1c1-t29">
+<p><span class="bold">Impacted</span> (icon)</p>
+</td>
+<td style="text-align:left" headers="r4c1-t29 r1c2-t29">
+<p>When Track Impact is set to Yes, then an icon appears in this column indicating that the Relationship target object has changed and has a new revision.</p>
+<p>If the selected revision is Latest, to clear this icon flag, then select the relationship table row and choose <span class="bold">More</span> &gt; <span class="bold">Accept New Revision</span> or <span class="bold">Reject New Revision</span>.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t29" headers="r1c1-t29">
+<p><span class="bold">Track Impact</span></p>
+</td>
+<td style="text-align:left" headers="r5c1-t29 r1c2-t29">
+<p>Determines whether or not to track the impact of a new release of the revision-controlled target object.</p>
+<p>If you have the appropriate privileges, then you can edit the <span class="bold">Track Impact</span> cell.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="BABGJEBH" name="BABGJEBH"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.13.3.1</span> Relationships Tab Views</h4>
+<p>Use the <span class="bold">View</span> drop-down list to sort the relationships table rows. See also Using the Table Filter.</p>
+<div class="tblruleformal"><a id="sthref278" name="sthref278"></a><a id="sthref279" name="sthref279"></a>
+<p class="titleintable">Table 5-6 Relationships tab views</p>
+<table class="RuleFormal" title="Relationships tab views" summary="Relationships tab views, Web Client" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="36%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t30">View option</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t30">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t30" headers="r1c1-t30">
+<p><span class="bold">Base View</span> (Web Client)</p>
+<p><span class="bold">All Relationships</span> (Java Client)</p>
+</td>
+<td style="text-align:left" headers="r2c1-t30 r1c2-t30">
+<p>Displays all relationship table rows.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t30" headers="r1c1-t30">
+<p><span class="bold">Complete</span></p>
+</td>
+<td style="text-align:left" headers="r3c1-t30 r1c2-t30">
+<p>Displays relationships that have a rule specified and the criteria of the rule has been met.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t30" headers="r1c1-t30">
+<p><span class="bold">Pending</span></p>
+</td>
+<td style="text-align:left" headers="r4c1-t30 r1c2-t30">
+<p>Displays relationships that have a rule specified and the criteria of the rule has <span class="italic">not</span> been met.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect3" -->
+<a id="BABJGBEH" name="BABJGBEH"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">5.13.3.2</span> Relationship Tab Actions in Web Client</h4>
+<p>In Web Client, buttons and actions on the <span class="bold">Relationships</span> tab allow you to add, edit, and remove relationships and relationship rules.</p>
+<div class="tblruleformal"><a id="sthref280" name="sthref280"></a><a id="sthref281" name="sthref281"></a>
+<p class="titleintable">Table 5-7 Relationship tab buttons</p>
+<table class="RuleFormal" title="Relationship tab buttons" summary="Relationships tab buttons, Web Client" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="31%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t31">Button</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t31">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t31" headers="r1c1-t31">
+<p><span class="bold">Add</span></p>
+</td>
+<td style="text-align:left" headers="r2c1-t31 r1c2-t31">
+<p>Add a relationship to the table by searching for the object you want. See <a href="#BABGBDIF">"Adding Relationships to Objects."</a></p>
+<p>You can add a relationship by:</p>
+<ul>
+<li>
+<p>Add by search - Search for an object</p>
+</li>
+<li>
+<p>Add by create - Create a new object</p>
+</li>
+<li>
+<p>Add a Reference Object - Search an external application for an object and then create an Agile PLM Reference Object that provides access to the object in the external application from the <span class="bold">Relationships</span> tab.</p>
+</li>
+<li>
+<p>Copy and Paste</p>
+</li>
+<li>
+<p>Drag and Drop</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t31" headers="r1c1-t31">
+<p><span class="bold">Remove</span></p>
+</td>
+<td style="text-align:left" headers="r3c1-t31 r1c2-t31">
+<p>Removes the selected relationship table rows. See <a href="#BABBJAFG">"Removing Relationships."</a></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t31" headers="r1c1-t31">
+<p><span class="bold">Edit Rule</span></p>
+</td>
+<td style="text-align:left" headers="r4c1-t31 r1c2-t31">
+<p>Opens the Relationship Rule edit dialog, which lets you add, edit, or remove a rule.</p>
+<p>See <a href="#BABFCCJF">"Adding a Rule to a Relationship."</a></p>
+<p>See <a href="#BABCJJCB">"Editing a Relationship Rule."</a></p>
+<p>See <a href="#BABDDDIG">"Removing a Relationship Rule."</a></p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t31" headers="r1c1-t31">
+<p>Views</p>
+</td>
+<td style="text-align:left" headers="r5c1-t31 r1c2-t31">
+<p>Lets you sort the table by multiple criteria. See <a href="#BABGJEBH">"Relationships Tab Views."</a></p>
+<p>As with nearly all Web Client tables, you can define and save your own personal views.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t31" headers="r1c1-t31">
+<p>Web Client table edit features</p>
+</td>
+<td style="text-align:left" headers="r6c1-t31 r1c2-t31">
+<p>Lets you edit the Relationships table. See <a href="#BABFEDGI">"Editing the Relationships Table."</a></p>
+<p>If the Agile administrator has enabled relationship table attributes in addition to the default attributes, you can edit the additional attributes if you have the appropriate privileges. Double-click in an editable cell to begin editing.</p>
+<p>If relationship table attributes for revision-specific relationships have been enabled, you can edit those attributes if you have the appropriate privileges. See <a href="#BABCDGFI">"What are Revision-Specific Relationships?."</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref282" name="sthref282"></a>
+<h4 class="sect3"><span class="secnum">5.13.3.3</span> Using the Web Client Relationship Tab Views</h4>
+<p>The <span class="bold">Relationships</span> tab uses the Views feature that is available on all Web Client tables.</p>
+<p>Agile PLM provides you with four standard preconfigured views; see<a href="#BABGJEBH">"Relationships Tab Views."</a></p>
+<p>You can create and save personal table views. See <a href="chapter_2.htm#BGBGBAHI">"Table Views."</a></p>
+</div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABGBDIF" name="BABGBDIF"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.14</span> Adding Relationships to Objects</h2>
+<p>You can add objects to the relationships table of any object. The relationship is listed on the <span class="bold">Relationships</span> tabs of both objects. You must have the appropriate modify privileges for both objects in the relationship: the object to which you are adding the relationship and the related object.</p>
+<p><span class="bold">To add objects to the relationships table in Web Client:</span></p>
+<ol>
+<li>
+<p>Navigate to the <span class="bold">Relationships</span> tab of an object.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Add</span> menu button and choose one of the following options:</p>
+<ul>
+<li>
+<p>Choose <span class="bold">By Search</span> to search for an object. Open the search palette. Execute a quick search to find the objects you want. Double-click to add an object. Press Escape to close the palette.</p>
+</li>
+<li>
+<p>Choose <span class="bold">By Create</span> to create a new object. Select an object type, fill in any required fields, and then click <span class="bold">Add</span>. The newly created object is added to the table.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Reference Objects</span> to search for an object in an external application and add it as a reference in the relationships table.</p>
+<ol>
+<li>
+<p>In the Search palette that opens, search for the object and click the name of the object to view it in the corresponding application.</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span> to add the reference object.</p>
+</li>
+</ol>
+<p>For details about configuring reference objects, see <span class="italic">Agile PLM Administrator Guide</span>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>By the Drag and Drop method:</p>
+<ul>
+<li>
+<p>Select an object in the left navigation pane. Drag it onto the table and drop it. You can drag and drop from your <span class="bold">My Bookmarks</span>, <span class="bold">Recently Visited</span> list, and the <span class="bold">NAVIGATOR</span> drawer.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Copy and Paste</p>
+<ul>
+<li>
+<p>Copy one or more objects from a table: search results table, BOM table, Where Used table, and so forth. Use <span class="bold">More</span> &gt; <span class="bold">Copy</span> or Ctrl-C to copy the rows.</p>
+</li>
+<li>
+<p>Open the object to which you want to add a relationship. Click the <span class="bold">Relationships</span> tab to display it. Paste the rows by using <span class="bold">More</span> &gt; <span class="bold">Paste</span> or Ctrl-V.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>You can also add Problem Reports or Non-Conformance Reports to the <span class="bold">Relationships</span> tab of any other Agile objects.</p>
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref283" name="sthref283"></a>
+<h3 class="sect2"><span class="secnum">5.14.1</span> Viewing Reference Objects</h3>
+<p><span class="bold">To view or access a reference object:</span></p>
+<ol>
+<li>
+<p>In the <span class="bold">Relationships</span> table, click the reference object link.</p>
+<p>Reference object rows are indicated with the icon in the relationships table.</p>
+</li>
+<li>
+<p>The external application opens in a new browser window.</p>
+<p>Enter a username and password if prompted to do so.</p>
+</li>
+<li>
+<p>The reference object appears in the external application browser window.</p>
+</li>
+</ol>
+<p><span class="bold">To see a quick view of the reference object:</span></p>
+<ol>
+<li>
+<p>Place the cursor over the reference object link.</p>
+</li>
+<li>
+<p>When the <span class="bold">Quick View</span> callout bubble appears, click <span class="bold">Quick View</span> to open a quick view palette, a separate popup window.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABIJCFH" name="BABIJCFH"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.14.2</span> Selecting a Revision</h3>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+You can select a specific part, document or price revision if the Agile administrator has enabled revision-specific relationship capabilities. See <a href="#BABCDGFI">"What are Revision-Specific Relationships?."</a></td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>If revision-specific relationship capabilities are enabled for only one object in the relationship (for example, enabled for Part objects, but not for ECOs), then the relationship is added to the Relationships table, the Revision defaults to <span class="bold">All</span>.</p>
+<p>If revision-specific relationship capabilities are enabled for both objects in the relationship, then the relationship is added, the default Revision is <span class="bold">Latest</span>. If you have the appropriate privileges you can select a different revision.</p>
+<p><span class="bold">To select a revision for a relationship:</span></p>
+<ol>
+<li>
+<p>Double-click the <span class="bold">Revision</span> cell that you want to modify.</p>
+</li>
+<li>
+<p>In the drop-down list, select a revision. You can select:</p>
+<ul>
+<li>
+<p>A specific revision, for example, Introductory, A, B, or C.</p>
+</li>
+<li>
+<p>Latest &ndash; the relationship applies to the LATEST revision.</p>
+</li>
+<li>
+<p>All &ndash; the relationship applies to all revisions rather than a specific revision.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Save</span> to save your modifications.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABDGBCF" name="BABDGBCF"></a>
+<div class="sect2"><!-- infolevel="all" infotype="General" -->
+<h3 class="sect2"><span class="secnum">5.14.3</span> Accepting or Rejecting a New Revision</h3>
+<p>For revision-controlled objects (Parts, Documents, or Prices) on the <span class="bold">Relationships</span> tab, the <span class="bold">Impacted</span> icon is displayed in the relationships table row when <span class="bold">Track Impact</span> is set to Yes, and a new revision is released.</p>
+<p><span class="bold">To accept or reject the new revision:</span></p>
+<ol>
+<li>
+<p>Select one or more table rows that display the <span class="bold">Impacted</span> icon.</p>
+</li>
+<li>
+<p>In the <span class="bold">More</span> drop-down menu, choose either <span class="bold">Accept New Revision</span> or <span class="bold">Reject New Revision</span>.</p>
+</li>
+<li>
+<p>Click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABFEDGI" name="BABFEDGI"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.15</span> Editing the Relationships Table</h2>
+<p>With the appropriate privileges, you can edit the nondefault attributes of the relationships table of any object. Default relationship table attributes cannot be edited. For a list of default relationship table attributes, see <a href="#BABJIEII">"Relationships Tab."</a> If no nondefault attributes are enabled for the relationships table you are viewing, the <span class="bold">Edit</span> button may be disabled.</p>
+<p>You cannot add, edit, or remove relationship rules with the relationship table edit feature. For more information about relationship rules, see <a href="#BABICGCE">"Relationships and Dependencies Between Objects."</a></p>
+<p><span class="bold">To edit a relationship in Web Client:</span></p>
+<ol>
+<li>
+<p>Open the object you want and click the <span class="bold">Relationships</span> tab.</p>
+</li>
+<li>
+<p>Double-click in an editable cell.</p>
+<p>The table enters edit mode and the table <span class="bold">Save</span> and <span class="bold">Cancel</span> buttons become active.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If no nondefault attributes are enabled for the relationships table you are viewing, the table will not enter into edit mode.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>Make the changes, and click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect1" -->
+<a id="BABBJAFG" name="BABBJAFG"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.16</span> Removing Relationships</h2>
+<p>When you remove a relationship, it is removed from the <span class="bold">Relationships</span> tab of the current object and from the <span class="bold">Relationships</span> tab of the related object. Any rules associated with the relationship are also removed.</p>
+<p><span class="bold">To remove a relationship in Web Client:</span></p>
+<ol>
+<li>
+<p>In the table from which you want to remove objects, select the objects you want to remove.</p>
+</li>
+<li>
+<p>Click the corresponding <span class="bold">Remove</span> button. The rows are removed.</p>
+</li>
+</ol>
+<p><span class="bold">To remove a reference object from the Relationships tab:</span></p>
+<ol>
+<li>
+<p>In the Relationships table, select the reference object rows you want to remove.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Remove</span> button. The rows are removed.</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If the reference object that was removed from the table does not appear on the Relationships tab of any other object, then the reference object is also deleted.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect1" -->
+<a id="BABBCHCG" name="BABBCHCG"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.17</span> What is a Relationship Rule?</h2>
+<p>Specifying a rule for a relationship defines the manner in which one Agile object can affect the workflow status of another Agile object. A relationship rule includes a <span class="italic">Source Object</span>, an <span class="italic">Event</span>, a <span class="italic">Target Object</span>, and a <span class="italic">Result</span>. The format of a relationship rule is shown in the following sentence:</p>
+<p><span class="bold">When &lt;Source Object&gt;</span> <span class="bold">is</span> <span class="bold">&lt;Event&gt;, set</span> <span class="bold">&lt;Target Object&gt;</span> <span class="bold">to</span> <span class="bold">&lt;Result&gt;</span>.</p>
+<p>That is, an <span class="italic">Event</span> in the <span class="italic">Source Object</span> triggers a <span class="italic">Result</span> in the <span class="italic">Target Object</span>.</p>
+<ul>
+<li>
+<p>A <span class="italic">Source Object</span> can be either a routable object with a workflow (for example, a change order or a project object) or a nonroutable object with a lifecycle phase (for example, a part or a document).</p>
+</li>
+<li>
+<p>An <span class="italic">Event</span> is a change in the workflow status or a change in the lifecycle phase of the <span class="italic">Source Object</span>.</p>
+</li>
+<li>
+<p>A <span class="italic">Target Object</span> is always a routable object with workflow statuses.</p>
+</li>
+<li>
+<p>A <span class="italic">Result</span> is always a change in the <span class="italic">Target Object</span>'s workflow status.</p>
+</li>
+</ul>
+<p>Here are some examples of relationship rules:</p>
+<p><span class="bold">When</span> ECO_100 <span class="bold">is</span> Implemented, <span class="bold">set</span> ECR_334 <span class="bold">to</span> Closed.</p>
+<p><span class="bold">When</span> ECO_565 <span class="bold">is</span> Released, <span class="bold">set</span> NCR_009 <span class="bold">to</span> Closed.</p>
+<p><span class="bold">When</span> Part_945 <span class="bold">is</span> Production, <span class="bold">set</span> Task_Design_Assembly <span class="bold">to</span> In Process.</p>
+<p><span class="bold">When</span> Document_934 <span class="bold">is</span> Prototype, <span class="bold">set</span> ECO_3445 <span class="bold">to</span> Released.</p>
+<p><span class="bold">When</span> Part_D457 <span class="bold">is</span> Prototype, <span class="bold">set</span> Task_Promote_BOM_to_Prototype <span class="bold">to</span> Complete.</p>
+<p><span class="bold">When</span> FileFolder0098 <span class="bold">is</span> Concept, <span class="bold">set</span> Audit_0061 <span class="bold">to</span> Initiated.</p>
+<p>The resulting change in the <span class="italic">Target Object</span>'s workflow status also requires that all other conditions required for the workflow to advance have been met. For example, for a change order to be released, it must pass a release audit. If the relationship rule triggering event occurs, but the change order does not pass the release audit, its workflow status will not change. In a similar manner, if a change order passes its release audit, but the relationship rule triggering event has not occurred, the change order workflow status will not change. In both cases, when all the required criteria are fulfilled and the relationship rule triggering event has occurred, the <span class="italic">Target Object</span>'s workflow status will change.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+You cannot define rules for reference objects.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<a id="BABIBJIA" name="BABIBJIA"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">5.17.1</span> Relationship Rule Guidelines</h3>
+<p>The following guidelines and restrictions apply to relationship rules:</p>
+<ul>
+<li>
+<p>Rules for revision-specific relationships apply to ALL revisions.</p>
+</li>
+<li>
+<p>You cannot define a rule for a reference object.</p>
+</li>
+<li>
+<p>You cannot define a rule for a workflow object if no workflow has been selected for that object. Rules are based on workflow statuses and workflow statuses are defined by each workflow. If a routable object is Unassigned (it has no workflow assigned) then there is no identified list of statuses to select when defining a relationship rule.</p>
+</li>
+<li>
+<p>Only one rule can be defined for each relationship table row. However, you can add the same object to the relationship table in multiple rows and define a different rule for each row.</p>
+</li>
+<li>
+<p>If you want two objects to advance through their respective workflows simultaneously, you create relationship entries for each status.</p>
+</li>
+<li>
+<p>The <span class="bold">Criteria Met</span> column in the relationship tables indicates that the Sourc<span class="italic">e Object's</span> triggering event has occurred. If the triggering event is that the <span class="italic">Source Object</span>'s workflow status changes to Status_02, but the workflow status was manually changed to Status_03, skipping over Status_02, then the <span class="italic">Target Object</span>'s event (workflow status change) will not occur. If you remove the relationship row or you remove the relationship rule, then the <span class="italic">Target Object</span>'s event can occur.</p>
+</li>
+<li>
+<p>The <span class="bold">Criteria Met</span> field, once checked (the <span class="bold">Complete</span> icon appears) is not "unchecked" if an object is returned to an earlier status for other reasons.</p>
+</li>
+<li>
+<p>A relationship rule causes the <span class="italic">Target Object</span> only to advance in its workflow, never to return to a status it has already left.</p>
+</li>
+<li>
+<p>A nonroutable object with no workflow, for example, an item, can be a <span class="italic">Source Object</span> but it cannot be a <span class="italic">Target Object</span>. You can create a rule between a nonroutable object and a routable object only when the nonroutable object is the <span class="italic">Source Object</span>.</p>
+</li>
+<li>
+<p>You can create a relationship without a rule between two nonroutable objects. Agile PLM will not allow you to create a rule between two nonroutable objects.</p>
+</li>
+<li>
+<p>The relationship rule can be defined from the <span class="bold">Relationships</span> tab of either object.</p>
+</li>
+<li>
+<p>You must have the appropriate "modify relationship" privilege for both objects to create a relationship without a rule between two objects. To create a rule between two related objects, you must, in addition, have the appropriate "modify rule" privilege for both objects.</p>
+<p>The "modify rule" privilege allows you to specify a routable object as the <span class="italic">Target Object</span> in a rule. That is, it allows you to specify a rule that triggers a modification (<span class="italic">Result</span>) in the <span class="italic">Target Object</span>.</p>
+<p>When both objects in a relationship are routable objects, if you do not have "modify rule" privilege for one of the objects in that relationship, then, in any rule you create, that object can be only the <span class="italic">Source Object</span> (because it will not be modified when the rule criteria is met); it cannot be the <span class="italic">Target Object</span>.</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If there are relationships with rules defined for multiple statuses of a single routable <span class="italic">Target Object</span>, Agile checks that related events that apply to earlier result statuses have been met before advancing the workflow. For example, for a specific <span class="italic">Target Object</span>, if there are events defined for both Submitted and Released statuses, and the events for the Released status are satisfied, Agile will not advance the <span class="italic">Target Object</span>'s workflow to Released status until the events for the Submitted status are also satisfied.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect2" -->
+<a id="BABFCCJF" name="BABFCCJF"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">5.17.2</span> Adding a Rule to a Relationship</h3>
+<p><span class="bold">To add a rule to a relationship in Web Client:</span></p>
+<ol>
+<li>
+<p>On the <span class="bold">Relationships</span> tab, select the table row of the related object to which you want to add a rule.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Edit Rule</span> button.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If it is not possible to add a rule to the selected relationship because both objects are nonroutable objects, an error message is displayed on the tab.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>In the Relationship Rule edit dialog, use the drop-down lists to define the rule.</p>
+</li>
+<li>
+<p>When you are finished, click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABCJJCB" name="BABCJJCB"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">5.17.3</span> Editing a Relationship Rule</h3>
+<p><span class="bold">To edit a rule to a relationship in Web Client:</span></p>
+<ol>
+<li>
+<p>On the <span class="bold">Relationships</span> tab, select the table row of the related object to which you want to edit a rule.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Edit Rule</span> button.</p>
+</li>
+<li>
+<p>In the Relationship Rule edit dialog, use the drop-down lists to edit the rule.</p>
+</li>
+<li>
+<p>When you are finished, click <span class="bold">Save</span>.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" -->
+<a id="BABDDDIG" name="BABDDDIG"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">5.17.4</span> Removing a Relationship Rule</h3>
+<p><span class="bold">To remove a rule to a relationship in Web Client:</span></p>
+<ol>
+<li>
+<p>On the <span class="bold">Relationships</span> tab, select the table row of the related object to which you want to remove a rule.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Edit Rule</span> button.</p>
+</li>
+<li>
+<p>In the Relationship Rule edit dialog, click <span class="bold">Remove</span>.</p>
+<p>The rule is removed from the selected relationship.</p>
+</li>
+</ol>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABFIDFG" name="BABFIDFG"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">5.18</span> Relationships in PQM</h2>
+<p>This is some additional information about relationships as they are used in the PQM solution:</p>
+<p>When relationships are created between PQM objects, a blank rule is created for the relationship. You must edit the blank rule to define how you want the PQM objects to affect each other.</p>
+<ul>
+<li>
+<p>When a QCR affects the PSR, that is, when a QCR and PSR are related and the relationship rule follows the format:</p>
+<p>When <span class="italic">&lt;QCR source object&gt;</span> is <span class="italic">&lt;event&gt;</span>, set <span class="italic">&lt;PSR target object&gt;</span> to <span class="italic">&lt;result&gt;</span></p>
+<p>all items from the PSR <span class="bold">Affected Items</span> tab are displayed on the PSR Items table of the QCR. If the PSR was used to aggregate multiple PSRs, then the related PSRs' affected items are displayed.</p>
+</li>
+<li>
+<p>When this QCR is affected by a PSR, that is, when the QCR and the PSR are related and the rule follows the format:</p>
+<p>When <span class="italic">&lt;PSR source object&gt;</span> is <span class="italic">&lt;event&gt;</span>, set <span class="italic">&lt;QCR target object&gt;</span> to <span class="italic">&lt;result&gt;.</span></p>
+<p>all items from the PSR <span class="bold">Affected Items</span> tab and the related PSR's affected items are <span class="italic">not</span> displayed on the PSR Items table of the QCR.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref284" name="sthref284"></a>
+<h2 class="sect1"><span class="secnum">5.19</span> Deleting Objects</h2>
+<p>For detailed information about deleting objects, see <a href="appendix_a.htm#CHDEDBBG">Appendix A, "Deleting Agile Objects."</a>.</p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center"><a href="chapter_4.htm"><img src="../../dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td style="text-align:center"><a href="chapter_6.htm"><img src="../../dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo"><img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /> <a href="../../dcommon/html/cpyr.htm"><br />
+<span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2010, 2016,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span></a></td>
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Deleting Agile Objects</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1071" />
+<meta name="date" content="2016-01-07T18:6:57Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Agile Product Lifecycle Management Getting Started Guide, Release 9.3.5" />
+<meta name="relnum" content="Release 9.3.5" />
+<meta name="partnum" content="E61151-02" />
+<meta name="docid" content="no_value_supplied" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="../../dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="prev" href="chapter_13.htm" title="Previous" type="text/html" />
+<link rel="next" href="glossary.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="header"><a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Go to primary content</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Agile Product Lifecycle Management Getting Started Guide</b><br />
+<b>Release 9.3.5</b><br />
+E61151-02</td>
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td style="text-align:center"><a href="chapter_13.htm"><img src="../../dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td style="text-align:center"><a href="glossary.htm"><img src="../../dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<div class="appendix"><a id="CHDEDBBG" name="CHDEDBBG"></a>
+<h1 class="appendix"><span class="secnum">A</span> Deleting Agile Objects</h1>
+<p>Agile PLM objects can be soft-deleted, and then hard-deleted. The following topics are discussed:</p>
+<ul>
+<li>
+<p><a href="#CHDHDGFF">"Soft Delete and Hard Delete Defined"</a></p>
+</li>
+<li>
+<p><a href="#CHDIFBHD">"Soft-Deleting an Object"</a></p>
+</li>
+<li>
+<p><a href="#CHDCHAJF">"Undeleting an Object"</a></p>
+</li>
+<li>
+<p><a href="#CHDDHCAC">"Hard-Deleting an Object"</a></p>
+</li>
+<li>
+<p><a href="#CHDJFHFD">"Notes about Deleting Specific Agile Object Types"</a></p>
+</li>
+</ul>
+<a id="CHDHDGFF" name="CHDHDGFF"></a>
+<div class="sect1"><!-- infolevel="all" infotype="General" -->
+<h2 class="sect1"><span class="secnum">A.1</span> Soft Delete and Hard Delete Defined</h2>
+<p>Java Client and Web Client support "soft" and "hard" deletes for many Agile object classes. When you soft-delete an object in the database, it is not permanently deleted. A soft-deleted object is marked "Deleted" in the database, and its object number or name is reserved. You cannot create another object with the same type and number or name as a soft-deleted object.</p>
+<p>When you run a search, soft-deleted objects do not appear in the search results table. To locate soft-deleted objects, you must run the predefined deleted object searches in the <span class="bold">Recycle Bin Searches</span> folder.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+You have access to the <span class="bold">Recycle Bin Searches</span> folder if <span class="bold">Recycle Bin Searches</span> is included in the <span class="bold">Searches</span> field of your user profile. If you have the appropriate privileges, then you can edit your user profile and add <span class="bold">Recycle Bin Searches</span> to the list of searches in the <span class="bold">Searches</span> field. If you do not have the appropriate privileges to modify the <span class="bold">Searches</span> field in your user profile, then ask the Agile administrator to modify your user profile.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>A hard-deleted object is permanently removed from the database.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Caution:</p>
+You <span class="italic">cannot</span> undelete a hard-deleted object.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>To soft-delete, hard-delete or undelete an Agile object:</p>
+<ul>
+<li>
+<p>You must have the appropriate Delete or Undelete privileges for that object.</p>
+</li>
+<li>
+<p>All relationships and subscriptions must be removed.</p>
+</li>
+<li>
+<p>The object must meet any additional conditions that determine whether it can be deleted or undeleted.</p>
+</li>
+</ul>
+<p>In general, if deleting or undeleting an object would cause the compromise of data integrity, the delete or undelete action is disabled.</p>
+<p>For detailed information about deleting specific object types, see<a href="#CHDJFHFD">"Notes about Deleting Specific Agile Object Types."</a></p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDIFBHD" name="CHDIFBHD"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">A.2</span> Soft-Deleting an Object</h2>
+<p>When an object is soft-deleted, it is no longer available for use. However, until it is hard-deleted, its number or name is reserved in the Agile PLM database and cannot be reused.</p>
+<p><span class="bold">To soft-delete an object in Web Client:</span></p>
+<ol>
+<li>
+<p>Select and open the object you want to delete.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Actions</span> &gt; <span class="bold">Delete</span>, and respond <span class="bold">OK</span> to the confirmation prompt.</p>
+<p>The object is soft-deleted.</p>
+</li>
+</ol>
+<p><span class="bold">To soft-delete an object in Java Client:</span></p>
+<ol>
+<li>
+<p>Select and open the object you want to delete.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Delete</span> button, and respond <span class="bold">Yes</span> to the confirmation prompt.</p>
+<p>The object is soft-deleted.</p>
+</li>
+</ol>
+<p>See also: <a href="#CHDHDGFF">"Soft Delete and Hard Delete Defined,"</a> <a href="#CHDCHAJF">"Undeleting an Object,"</a> and <a href="#CHDDHCAC">"Hard-Deleting an Object."</a></p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDCHAJF" name="CHDCHAJF"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">A.3</span> Undeleting an Object</h2>
+<p>If you have the appropriate privileges, then you can undelete soft-deleted objects.</p>
+<p><span class="bold">To undelete an object in Web Client:</span></p>
+<ol>
+<li>
+<p>Run the appropriate Deleted <span class="italic">&lt;objects&gt;</span> search from the <span class="bold">Recycle Bin Searches</span> folder.</p>
+</li>
+<li>
+<p>Open the deleted object you want to restore.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Actions</span> &gt; <span class="bold">Undelete</span>.</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+You can click the <span class="bold">Navigator</span> button in the search results table to display the search result object links in the left pane <span class="bold">NAVIGATOR</span> drawer.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><span class="bold">To undelete an object in Java Client:</span></p>
+<ol>
+<li>
+<p>Run the appropriate Deleted <span class="italic">&lt;objects&gt;</span> search from the <span class="bold">Recycle Bin Searches</span> folder.</p>
+</li>
+<li>
+<p>Open the deleted object you want to restore.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Undelete</span> button.</p>
+</li>
+</ol>
+<p>See also: <a href="#CHDHDGFF">"Soft Delete and Hard Delete Defined,"</a> <a href="#CHDIFBHD">"Soft-Deleting an Object,"</a> and <a href="#CHDDHCAC">"Hard-Deleting an Object,"</a></p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDDHCAC" name="CHDDHCAC"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">A.4</span> Hard-Deleting an Object</h2>
+<p>Soft-deleted objects still exist in the database. To remove an object permanently, you must hard-delete it. While an object is still only soft-deleted, you can undelete it. Run the appropriate Deleted <span class="italic">object</span> search from the <span class="bold">Recycle Bin Searches</span> folder.</p>
+<p><span class="bold">To hard-delete a soft-delete object (if you have the appropriate privileges) in Web Client:</span></p>
+<ol>
+<li>
+<p>Run the appropriate Deleted &lt;<span class="italic">objects</span>&gt; search from the <span class="bold">Recycle Bin Searches</span> folder.</p>
+</li>
+<li>
+<p>Select the one or more object rows in the search results table.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Delete</span> button.</p>
+</li>
+<li>
+<p>In response to the warning prompt, choose <span class="bold">Continue</span> and then click <span class="bold">Finish</span>.</p>
+</li>
+<li>
+<p>Or, you can hard-delete one object at a time:</p>
+<ul>
+<li>
+<p>Open the object.</p>
+</li>
+<li>
+<p>Choose <span class="bold">Actions</span> &gt; <span class="bold">Delete</span>, and respond <span class="bold">OK</span> to the confirmation prompt.</p>
+</li>
+</ul>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+You can click the <span class="bold">Navigator</span> button in the search results table to display the search results object links in the left pane <span class="bold">NAVIGATOR</span> drawer.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p><span class="bold">To hard-delete a soft-deleted object (if you have the appropriate privileges) in Java Client:</span></p>
+<ol>
+<li>
+<p>Run the appropriate Deleted &lt;<span class="italic">objects</span>&gt; search from the <span class="bold">Recycle Bin Searches</span> folder.</p>
+</li>
+<li>
+<p>Open the object.</p>
+</li>
+<li>
+<p>Click the <span class="bold">Delete Object</span> button, and respond <span class="bold">Yes</span> to the confirmation prompt.</p>
+</li>
+</ol>
+<p>See also: <a href="#CHDHDGFF">"Soft Delete and Hard Delete Defined,"</a> <a href="#CHDCHAJF">"Undeleting an Object,"</a> and <a href="#CHDIFBHD">"Soft-Deleting an Object,"</a>.</p>
+</div>
+<!-- class="sect1" -->
+<a id="CHDJFHFD" name="CHDJFHFD"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">A.5</span> Notes about Deleting Specific Agile Object Types</h2>
+<p>The following topics provide notes about required conditions for deleting each Agile PLM object type.</p>
+<div class="sect2"><a id="sthref709" name="sthref709"></a>
+<h3 class="sect2"><span class="secnum">A.5.1</span> Notes about Deleting Item Objects</h3>
+<p>Before you can delete an item object, it must meet the conditions described below.</p>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+<li>
+<p>The item has no released changes against it.</p>
+</li>
+<li>
+<p>The item is not listed on the <span class="bold">Affected Items</span> tab of any pending changes.</p>
+<p>You must first remove the item from the <span class="bold">Affected Items</span> tab of each pending change before you can delete the item.</p>
+</li>
+<li>
+<p>The item has not been added to PSR.</p>
+</li>
+<li>
+<p>The item has not been added to QCR.</p>
+</li>
+<li>
+<p>The item has not been added to Material Declaration.</p>
+</li>
+<li>
+<p>The item has not been added to Price.</p>
+</li>
+<li>
+<p>The item has no content on its <span class="bold">BOM</span> tab for the current revision or any pending revisions.</p>
+</li>
+<li>
+<p>The item has no content on its <span class="bold">Manufacturers</span> tab for the current revision or any pending revisions.</p>
+</li>
+<li>
+<p>The item is not used on the Bill of Materials of any other item, that is, the item to be deleted is not a child item on the BOM tab of a parent item revision, including the latest released revision, past released revisions, or pending revisions of the parent item.</p>
+</li>
+<li>
+<p>The item is not associated with a Part Family, that is, the item does not appear on the <span class="bold">Parts</span> tab of a Part Family object. On the <span class="bold">Title Page</span> of the item to be deleted, the Part Family field must be empty. If the <span class="bold">Part Family</span> field is populated, then the <span class="bold">Actions</span> &gt; <span class="bold">Delete</span> command is disabled.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><!-- infolevel="all" infotype="General" --><a id="sthref710" name="sthref710"></a>
+<h3 class="sect2"><span class="secnum">A.5.2</span> Notes about Deleting Change Objects</h3>
+<p>Before you can delete a change object, it must meet the conditions described below.</p>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges. For example, you are the change analyst or component engineer, and the Agile administrator has given change analysts or component engineers the appropriate privileges to delete a change.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+<li>
+<p>The change is at the Pending status type or the Unassigned status.</p>
+</li>
+<li>
+<p>You have Discovery and Read privileges for any items on the Affected Items table, otherwise, you cannot delete the change.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+To delete a change that has already been released, you must first unrelease the change. You need the appropriate privileges to unrelease a change by using the Workflow tab to switch it to a different status.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>When you soft-delete a change that has items on the Affected Items tab, all redlines associated with that change are discarded. To preserve data integrity, a soft-deleted change with items on the Affected Items tab cannot be undeleted. That is, a soft-deleted change can be undeleted only if there are no items on the Affected Items tab.</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If you think you might want to undelete a soft-deleted routable object in the future, then be sure to clear its <span class="bold">Affected Items</span> tab before you delete it. You can undelete only routable objects with no entries on the <span class="bold">Affected Items</span> tab. To keep a record of affected items when you delete the change object, then use the <span class="bold">Save As</span> command to copy it under another change object number before deleting it.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref711" name="sthref711"></a>
+<h3 class="sect2"><span class="secnum">A.5.3</span> Notes about Deleting Transfer Order Objects</h3>
+<p>Before you can delete a Transfer Order object, it must meet the conditions described below.</p>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+<li>
+<p>The transfer order is at the Pending status type or the Unassigned status.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref712" name="sthref712"></a>
+<h3 class="sect2"><span class="secnum">A.5.4</span> Notes about Deleting PSR or QCR Objects</h3>
+<p>Before you can delete a Product Service Request (PSR) or Quality Change Request (QCR) object, it must meet the conditions described below.</p>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+<li>
+<p>The PSR or QCR is at the Pending status type or the Unassigned status.</p>
+</li>
+<li>
+<p>You have Discovery and Read privileges for any items on the Affected Items table; otherwise, you cannot delete the PSR or QCR.</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+To delete a PSR or QCR that has already been released, you must first unrelease it. You need the appropriate privileges to unrelease a PSR or QCR by using the <span class="bold">Workflow</span> tab to switch it to a different status.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>You <span class="italic">cannot</span> delete a <span class="bold">PSR</span> if:</p>
+<ul>
+<li>
+<p>It appears on the <span class="bold">Relationships</span> tab of a QCR.</p>
+</li>
+<li>
+<p>It is currently part of a corrective action process. Remove the PSR from the QCR and then delete the PSR.</p>
+</li>
+<li>
+<p>It appears in the Related PSR tab of another PSR.</p>
+</li>
+<li>
+<p>It is currently part of a larger problem. Remove this PSR from the parent PSR and then delete it.</p>
+</li>
+<li>
+<p>It appears on the Related PSR tab.</p>
+</li>
+<li>
+<p>It is being used to aggregate multiple problems. Remove the related PSRs and then delete it.</p>
+</li>
+</ul>
+<p>You <span class="italic">cannot</span> delete a <span class="bold">QCR</span> if:</p>
+<ul>
+<li>
+<p>It has any PSRs on the <span class="bold">Relationships</span> tab.</p>
+</li>
+<li>
+<p>If the corrective action process contains Problem Reports. Remove the PSR from the QCR and then delete the QCR.</p>
+</li>
+<li>
+<p>It has any Changes on its <span class="bold">Relationships</span> tab.</p>
+</li>
+<li>
+<p>If the corrective action process is already routed through engineering changes. Remove the Changes from the QCR and then delete the QCR.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref713" name="sthref713"></a>
+<h3 class="sect2"><span class="secnum">A.5.5</span> Notes about Deleting Sourcing Project, RFQ and RFQ Response Objects</h3>
+<p>Agile Product Cost Management (PCM) objects include: Sourcing Project, RFQ, and RFQ Response. Before you can delete any Agile PCM object it must meet the conditions described below.</p>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+<li>
+<p>Sourcing Project</p>
+<ul>
+<li>
+<p>The sourcing project has no RFQs.</p>
+</li>
+<li>
+<p>If the sourcing project has RFQs, the RFQs are in the closed state.</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Sourcing project objects can be soft deleted, but soft-deleted sourcing project objects cannot be undeleted or hard deleted.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>RFQ</p>
+<ul>
+<li>
+<p>The RFQ has no released changes against it.</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+RFQ objects can be soft deleted, but soft-deleted RFQ objects cannot be undeleted or hard deleted.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</li>
+<li>
+<p>RFQ Response</p>
+<ul>
+<li>
+<p>The delete action is not supported for RFQ response objects.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref714" name="sthref714"></a>
+<h3 class="sect2"><span class="secnum">A.5.6</span> Notes about Deleting Package Objects</h3>
+<p>Before you can delete a Package object, it must meet the conditions described below.</p>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+<li>
+<p>The package is at the Pending status type or the Unassigned status.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref715" name="sthref715"></a>
+<h3 class="sect2"><span class="secnum">A.5.7</span> Notes about Deleting Manufacturer Objects</h3>
+<p>Before you can delete a manufacturer object, it must meet the conditions described below.</p>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+<li>
+<p>It is not listed on the Manufacturers tab of an item. (Check the Where Used tab of the manufacturing object.)</p>
+</li>
+<li>
+<p>If the object is a manufacturer, no manufacturer parts are associated with it.</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If all manufacturer parts associated with a manufacturer have been deleted, then the manufacturer can be deleted as well. However, you will not be allowed to undelete the soft-deleted manufacturer parts until the soft-deleted manufacturer object is undeleted.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref716" name="sthref716"></a>
+<h3 class="sect2"><span class="secnum">A.5.8</span> Notes about Deleting Site Objects</h3>
+<p>Before you can delete a Site object, it must meet the conditions described below.</p>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+Site objects can be soft deleted, but soft-deleted sites cannot be undeleted or hard deleted. If you are no longer using a site, then Agile recommends that you disable it.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+<li>
+<p>The site does not appear on any item's <span class="bold">Sites</span> tab.</p>
+</li>
+<li>
+<p>The site is not associated with any other Agile object.</p>
+</li>
+<li>
+<p>The site has a lifecycle of Disabled.</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If it meets the conditions listed above, then a disabled site can be soft-deleted even when it is listed in the Sites or Default Site field of user profiles. The deleted site is automatically removed from the Sites list in any user profile where it is listed.
+<p>Once the site has been associated with an item, you can change its status to Disabled, but you cannot delete it.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref717" name="sthref717"></a>
+<h3 class="sect2"><span class="secnum">A.5.9</span> Notes about Deleting User Objects</h3>
+<p>Before you can delete a User object, it must meet the conditions described below.</p>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+User objects <span class="italic">cannot</span> be hard-deleted.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>User access to Agile PLM can also be controlled by using the user profile Status property. For example, if someone leaves the company, or will no longer be using Agile PLM, or you need to prevent a user from logging in to the Agile PLM system, then disable the user object by setting the Status property to Inactive. The user remains listed on the Java Client Administrator <span class="bold">Users</span> node and on the Web Client Address Book <span class="bold">Users</span> tab, and the name still appears on existing workflows, escalations, and so forth, but the user will no longer appear in the Address Book for other users to select. You can reset the user to Active status at any time.</p>
+<p>In Java Client Administrator, to display the list of deleted users, you can use either the <span class="bold">Deleted Users</span> node or the Recycle Bin search <span class="bold">Deleted Users</span>. In Agile Web Client, to display the list of deleted users, use the Recycle Bin search <span class="bold">Deleted Users</span>.</p>
+<p>For detailed information about managing Agile PLM users, see <span class="italic">Agile PLM Administrator Guide</span>.</p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref718" name="sthref718"></a>
+<h3 class="sect2"><span class="secnum">A.5.10</span> Notes about Deleting User Group Objects</h3>
+<p>You can delete a user group that is no longer needed.</p>
+<p>Before you can delete a user group object, it must meet the conditions described below.</p>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+If you set a user group Status to Inactive, then the inactive group appears in the search results table. In contrast, a soft-deleted user group does not appear in the search results table.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<p>If you delete a user group to which users have been assigned, then you can do so without removing the users who were in the user group:</p>
+<ul>
+<li>
+<p>Global User Groups &ndash; when you soft-delete a global user group, the group is listed in the group members' user profile <span class="bold">Groups</span> tabs as an inactive group. When you hard-delete a global user group, the user assignments to that global user group are also deleted and do not appear on the user profile <span class="bold">Groups</span> tab.</p>
+</li>
+<li>
+<p>Personal User Groups &ndash; For personal user groups, whether active or inactive, assignments are not listed on the group members' user profile <span class="bold">Groups</span> tabs.'</p>
+</li>
+</ul>
+<p>When you delete a user group, it is removed from the Agile PLM address book. You cannot delete a user group if it is in use in these cases:</p>
+<ul>
+<li>
+<p>It is on any routable object signoff list on the routable object <span class="bold">Workflow</span> tab.</p>
+</li>
+<li>
+<p>It is listed in any workflow definition Notify properties.</p>
+</li>
+<li>
+<p>It is used as a designated escalation person for any users, user groups, and partners.</p>
+</li>
+</ul>
+<p>In Java Client Administrator, to display the list of deleted user groups, you can use either the <span class="bold">Deleted User Groups</span> node or the Recycle Bin search <span class="bold">Deleted User Groups</span>. In Agile Web Client, to display the list of deleted users, use the Recycle Bin search <span class="bold">Deleted User Groups</span>.</p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref719" name="sthref719"></a>
+<h3 class="sect2"><span class="secnum">A.5.11</span> Notes about Deleting PG&amp;C Objects</h3>
+<p>Agile Product Governance &amp; Compliance (PG&amp;C) objects include: Declarations, Specifications, Substances, and Part Groups. Before you can delete any Agile PG&amp;C object it must meet the conditions described below.</p>
+<ul>
+<li>
+<p>The Agile administrator has assigned to you a role that has the appropriate Delete privileges.</p>
+</li>
+<li>
+<p>All relationships and subscriptions have been removed.</p>
+</li>
+<li>
+<p>Substances, Specifications, and Part Groups</p>
+<ul>
+<li>
+<p>If the substance, specification or part group object is in use, then it cannot be deleted.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Declaration</p>
+<ul>
+<li>
+<p>The Declaration is at the Pending status type or the Unassigned status.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" --></div>
+<!-- class="appendix" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center"><a href="chapter_13.htm"><img src="../../dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td style="text-align:center"><a href="glossary.htm"><img src="../../dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo"><img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /> <a href="../../dcommon/html/cpyr.htm"><br />
+<span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2010, 2016,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span></a></td>
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>

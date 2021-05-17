@@ -1,0 +1,1887 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Concepts and Terms in Agile PLM Solutions</title>
+<meta name="generator" content="Oracle DARB XHTML Converter (Mode = document) - Merged Version 1071" />
+<meta name="date" content="2016-01-07T18:6:47Z" />
+<meta name="robots" content="noarchive" />
+<meta name="doctitle" content="Agile Product Lifecycle Management Getting Started Guide, Release 9.3.5" />
+<meta name="relnum" content="Release 9.3.5" />
+<meta name="partnum" content="E61151-02" />
+<meta name="docid" content="no_value_supplied" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" type="text/html" />
+<link rel="stylesheet" href="../../dcommon/css/blafdoc.css" title="Oracle BLAFDoc" type="text/css" />
+<link rel="contents" href="toc.htm" title="Contents" type="text/html" />
+<link rel="glossary" href="glossary.htm" title="Glossary" type="text/html" />
+<link rel="prev" href="chapter_3.htm" title="Previous" type="text/html" />
+<link rel="next" href="chapter_5.htm" title="Next" type="text/html" />
+</head>
+<body>
+<div class="header"><a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Go to primary content</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top"><b>Agile Product Lifecycle Management Getting Started Guide</b><br />
+<b>Release 9.3.5</b><br />
+E61151-02</td>
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td style="text-align:center"><a href="chapter_3.htm"><img src="../../dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td style="text-align:center"><a href="chapter_5.htm"><img src="../../dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN" id="BEGIN"></a></div>
+<!-- class="header" -->
+<div class="ind"><!-- End Header -->
+<div class="chapter"><a id="BABBFBGD" name="BABBFBGD"></a>
+<h1 class="chapter"><span class="secnum">4</span> Concepts and Terms in Agile PLM Solutions</h1>
+<p>This chapter describes Agile objects and other important concepts in Agile PLM.</p>
+<a id="BABFDGCJ" name="BABFDGCJ"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">4.1</span> Introducing Agile Objects</h2>
+<p>In the Agile PLM system, you work with <span class="italic">objects</span>. Examples of objects are parts, documents, RFQs, and change orders.</p>
+<p>The objects you can view and the actions you can perform are determined by the server components installed on the Agile PLM Application Server and the roles and privileges you are granted to access those components. Privileges can vary from field to field. If you have questions about your roles and privileges, contact your Agile administrator.</p>
+<div class="sect2"><a id="sthref161" name="sthref161"></a>
+<h3 class="sect2"><span class="secnum">4.1.1</span> How Objects Appear</h3>
+<p>When you open an object, it appears with multiple tabs. Different types of objects have different tabs. Each tab contains fields that provide information about that object. For example, a part's <span class="bold">Title Block</span> tab includes <span class="bold">Number</span>, <span class="bold">Part Category</span>, and <span class="bold">Description</span> fields, and a change's <span class="bold">Cover Page</span> tab includes <span class="bold">Originator</span>, <span class="bold">Status</span>, and <span class="bold">Reason For Change</span> fields.</p>
+<p>Some tabs have fields and tables where you enter data; some fields and tables are filled in automatically. Some objects and commonly found tabs are mentioned in the platform-specific discussions later in this chapter. For more information about objects and their tabs, see <a href="chapter_5.htm#BABJCDGA">Chapter 5, "Working with Business Objects in Web Client"</a> or <a href="chapter_6.htm#BABHEAIB">Chapter 6, "Working with Business Objects in Java Client."</a></p>
+<p>Below are a typical object page in Web Client and the same object window in Java Client.</p>
+<div class="figure"><a id="sthref162" name="sthref162"></a>
+<p class="titleinfigure">Figure 4-1 Agile object page, Web Client</p>
+<img src="img/wc_item-obj.png" alt="Screenshot, business object page, Web Client" /><br /></div>
+<!-- class="figure" -->
+<div class="figure"><a id="sthref163" name="sthref163"></a>
+<p class="titleinfigure">Figure 4-2 Agile object window, Java Client</p>
+<img src="img/jc_item_obj.png" alt="Screenshot, business object window, Java Client" /><br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect2" -->
+<a id="BABIEBEJ" name="BABIEBEJ"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">4.1.2</span> Agile Object Types</h3>
+<p>Business objects that you create in Agile PLM are based on a framework of <span class="italic">object types</span>: <span class="bold">base class</span>, <span class="bold">class</span>, and <span class="bold">subclass</span>. The base class object type is a framework for classes; the class object type is a framework for subclasses. Each class has at least one default subclass; the subclass level is where you create specific objects. Every object created in Agile PLM (by users or administrators) is an instance of an existing subclass. (Base classes and classes are never objects themselves.)</p>
+<p>The Agile PLM provides some three dozen default classes of business objects. The default classes of objects that your company can avail depend on which Agile products and licenses have been purchased. The Agile administrator&mdash;that is, any user who has been assigned the Administrator privilege mask or role&mdash;can create subclasses according to the needs of the enterprise; the administrator can also rename the existing (preconfigured) base classes, classes, and subclasses. You may find that even a relatively new Agile PLM installation has objects that have been created with names that are not reflected in this manual, for example, in the next three tables that describe the object types.</p>
+<p>The classes represent either a kind of action (business process) or kind of entity (business object). Everything that a user can create in Agile PLM&mdash;object or process&mdash;is treated as an object, and, again, each object is a specific instance of a subclass. The child subclass inherits the attribute settings of the parent class; where applicable, it inherits lifecycle phase and process extension. Tabs&mdash;tab names and tab visibility&mdash;are inherited from the parent class, but only if these are set at the class level; even preconfigured subclasses with the same parent class can differ slightly from their "siblings" because of tabs that the administrator has hidden or given different names.</p>
+<p>This table summarizes Agile's hierarchy of object types. As an Agile user, you do not need to know much about base classes and classes, but it is helpful to have an idea of the hierarchy and naming behind the subclasses you will be working with. "Items" and "changes" are examples of frequently used base class names.</p>
+<div class="tblruleformal"><a id="sthref164" name="sthref164"></a><a id="sthref165" name="sthref165"></a>
+<p class="titleintable">Table 4-1 Hierarchy of Agile object types</p>
+<table class="RuleFormal" title="Hierarchy of Agile object types" summary="Hierarchy of Agile object types" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="16%" />
+<col width="19%" />
+<col width="18%" />
+<col width="*" />
+<col width="23%" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t2">Object type</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t2">This type inherits...</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t2">Rename, Create, or Delete</th>
+<th style="text-align:left" valign="bottom" id="r1c4-t2">Installed examples</th>
+<th style="text-align:left" valign="bottom" id="r1c5-t2">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t2" headers="r1c1-t2">
+<p><span class="bold">Base Class</span></p>
+</td>
+<td style="text-align:left" headers="r2c1-t2 r1c2-t2">
+<p>Does not inherit; is the highest level of object type that user sees (for example, in searches).</p>
+</td>
+<td style="text-align:left" headers="r2c1-t2 r1c3-t2">
+<p>Administrator can rename base classes, but cannot create or delete any base class.</p>
+</td>
+<td style="text-align:left" headers="r2c1-t2 r1c4-t2">
+<p>Users base class</p>
+<p>Items base class</p>
+<p>Changes base class</p>
+<p>Suppliers base class</p>
+</td>
+<td style="text-align:left" headers="r2c1-t2 r1c5-t2">
+<p>n/a</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t2" headers="r1c1-t2">
+<p><span class="bold">Class</span></p>
+</td>
+<td style="text-align:left" headers="r3c1-t2 r1c2-t2">
+<p>...general properties and process extensions of its parent base class.</p>
+</td>
+<td style="text-align:left" headers="r3c1-t2 r1c3-t2">
+<p>Administrator can rename classes, but cannot create or delete any class.</p>
+</td>
+<td style="text-align:left" headers="r3c1-t2 r1c4-t2">
+<p>Users class</p>
+<p>Parts class and Documents class</p>
+<p>Change Orders class, Change Requests class, Site Change Orders class, and so on</p>
+<p>Suppliers class</p>
+</td>
+<td style="text-align:left" headers="r3c1-t2 r1c5-t2">
+<p>The class object type (sometimes called <span class="italic">main class</span>) is the primary level of organization in Agile PLM. Each class represents a specific process or kind of entity (see <a href="#BABEGDEH">"Routable and Nonroutable Objects"</a>).</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t2" headers="r1c1-t2">
+<p><span class="bold">Subclass</span></p>
+</td>
+<td style="text-align:left" headers="r4c1-t2 r1c2-t2">
+<p>...all components (tabs), properties, and attributes of its parent class. Subclasses arrange the information &amp; data that describes the specific object in the Agile PLM.</p>
+</td>
+<td style="text-align:left" headers="r4c1-t2 r1c3-t2">
+<p>Administrator can create and rename subclasses, and also delete any subclasses that have not been used by Agile users.</p>
+</td>
+<td style="text-align:left" headers="r4c1-t2 r1c4-t2">
+<p>User</p>
+<p>Part, Document</p>
+<p>ECO, ECR, SCO, and so on</p>
+<p>Broker, Distributor, Component Mfr., Contract Mfr., and Mfr. Representative</p>
+</td>
+<td style="text-align:left" headers="r4c1-t2 r1c5-t2">
+<p>When users create a new object in Agile, they specify one of the Agile-supplied subclasses or a subclass that the administrator has created (or renamed) per your company's requirements. Subclass names cannot be used more than once within an Agile PLM system. A few classes offer multiple preconfigured subclasses.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<p>The object type plays a part in user access and permissions. For example, you can restrict a user's privilege to the Changes base class, the Change Orders class, or the ECO subclass (or another, user-defined subclass of Change Orders class).</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<a id="BABIBDAJ" name="BABIBDAJ"></a>
+<div class="sect1">
+<h2 class="sect1"><span class="secnum">4.2</span> Installed Agile Classes, Base Classes, and Subclasses</h2>
+<p>The following tables list all the possible installed object types in Agile PLM. Classes are grouped by being routable or nonroutable, which is discussed further on. This section also discusses the following topics:</p>
+<ul>
+<li>
+<p><a href="#BABIEHDH">"Discovery and Read Privileges."</a></p>
+</li>
+<li>
+<p><a href="#BABEGDEH">"Routable and Nonroutable Objects."</a></p>
+</li>
+</ul>
+<p>The following tables list all the possible installed object types in Agile PLM, grouped by the routable and nonroutable distinction. Your company may have purchased server licenses to a subset of this list. A class appears grayed out in the administrator's list of classes if your company has not purchased its server license.</p>
+<p>Your Agile administrator may have created or renamed subclasses. The Agile administrator defines new objects by creating subclass objects under each object class. For example, under the Deviations class, you could see new subclasses such as "MechDev," "SWDev," and "Part Switch" in addition to the default subclass, Deviation.</p>
+<a id="sthref166" name="sthref166"></a>
+<p class="subhead2">Installed Routable Object Types</p>
+<p>The following tables list all the possible installed routable object types in Agile PLM.</p>
+<p>Routable objects &ndash; the means to direct or recommend changes to nonroutable objects; these classes have a default workflow for changes to seek approval from other users; objects from these classes can be changed without approval.</p>
+<p>Routable object base classes are:</p>
+<ul>
+<li>
+<p>Changes</p>
+</li>
+<li>
+<p>Declarations</p>
+</li>
+<li>
+<p>Packages</p>
+</li>
+<li>
+<p>Product Service Requests</p>
+</li>
+<li>
+<p>Projects</p>
+</li>
+<li>
+<p>Quality Change Requests</p>
+</li>
+<li>
+<p>Transfer Orders</p>
+</li>
+</ul>
+<div class="tblruleformal"><a id="sthref167" name="sthref167"></a><a id="sthref168" name="sthref168"></a>
+<p class="titleintable">Table 4-2 Changes base class routable objects</p>
+<table class="RuleFormal" title="Changes base class routable objects" summary="Changes base class routable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t3">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t3">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t3">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t3" headers="r1c1-t3">
+<p>Change Orders</p>
+</td>
+<td style="text-align:left" headers="r2c1-t3 r1c2-t3">
+<p>ECO</p>
+</td>
+<td style="text-align:left" headers="r2c1-t3 r1c3-t3">
+<p>Directives to change an item; can advance the revision ("rev") of an item</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t3" headers="r1c1-t3">
+<p>Change Requests</p>
+</td>
+<td style="text-align:left" headers="r3c1-t3 r1c2-t3">
+<p>ECR</p>
+</td>
+<td style="text-align:left" headers="r3c1-t3 r1c3-t3">
+<p>Requests for a change to an item</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t3" headers="r1c1-t3">
+<p>Deviations</p>
+</td>
+<td style="text-align:left" headers="r4c1-t3 r1c2-t3">
+<p>Deviation</p>
+</td>
+<td style="text-align:left" headers="r4c1-t3 r1c3-t3">
+<p>Directives to temporarily substitute one item for another</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t3" headers="r1c1-t3">
+<p>Manufacturer Orders</p>
+</td>
+<td style="text-align:left" headers="r5c1-t3 r1c2-t3">
+<p>MCO</p>
+</td>
+<td style="text-align:left" headers="r5c1-t3 r1c3-t3">
+<p>Changes to AML data, such as information about manufacturers or manufacturer part numbers</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t3" headers="r1c1-t3">
+<p>Price Change Orders</p>
+</td>
+<td style="text-align:left" headers="r6c1-t3 r1c2-t3">
+<p>PCO</p>
+</td>
+<td style="text-align:left" headers="r6c1-t3 r1c3-t3">
+<p>Directives to change a published price; can advance the revision of a published price</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t3" headers="r1c1-t3">
+<p>Site Change Orders</p>
+</td>
+<td style="text-align:left" headers="r7c1-t3 r1c2-t3">
+<p>SCO</p>
+</td>
+<td style="text-align:left" headers="r7c1-t3 r1c3-t3">
+<p>Changes to BOM and AML information for a specific site</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r8c1-t3" headers="r1c1-t3">
+<p>Stop Ships</p>
+</td>
+<td style="text-align:left" headers="r8c1-t3 r1c2-t3">
+<p>Stop Ship</p>
+</td>
+<td style="text-align:left" headers="r8c1-t3 r1c3-t3">
+<p>Directives to stop shipping/using an item</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref169" name="sthref169"></a><a id="sthref170" name="sthref170"></a>
+<p class="titleintable">Table 4-3 Declaration base class routable objects</p>
+<table class="RuleFormal" title="Declaration base class routable objects" summary="Declaration base class routable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t4">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t4">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t4">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t4" headers="r1c1-t4">
+<p>Substance Declarations</p>
+</td>
+<td style="text-align:left" headers="r2c1-t4 r1c2-t4">
+<p>Substance Declaration</p>
+</td>
+<td style="text-align:left" headers="r2c1-t4 r1c3-t4">
+<p>Seeks compliance information for each substance within the specification</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t4" headers="r1c1-t4">
+<p>Part Declarations</p>
+</td>
+<td style="text-align:left" headers="r3c1-t4 r1c2-t4">
+<p>Part Declaration</p>
+</td>
+<td style="text-align:left" headers="r3c1-t4 r1c3-t4">
+<p>Seeks part-level compliance information and other composition header-level information (manufacturing parameters)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t4" headers="r1c1-t4">
+<p>JGPSSI Declarations</p>
+</td>
+<td style="text-align:left" headers="r4c1-t4 r1c2-t4">
+<p>JGPSSI Declaration</p>
+</td>
+<td style="text-align:left" headers="r4c1-t4 r1c3-t4">
+<p>Seeks compliance information (weights) according to the JGP standard.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t4" headers="r1c1-t4">
+<p>Homogeneous Material Declarations</p>
+</td>
+<td style="text-align:left" headers="r5c1-t4 r1c2-t4">
+<p>Homogeneous Material Declaration</p>
+</td>
+<td style="text-align:left" headers="r5c1-t4 r1c3-t4">
+<p>Seeks complete breakdown of parts on the Bill Of Substances and compliance information at the homogeneous material level</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t4" headers="r1c1-t4">
+<p>Supplier Declarations of Conformance</p>
+</td>
+<td style="text-align:left" headers="r6c1-t4 r1c2-t4">
+<p>Supplier Declaration of Conformance</p>
+</td>
+<td style="text-align:left" headers="r6c1-t4 r1c3-t4">
+<p>Seeks compliance with specifications from customers and government agencies</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t4" headers="r1c1-t4">
+<p>IPC 1752-1 Declarations</p>
+</td>
+<td style="text-align:left" headers="r7c1-t4 r1c2-t4">
+<p>IPC 1752-1 Declaration</p>
+</td>
+<td style="text-align:left" headers="r7c1-t4 r1c3-t4">
+<p>A Joint Industry Guide (JIG) material composition declaration for electronic products</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r8c1-t4" headers="r1c1-t4">
+<p>IPC 1752-2 Declarations</p>
+</td>
+<td style="text-align:left" headers="r8c1-t4 r1c2-t4">
+<p>IPC 1752-2 Declaration</p>
+</td>
+<td style="text-align:left" headers="r8c1-t4 r1c3-t4">
+<p>A homogeneous material composition declaration for electronic products</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref171" name="sthref171"></a><a id="sthref172" name="sthref172"></a>
+<p class="titleintable">Table 4-4 Packages base class routable objects</p>
+<table class="RuleFormal" title="Packages base class routable objects" summary="Packages base class routable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t5">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t5">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t5">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t5" headers="r1c1-t5">
+<p>packages</p>
+</td>
+<td style="text-align:left" headers="r2c1-t5 r1c2-t5">
+<p>Package</p>
+</td>
+<td style="text-align:left" headers="r2c1-t5 r1c3-t5">
+<p>Packages of data to share with partners</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref173" name="sthref173"></a><a id="sthref174" name="sthref174"></a>
+<p class="titleintable">Table 4-5 Product Service Requests base class routable objects</p>
+<table class="RuleFormal" title="Product Service Requests base class routable objects" summary="Product Service Requests base class routable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t6">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t6">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t6">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t6" headers="r1c1-t6">
+<p>Problem Reports</p>
+</td>
+<td style="text-align:left" headers="r2c1-t6 r1c2-t6">
+<p>Problem Report</p>
+</td>
+<td style="text-align:left" headers="r2c1-t6 r1c3-t6">
+<p>Quality incidents with items or products</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t6" headers="r1c1-t6">
+<p>Non-Conformance Reports</p>
+</td>
+<td style="text-align:left" headers="r3c1-t6 r1c2-t6">
+<p>NCR</p>
+</td>
+<td style="text-align:left" headers="r3c1-t6 r1c3-t6">
+<p>Quality conformance issues with items or products</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref175" name="sthref175"></a><a id="sthref176" name="sthref176"></a>
+<p class="titleintable">Table 4-6 Projects base class routable objects</p>
+<table class="RuleFormal" title="Projects base class routable objects" summary="Projects base class routable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t7">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t7">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t7">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t7" headers="r1c1-t7">
+<p>Activities</p>
+</td>
+<td style="text-align:left" headers="r2c1-t7 r1c2-t7">
+<p>Phase; Program; Project; Task</p>
+</td>
+<td style="text-align:left" headers="r2c1-t7 r1c3-t7">
+<p>Components of project planning in Product Portfolio Management; activities are time-based objects to which resources can be assigned</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t7" headers="r1c1-t7">
+<p>Gates</p>
+</td>
+<td style="text-align:left" headers="r3c1-t7 r1c2-t7">
+<p>DG1, DG2, DG3, DG4, DG5, DG6; Gate; Milestone</p>
+</td>
+<td style="text-align:left" headers="r3c1-t7 r1c3-t7">
+<p>Project management milestones in Product Portfolio Management; gates identify cross-PLM deliverables of the product development process to enable executive reviews of projects</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref177" name="sthref177"></a><a id="sthref178" name="sthref178"></a>
+<p class="titleintable">Table 4-7 Quality Change Requests base class routable objects</p>
+<table class="RuleFormal" title="Quality Change Requests base class routable objects" summary="Quality Change Requests base class routable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="26%" />
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t8">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t8">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t8">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t8" headers="r1c1-t8">
+<p>Corrective and Preventive Actions</p>
+</td>
+<td style="text-align:left" headers="r2c1-t8 r1c2-t8">
+<p>CAPA</p>
+</td>
+<td style="text-align:left" headers="r2c1-t8 r1c3-t8">
+<p>Requests for corrective actions and preventive actions</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t8" headers="r1c1-t8">
+<p>Audits</p>
+</td>
+<td style="text-align:left" headers="r3c1-t8 r1c2-t8">
+<p>Audit</p>
+</td>
+<td style="text-align:left" headers="r3c1-t8 r1c3-t8">
+<p>Proactive reviews of business processes</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref179" name="sthref179"></a><a id="sthref180" name="sthref180"></a>
+<p class="titleintable">Table 4-8 Transfer Orders base class routable objects</p>
+<table class="RuleFormal" title="Transfer Orders base class routable objects" summary="Transfer Orders base class routable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="26%" />
+<col width="24%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t9">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t9">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t9">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t9" headers="r1c1-t9">
+<p>Automated Transfer Orders</p>
+</td>
+<td style="text-align:left" headers="r2c1-t9 r1c2-t9">
+<p>ATO</p>
+</td>
+<td style="text-align:left" headers="r2c1-t9 r1c3-t9">
+<p>Transfer or publication of a product record that is automatically triggered by a workflow</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t9" headers="r1c1-t9">
+<p>Content Transfer Orders</p>
+</td>
+<td style="text-align:left" headers="r3c1-t9 r1c2-t9">
+<p>CTO</p>
+</td>
+<td style="text-align:left" headers="r3c1-t9 r1c3-t9">
+<p>Transfer or publication of a product record that is manually triggered</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="sthref181" name="sthref181"></a>
+<p class="subhead2">Installed Nonroutable Object Types</p>
+<p>The following tables list all the possible installed nonroutable object types in Agile PLM.</p>
+<p>Nonroutable Objects &ndash; objects in these classes are not routed to Agile PLM users with workflows; objects from some of these classes, however, are changed by a user submitting a workflow (from routable classes) for approval from other users.</p>
+<p>Nonroutable object base classes are:</p>
+<ul>
+<li>
+<p>Customers</p>
+</li>
+<li>
+<p>Discussions</p>
+</li>
+<li>
+<p>File Folders</p>
+</li>
+<li>
+<p>Items</p>
+</li>
+<li>
+<p>Manufacturers</p>
+</li>
+<li>
+<p>Manufacturers Parts</p>
+</li>
+<li>
+<p>Part Groups</p>
+</li>
+<li>
+<p>Prices</p>
+</li>
+<li>
+<p>Reports</p>
+</li>
+<li>
+<p>Requests for Quote</p>
+</li>
+<li>
+<p>RFQ Responses</p>
+</li>
+<li>
+<p>Sites</p>
+</li>
+<li>
+<p>Sourcing Projects</p>
+</li>
+<li>
+<p>Specifications</p>
+</li>
+<li>
+<p>Substances</p>
+</li>
+<li>
+<p>Suppliers</p>
+</li>
+<li>
+<p>Users</p>
+</li>
+<li>
+<p>User Groups</p>
+</li>
+</ul>
+<div class="tblruleformal"><a id="sthref182" name="sthref182"></a><a id="sthref183" name="sthref183"></a>
+<p class="titleintable">Table 4-9 Customers base class nonroutable objects</p>
+<table class="RuleFormal" title="Customers base class nonroutable objects" summary="Customers base class non-routable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t10">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t10">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t10">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t10" headers="r1c1-t10">
+<p>customers</p>
+</td>
+<td style="text-align:left" headers="r2c1-t10 r1c2-t10">
+<p>Customer</p>
+</td>
+<td style="text-align:left" headers="r2c1-t10 r1c3-t10">
+<p>Clients of the company</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref184" name="sthref184"></a><a id="sthref185" name="sthref185"></a>
+<p class="titleintable">Table 4-10 Discussions base class nonroutable objects</p>
+<table class="RuleFormal" title="Discussions base class nonroutable objects" summary="Discussions base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t11">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t11">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t11">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t11" headers="r1c1-t11">
+<p>discussions</p>
+</td>
+<td style="text-align:left" headers="r2c1-t11 r1c2-t11">
+<p>Discussion</p>
+</td>
+<td style="text-align:left" headers="r2c1-t11 r1c3-t11">
+<p>Informal, threaded dialogue</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref186" name="sthref186"></a><a id="sthref187" name="sthref187"></a>
+<p class="titleintable">Table 4-11 File Folders base class nonroutable objects</p>
+<table class="RuleFormal" title="File Folders base class nonroutable objects" summary="File Folders base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t12">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t12">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t12">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t12" headers="r1c1-t12">
+<p>File folders</p>
+</td>
+<td style="text-align:left" headers="r2c1-t12 r1c2-t12">
+<p>File Folder</p>
+<p>Markup</p>
+</td>
+<td style="text-align:left" headers="r2c1-t12 r1c3-t12">
+<p>Objects that include files or URLs; this class includes all file folder objects except historical report file folders</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t12" headers="r1c1-t12">
+<p>Designs</p>
+</td>
+<td style="text-align:left" headers="r3c1-t12 r1c2-t12">
+<p>Design</p>
+</td>
+<td style="text-align:left" headers="r3c1-t12 r1c3-t12">
+<p>Objects that permit building design structures in the CAD environment</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref188" name="sthref188"></a><a id="sthref189" name="sthref189"></a>
+<p class="titleintable">Table 4-12 Items base class nonroutable objects</p>
+<table class="RuleFormal" title="Items base class nonroutable objects" summary="Items base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t13">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t13">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t13">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t13" headers="r1c1-t13">
+<p>Documents</p>
+</td>
+<td style="text-align:left" headers="r2c1-t13 r1c2-t13">
+<p>Document</p>
+</td>
+<td style="text-align:left" headers="r2c1-t13 r1c3-t13">
+<p>Specifications, blueprints, manufacturing data, and so forth</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t13" headers="r1c1-t13">
+<p>Parts</p>
+</td>
+<td style="text-align:left" headers="r3c1-t13 r1c2-t13">
+<p>Materials Subclass</p>
+<p>Model</p>
+<p>Option Class</p>
+<p>Part</p>
+<p>Recipe</p>
+</td>
+<td style="text-align:left" headers="r3c1-t13 r1c3-t13">
+<p>Parts manufactured within the company, or provided by manufacturers or suppliers and given internal part numbers</p>
+<p><span class="bold">Note:</span> The Materials Subclass and Recipe subclasses are NOT available until the Recipe &amp; Material Workspace product is installed.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref190" name="sthref190"></a><a id="sthref191" name="sthref191"></a>
+<p class="titleintable">Table 4-13 Manufacturers base class nonroutable objects</p>
+<table class="RuleFormal" title="Manufacturers base class nonroutable objects" summary="Manufacturers base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t14">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t14">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t14">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t14" headers="r1c1-t14">
+<p>manufacturers</p>
+</td>
+<td style="text-align:left" headers="r2c1-t14 r1c2-t14">
+<p>Manufacturer</p>
+</td>
+<td style="text-align:left" headers="r2c1-t14 r1c3-t14">
+<p>Qualified manufacturers</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref192" name="sthref192"></a><a id="sthref193" name="sthref193"></a>
+<p class="titleintable">Table 4-14 Manufacturer Parts base class nonroutable objects</p>
+<table class="RuleFormal" title="Manufacturer Parts base class nonroutable objects" summary="Manufacturer Parts base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t15">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t15">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t15">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t15" headers="r1c1-t15">
+<p>Manufacturer parts</p>
+</td>
+<td style="text-align:left" headers="r2c1-t15 r1c2-t15">
+<p>Manufacturer Part</p>
+</td>
+<td style="text-align:left" headers="r2c1-t15 r1c3-t15">
+<p>Parts provided by manufacturers</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref194" name="sthref194"></a><a id="sthref195" name="sthref195"></a>
+<p class="titleintable">Table 4-15 Part Groups base class nonroutable objects</p>
+<table class="RuleFormal" title="Part Groups base class nonroutable objects" summary="Part Groups base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t16">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t16">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t16">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t16" headers="r1c1-t16">
+<p>Part groups</p>
+</td>
+<td style="text-align:left" headers="r2c1-t16 r1c2-t16">
+<p>Commodity</p>
+<p>Part Family</p>
+<p>Item Group</p>
+</td>
+<td style="text-align:left" headers="r2c1-t16 r1c3-t16">
+<p>Containers of other parts (items or manufacturer parts) that share such properties as mass or composition information.</p>
+<p><span class="bold">Note:</span> This object was named "Commodities" in previous releases of Agile PLM.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref196" name="sthref196"></a><a id="sthref197" name="sthref197"></a>
+<p class="titleintable">Table 4-16 Prices base class nonroutble objects</p>
+<table class="RuleFormal" title="Prices base class nonroutble objects" summary="Prices base class nonroutble objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t17">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t17">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t17">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t17" headers="r1c1-t17">
+<p>Quote Histories</p>
+</td>
+<td style="text-align:left" headers="r2c1-t17 r1c2-t17">
+<p>Quote History</p>
+</td>
+<td style="text-align:left" headers="r2c1-t17 r1c3-t17">
+<p>Organizes bid prices from RFQ responses; cannot be revised by a PCO (see grouping of Changes in preceding table)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t17" headers="r1c1-t17">
+<p>Published Prices</p>
+</td>
+<td style="text-align:left" headers="r3c1-t17 r1c2-t17">
+<p>Published Price; Contract</p>
+</td>
+<td style="text-align:left" headers="r3c1-t17 r1c3-t17">
+<p>Organizes prices of the company's products; can be revised by a PCO (see grouping of Changes in preceding table)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref198" name="sthref198"></a><a id="sthref199" name="sthref199"></a>
+<p class="titleintable">Table 4-17 Reports base class nonroutable objects</p>
+<table class="RuleFormal" title="Reports base class nonroutable objects" summary="Reports base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t18">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t18">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t18">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t18" headers="r1c1-t18">
+<p>Standard Reports</p>
+</td>
+<td style="text-align:left" headers="r2c1-t18 r1c2-t18">
+<p>Administrator Report; Standard Report</p>
+</td>
+<td style="text-align:left" headers="r2c1-t18 r1c3-t18">
+<p>The ready-to-use reports for administrators (Administrator Reports) and users (Standard Reports include Products, Sourcing, Quality, Process, Personal, and Global reports)</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t18" headers="r1c1-t18">
+<p>Custom Reports</p>
+</td>
+<td style="text-align:left" headers="r3c1-t18 r1c2-t18">
+<p>Custom Report</p>
+</td>
+<td style="text-align:left" headers="r3c1-t18 r1c3-t18">
+<p>Reports created and used within company</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t18" headers="r1c1-t18">
+<p>External Reports</p>
+</td>
+<td style="text-align:left" headers="r4c1-t18 r1c2-t18">
+<p>External Report</p>
+</td>
+<td style="text-align:left" headers="r4c1-t18 r1c3-t18">
+<p>Reports created outside Agile PLM</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref200" name="sthref200"></a><a id="sthref201" name="sthref201"></a>
+<p class="titleintable">Table 4-18 Request For Quote base class nonroutable objects</p>
+<table class="RuleFormal" title="Request For Quote base class nonroutable objects" summary="Request For Quote base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t19">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t19">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t19">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t19" headers="r1c1-t19">
+<p>Requests for quote</p>
+</td>
+<td style="text-align:left" headers="r2c1-t19 r1c2-t19">
+<p>RFQ</p>
+</td>
+<td style="text-align:left" headers="r2c1-t19 r1c3-t19">
+<p>Requests for quote, which are assembled from sourcing projects and sent to suppliers for formal bids</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref202" name="sthref202"></a><a id="sthref203" name="sthref203"></a>
+<p class="titleintable">Table 4-19 RFQ Responses base class nonroutable objects</p>
+<table class="RuleFormal" title="RFQ Responses base class nonroutable objects" summary="RFQ Responses base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t20">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t20">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t20">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t20" headers="r1c1-t20">
+<p>RFQ responses</p>
+</td>
+<td style="text-align:left" headers="r2c1-t20 r1c2-t20">
+<p>RFQ Response</p>
+</td>
+<td style="text-align:left" headers="r2c1-t20 r1c3-t20">
+<p>Bids, that is, responses from suppliers to your company's RFQs</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref204" name="sthref204"></a><a id="sthref205" name="sthref205"></a>
+<p class="titleintable">Table 4-20 Sites base class nonroutable objects</p>
+<table class="RuleFormal" title="Sites base class nonroutable objects" summary="Sites base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t21">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t21">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t21">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t21" headers="r1c1-t21">
+<p>Sites</p>
+</td>
+<td style="text-align:left" headers="r2c1-t21 r1c2-t21">
+<p>Site</p>
+</td>
+<td style="text-align:left" headers="r2c1-t21 r1c3-t21">
+<p>Manufacturing locations within the company, or closely partnered with the company</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref206" name="sthref206"></a><a id="sthref207" name="sthref207"></a>
+<p class="titleintable">Table 4-21 Sourcing Projects base class nonroutable objects</p>
+<table class="RuleFormal" title="Sourcing Projects base class nonroutable objects" summary="Sourcing Projects base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t22">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t22">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t22">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t22" headers="r1c1-t22">
+<p>Sourcing projects</p>
+</td>
+<td style="text-align:left" headers="r2c1-t22 r1c2-t22">
+<p>Sourcing Project</p>
+</td>
+<td style="text-align:left" headers="r2c1-t22 r1c3-t22">
+<p>Work preparatory to creating RFQs and capability for analysis across multiple RFQs</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref208" name="sthref208"></a><a id="sthref209" name="sthref209"></a>
+<p class="titleintable">Table 4-22 Specifications base class nonroutable objects</p>
+<table class="RuleFormal" title="Specifications base class nonroutable objects" summary="Specifications base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t23">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t23">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t23">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t23" headers="r1c1-t23">
+<p>Specifications</p>
+</td>
+<td style="text-align:left" headers="r2c1-t23 r1c2-t23">
+<p>Specification</p>
+</td>
+<td style="text-align:left" headers="r2c1-t23 r1c3-t23">
+<p>Lists of banned substances (or substances of concern) and their threshold values</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref210" name="sthref210"></a><a id="sthref211" name="sthref211"></a>
+<p class="titleintable">Table 4-23 Substances base class nonroutable objects</p>
+<table class="RuleFormal" title="Substances base class nonroutable objects" summary="Substances base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t24">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t24">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t24">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t24" headers="r1c1-t24">
+<p>Substances</p>
+</td>
+<td style="text-align:left" headers="r2c1-t24 r1c2-t24">
+<p>Substance</p>
+</td>
+<td style="text-align:left" headers="r2c1-t24 r1c3-t24">
+<p>A single chemical element used in composition of items, manufacturer parts, and part families</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t24" headers="r1c1-t24">
+<p>Materials</p>
+</td>
+<td style="text-align:left" headers="r3c1-t24 r1c2-t24">
+<p>Material</p>
+</td>
+<td style="text-align:left" headers="r3c1-t24 r1c3-t24">
+<p>A compound chemical, a substance consisting of multiple substances</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t24" headers="r1c1-t24">
+<p>Subparts</p>
+</td>
+<td style="text-align:left" headers="r4c1-t24 r1c2-t24">
+<p>Subpart</p>
+</td>
+<td style="text-align:left" headers="r4c1-t24 r1c3-t24">
+<p>A subunit of a component, used to get to the homogeneous material level to collect compliance information</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t24" headers="r1c1-t24">
+<p>Substance Groups</p>
+</td>
+<td style="text-align:left" headers="r5c1-t24 r1c2-t24">
+<p>Substance Group</p>
+</td>
+<td style="text-align:left" headers="r5c1-t24 r1c3-t24">
+<p>A group of multiple substances, with a base substance that is what legislation is interested in, for example, "Lead and Lead Compounds"</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref212" name="sthref212"></a><a id="sthref213" name="sthref213"></a>
+<p class="titleintable">Table 4-24 Suppliers base class nonroutable objects</p>
+<table class="RuleFormal" title="Suppliers base class nonroutable objects" summary="Suppliers base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t25">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t25">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t25">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t25" headers="r1c1-t25">
+<p>Suppliers</p>
+</td>
+<td style="text-align:left" headers="r2c1-t25 r1c2-t25">
+<p>Broker</p>
+<p>Component Mfr</p>
+<p>Contract Mfr</p>
+<p>Distributor</p>
+<p>Mfr. Representative</p>
+</td>
+<td style="text-align:left" headers="r2c1-t25 r1c3-t25">
+<p>Qualified suppliers of manufacturer parts; used by PCM (which uses the ready-to-use subclasses) and PG&amp;C solutions</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref214" name="sthref214"></a><a id="sthref215" name="sthref215"></a>
+<p class="titleintable">Table 4-25 Users base class nonroutable objects</p>
+<table class="RuleFormal" title="Users base class nonroutable objects" summary="Users base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t26">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t26">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t26">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t26" headers="r1c1-t26">
+<p>Users</p>
+</td>
+<td style="text-align:left" headers="r2c1-t26 r1c2-t26">
+<p>User</p>
+</td>
+<td style="text-align:left" headers="r2c1-t26 r1c3-t26">
+<p>Individuals using the Agile PLM system</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<div class="tblruleformal"><a id="sthref216" name="sthref216"></a><a id="sthref217" name="sthref217"></a>
+<p class="titleintable">Table 4-26 User Groups base class nonroutable objects</p>
+<table class="RuleFormal" title="User Groups base class nonroutable objects" summary="User Groups base class nonroutable objects" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="30%" />
+<col width="20%" />
+<col width="*" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t27">Class</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t27">Subclass</th>
+<th style="text-align:left" valign="bottom" id="r1c3-t27">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t27" headers="r1c1-t27">
+<p>User groups</p>
+</td>
+<td style="text-align:left" headers="r2c1-t27 r1c2-t27">
+<p>User Group</p>
+</td>
+<td style="text-align:left" headers="r2c1-t27 r1c3-t27">
+<p>Groups of people using the Agile PLM system, that is, departments, teams, site-specific groups.</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t27" headers="r1c1-t27">
+<p>Functional Teams</p>
+</td>
+<td style="text-align:left" headers="r3c1-t27 r1c2-t27">
+<p>Functional Team</p>
+</td>
+<td style="text-align:left" headers="r3c1-t27 r1c3-t27">
+<p>Groups of people that comprise a functional team; each member is assigned a workplace job function.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" -->
+<a id="BABIEHDH" name="BABIEHDH"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">4.2.1</span> Discovery and Read Privileges</h3>
+<p>Together, the Discovery privilege, the Read privilege, and the Enforce Field Level Read privilege determine which Agile objects you can find and open, and which object fields you can view.</p>
+<p>The Discovery privilege lets you discover the existence of an object in the Agile database. If you do not have Discovery privilege for an object, you cannot view the object, and you cannot find, or discover, the object in the Agile database. This includes viewing users in the address book; there may be some users that you cannot view due to lack of privileges.</p>
+<p>Once you have the privilege to discover an object, your Read and Enforce Field Level Read privileges for that object determine whether you can open and view it, and which individual fields you can view. You may be able to read an object, but you may not have Read privilege for every field of that object. So it is possible for you to open an object and, at the same time, be unable to view specific fields of that object. For more information about the Discovery and Read privileges, see the <span class="italic">Agile PLM Administrator Guide</span>.</p>
+</div>
+<!-- class="sect2" -->
+<a id="BABEGDEH" name="BABEGDEH"></a>
+<div class="sect2">
+<h3 class="sect2"><span class="secnum">4.2.2</span> Routable and Nonroutable Objects</h3>
+<p>Each class represents a specific process or kind of entity:</p>
+<ul>
+<li>
+<p><span class="bold">Routable objects</span> are created from classes that represent <span class="italic">processes</span>, such as a change in the change control process, or a transfer order, or a product service request. These objects can be routed to Agile users for approval or other input through workflows (see <a href="#BABEHICB">"Workflows."</a>).</p>
+</li>
+<li>
+<p><span class="bold">Nonroutable objects</span> are created from classes that represent <span class="italic">entities</span> or things, such as parts, sites, RFQs, users, prices, or reports. These objects can be "flagged" for progress through lifecycle phases. Note, however, that nonroutable objects&mdash;especially parts and documents&mdash;can be changed by the process of information-gathering by using workflows, which are created through such routable objects as change orders or change requests.</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote"><br />
+<table class="Note oac_no_warn" summary="" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0" dir="ltr">
+<tbody>
+<tr>
+<td style="text-align:left">
+<p class="notep1">Note:</p>
+File folder objects have lifecycle phases and, as they represent the entity of "attachment wrapper," are not considered routable objects; however, the File Folders class has a default, non-editable workflow with a single Review status (and no other status), which provides a <span class="bold">Routing Slip</span> tab where approvers can sign off and comment.</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="inftblnote" --></div>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref218" name="sthref218"></a>
+<h4 class="sect3"><span class="secnum">4.2.2.1</span> Routing Managers</h4>
+<p>Any object that can be routed for approval is a routable object. The user who oversees the routing and approval process is the routing manager. The various routing managers (see the table below) are simply roles assigned to users by the administrator. Once a user has been assigned a role of, say, change analyst, his name appears on the Change Analyst List and can be selected manually by a Java Client or Web Client user with the appropriate Modify privilege. If the workflow specifies a Default Change Analyst, then the Change Analyst field is automatically populated by the workflow.</p>
+<p>Routing managers evaluate and assign routable objects, and they receive email notifications pertaining to the objects to which they are assigned.</p>
+<p>The following table lists routable objects and the corresponding default routing manager.</p>
+<div class="tblruleformal"><a id="sthref219" name="sthref219"></a><a id="sthref220" name="sthref220"></a>
+<p class="titleintable">Table 4-27 Routable objects and corresponding routing managers</p>
+<table class="RuleFormal" title="Routable objects and corresponding routing managers" summary="List of rouble objects and the associated routing manager for each routable object type" dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<col width="*" />
+<col width="28%" />
+<thead>
+<tr align="left" valign="top">
+<th style="text-align:left" valign="bottom" id="r1c1-t29">Routable Object (with base class)</th>
+<th style="text-align:left" valign="bottom" id="r1c2-t29">Default Routing Manager</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r2c1-t29" headers="r1c1-t29">
+<p><span class="bold">Changes base class</span>: Change orders (ECOs), Change Requests (ECRs), Stop Ships, Deviations, Site Change Orders (SCOs)</p>
+</td>
+<td style="text-align:left" headers="r2c1-t29 r1c2-t29">
+<p>Change analyst</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r3c1-t29" headers="r1c1-t29">
+<p><span class="bold">Changes base class</span>: Manufacturer Orders (MCOs)</p>
+</td>
+<td style="text-align:left" headers="r3c1-t29 r1c2-t29">
+<p>Component Engineer</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r4c1-t29" headers="r1c1-t29">
+<p><span class="bold">Changes base class</span>: Price Change Orders (PCOs)</p>
+</td>
+<td style="text-align:left" headers="r4c1-t29 r1c2-t29">
+<p>Price administrator</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r5c1-t29" headers="r1c1-t29">
+<p><span class="bold">Declarations base class</span>: Part Declarations, Substance Declarations, Homogeneous Material Declarations, JGPSSI Declarations, Supplier Declarations of Conformance</p>
+</td>
+<td style="text-align:left" headers="r5c1-t29 r1c2-t29">
+<p>Compliance manager</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r6c1-t29" headers="r1c1-t29">
+<p><span class="bold">Packages base class</span>: Packages</p>
+</td>
+<td style="text-align:left" headers="r6c1-t29 r1c2-t29">
+<p>Program manager</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r7c1-t29" headers="r1c1-t29">
+<p><span class="bold">Product Service Requests base class</span> (PSRs): Problem Reports and Non-Conformance Reports (NCRs)</p>
+</td>
+<td style="text-align:left" headers="r7c1-t29 r1c2-t29">
+<p>Quality analyst</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r8c1-t29" headers="r1c1-t29">
+<p><span class="bold">Programs base class</span>: Activities and Gates</p>
+</td>
+<td style="text-align:left" headers="r8c1-t29 r1c2-t29">
+<p>PE program manager</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r9c1-t29" headers="r1c1-t29">
+<p><span class="bold">Quality Change Request base class</span> (QCRs): Corrective and Preventive Actions (CAPAs) and Audits</p>
+</td>
+<td style="text-align:left" headers="r9c1-t29 r1c2-t29">
+<p>Quality administrator</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td style="text-align:left" id="r10c1-t29" headers="r1c1-t29">
+<p><span class="bold">Transfer Orders base class</span>: Content Transfer Orders (CTOs) and Automated Transfer Orders (ATOs)</p>
+</td>
+<td style="text-align:left" headers="r10c1-t29 r1c2-t29">
+<p>Content manager</p>
+</td>
+</tr>
+</tbody>
+</table>
+<br /></div>
+<!-- class="tblruleformal" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref221" name="sthref221"></a>
+<h2 class="sect1"><span class="secnum">4.3</span> Other Important Concepts in Agile</h2>
+<p>Familiarity with the topics discussed in this section will help you use the full features of Agile.</p>
+<div class="sect2"><a id="sthref222" name="sthref222"></a>
+<h3 class="sect2"><span class="secnum">4.3.1</span> Login Security and Passwords</h3>
+<p>Depending on how your Agile administrator has configured your password settings, you may have two separate passwords for login and approval, or you may have one password for both login and approval.</p>
+<p>Your username and approval passwords are the same for both Java Client and Web Client.</p>
+<p>For system security, your administrator may configure the Agile PLM system so that you are not allowed to log in after a specified number of password failures (entering the wrong password). The lockout applies to your login password only, not your approval password.</p>
+<p>Depending on Agile PLM system settings, one of the following occurs:</p>
+<ul>
+<li>
+<p>The login lockout lasts until a specified time has passed (for example, one minute).</p>
+<p>After the specified time has passed, a small Login dialog box appears, telling you that there have been too many login failures. Click <span class="bold">OK</span> and continue.</p>
+</li>
+<li>
+<p>The login lockout lasts until your Agile administrator unlocks your account by changing your password. If you are locked out, Web Client does not accept further input for the time period specified by the Agile administrator (for example, one minute), before you can attempt to log in again.</p>
+</li>
+</ul>
+<p>If you are having difficulty logging in to Agile PLM, or had a failed logon and the lockout is lasting too long, see your Agile administrator.</p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref223" name="sthref223"></a>
+<h3 class="sect2"><span class="secnum">4.3.2</span> Object Subscriptions, Relationships, and Sharing</h3>
+<p>"Sharing," "subscriptions," and "relationships" all describe operations with objects in Agile PLM that provide better collaboration and enhanced automation as they proceed through the manufacturing process. These features are detailed in <a href="chapter_5.htm#BABJCDGA">Chapter 5, "Working with Business Objects in Web Client"</a> or <a href="chapter_6.htm#BABHEAIB">Chapter 6, "Working with Business Objects in Java Client."</a></p>
+<ul>
+<li>
+<p><span class="bold">Object sharing</span> &ndash; Lets you grant one or more of your roles to another Agile user for specific objects and specific classes listed in object tabs.</p>
+</li>
+<li>
+<p><span class="bold">Object subscription</span> &ndash; You can subscribe to objects so that you are notified when certain events happen to that object. For example, you can subscribe to a change to be notified whenever the change is promoted to a new status.</p>
+</li>
+<li>
+<p><span class="bold">Object-to-object relationships</span> &ndash; Lets you set up communication between Agile objects, and the actions resulting from (triggered by) that communication. For example, the implementation of an ECO could trigger the close of a related ECR.</p>
+</li>
+</ul>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref224" name="sthref224"></a>
+<h3 class="sect2"><span class="secnum">4.3.3</span> File Folder Objects and Attachment Files</h3>
+<p>Attachments to objects may contain information about the object or a manufacturing process. You can attach files and URLs by referencing them in a <span class="italic">file folder</span> object. There are two primary types of File Folders, regular File folders and Designs. The file folder holds pertinent content, or attachments. Design objects contain objects used for CAD integration.</p>
+<p>In previous versions of Agile, files and URLs that are attached&mdash;associated&mdash;to parts or other business objects are called <span class="italic">attachments</span>. In this version of Agile, attachment files and URLs may be referred to generally as attachments, but it is important to remember that what is really attached to Agile business objects are file folders.</p>
+<p>You can still view, copy, delete, and print attachment files. With appropriate roles and privileges, you can markup or redline an attachment file in the Viewer. See <a href="chapter_10.htm#CHDBJIGB">"Viewing and Redlining Attachment Files in the AutoVue for Agile Viewer."</a></p>
+<p>The <span class="bold">Attachments</span> tab of an Agile object lists attached file folders. The <span class="bold">Files</span> tab of a file folder object lists the files and URLs that are referenced, and it is where you add and remove files and URLs in the file folder. A file folder's <span class="bold">Where Used</span> tab is populated automatically with any objects that have a link to the file folder. A single file folder object can be referenced from the <span class="bold">Attachments</span> tab of multiple objects.</p>
+<p>For more information, see Working with Attachments. For details about searching attachment content, see <a href="chapter_8.htm#BABDEDGB">"Full Text Search for Content in Attachment Files."</a> Also see the <span class="italic">Viewer Supplement</span>.</p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref225" name="sthref225"></a>
+<h3 class="sect2"><span class="secnum">4.3.4</span> Searching for Data</h3>
+<p>When you want to find data in the Agile PLM system, you perform a search. Agile PLM provides several types of searches:</p>
+<ul>
+<li>
+<p><span class="italic">Simple searches</span> find objects of all types that match the text you specify.</p>
+</li>
+<li>
+<p><span class="italic">Quick searches</span> find objects that match two basic conditions: the text and the object type that you specify. They also have the ability to search attachment file content.</p>
+</li>
+<li>
+<p><span class="italic">Advanced object searches</span> find all the objects with fields that match the conditions of the search. For example, you could search for parts where the <span class="bold">Description</span> field contains "Computer."</p>
+</li>
+<li>
+<p><span class="italic">Where-used searches</span> (a specific type of advanced search) find the assemblies in which the BOM contains the items that match the search criteria.</p>
+</li>
+<li>
+<p><span class="italic">Relationship searches</span> (a specific type of advanced search) find objects related to the objects that meet the search criteria. For example, you can search for the problem reports that appear on the <span class="bold">Relationships</span> tab of changes that meet search criteria.</p>
+</li>
+<li>
+<p><span class="italic">Attachment content searches</span> find attachment objects that contain attachment files including the text specified in the search conditions.</p>
+</li>
+</ul>
+<p>For instructions about searching, see <a href="chapter_8.htm#BABHHIBG">Chapter 8, "Finding Agile Data with Searches."</a></p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref226" name="sthref226"></a>
+<h3 class="sect2"><span class="secnum">4.3.5</span> Agile Packages</h3>
+<p>Agile packages are sets of product information that can be created, viewed, and routed through Agile PLM to users up and down the supply chain.</p>
+<p>For example, suppose an Electronic Manufacturer Service (EMS) provider must receive a certain set of documents to respond to a request for quotation from an Original Equipment Manufacturer (OEM). The EMS defines the required documents in Java Client or Web Client. OEM employees then log in to Web Client, where they create Agile packages and are prompted to attach the required files. The Agile packages are submitted to the program manager at the EMS.</p>
+<p>The EMS is immediately notified when the OEM submits the packages. The EMS can review the packages and their contents. The packages pass through workflow stages in Agile PLM, where they are routed for review, accepted, or returned to the submitting partner if additional work is needed.</p>
+<p>OEM personnel can monitor all this activity anytime they log in to Web Client for that EMS provider. The OEM can also use Agile Content Service (ACS) to automatically create and populate the Agile package in the Agile PLM system of the EMS.</p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref227" name="sthref227"></a>
+<h3 class="sect2"><span class="secnum">4.3.6</span> Exporting Data</h3>
+<p>Users at Agile sites can export product definition data to a file. Export files can be comma-delimited text format (CSV) or Product Definition eXchange (PDX) format.</p>
+<p>PDX is the Product Definition eXchange standard designed for the e-supply chain. The standard is based on XML because it provides a simple yet powerful and flexible way to encode structured data into a format that is both human- and computer-readable. The PDX standard provides a way to describe product content (BOMs, AMLs, drawings, and so on), ECRs, ECOs, and deviations in an XML format.</p>
+<p>In a typical case, an OEM with Agile has a design to communicate to an EMS, also called contract electronics manufacturer (CEM), who builds the component or assembly. The product data might include items, BOMs, approved manufacturer lists, drawings, and so on. When a design changes, the manufacturer needs to communicate the changes to the EMS. The Export wizard can create a text file or PDX package of this information from the Agile database to be sent to the EMS.</p>
+<p>At the receiving end, the EMS then views that data (in Agile eXpress, if the file is a PDX package) and prints it or extracts it as needed for use in spreadsheets or other applications. The EMS can use Agile Import to import the PDX package or text file into the Agile database.</p>
+<p>Agile Import and Export are documented in the <span class="italic">Agile PLM Import/Export Guide</span>.</p>
+<p>For more information about the PDX standard, visit the PDX organization website at <code dir="ltr"><a href="http://webstds.ipc.org/2571/2571.htm">http://webstds.ipc.org/2571/2571.htm</a></code>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref228" name="sthref228"></a>
+<h2 class="sect1"><span class="secnum">4.4</span> Product Collaboration Process</h2>
+<p>The Agile Product Collaboration (PC) solution helps supply chain partners define, store, change, and manage product content information. The PC solution is central to Agile PLM, and most Agile users will need to be familiar with BOMs, AMLs, and the change control process.</p>
+<div class="sect2"><a id="sthref229" name="sthref229"></a>
+<h3 class="sect2"><span class="secnum">4.4.1</span> Bills of Material</h3>
+<p>Bills of material (BOMs) show all the items (parts, documents) that comprise the current part or subassembly. (Documents may or may not have bills of material, depending on your Agile PLM system settings.) Items on a BOM can be a single item or an assembly of several items. The BOM for each part appears on its <span class="bold">BOM</span> tab.</p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref230" name="sthref230"></a>
+<h3 class="sect2"><span class="secnum">4.4.2</span> Approved Manufacturer Lists</h3>
+<p>An approved manufacturers list (AML) is the list of manufacturers that have been approved to supply a particular item. The list identifies the manufacturer part for that item. The AML for a part, plus the manufacturer's part numbers and other information, appears on its <span class="bold">Manufacturers</span> tab.</p>
+</div>
+<!-- class="sect2" -->
+<div class="sect2"><a id="sthref231" name="sthref231"></a>
+<h3 class="sect2"><span class="secnum">4.4.3</span> Change Control Process</h3>
+<p>The change control process includes all procedures that manage changes or requests for change to any part, document, step, or instruction in your company's manufacturing process.</p>
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref232" name="sthref232"></a>
+<h4 class="sect3"><span class="secnum">4.4.3.1</span> Objects and Change Control</h4>
+<p>Items are subject to change control, that is, modification by an approved and released change order. To modify an item's <span class="bold">BOM</span> or <span class="bold">Manufacturers</span> tab, you must create a change against the item.</p>
+<p>The <span class="bold">Title Block</span> and <span class="bold">Sites</span> tabs of items are not under change control; this means, with the appropriate privileges, you can edit them at any time. Site objects and manufacturers are also not under change control.</p>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref233" name="sthref233"></a>
+<h4 class="sect3"><span class="secnum">4.4.3.2</span> Affected Items</h4>
+<p>The <span class="bold">Affected Items</span> tab of a change lists the items that are affected by the change. Users with sufficient privileges can use the <span class="bold">Affected Items</span> tab to:</p>
+<ul>
+<li>
+<p>List the items affected by the change, and assign a pending revision (or <span class="italic">rev</span>) to the affected items of the ECO</p>
+</li>
+<li>
+<p>Open the affected items</p>
+</li>
+<li>
+<p>Work with BOM, manufacturer, and attachment redlines</p>
+</li>
+</ul>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref234" name="sthref234"></a>
+<h4 class="sect3"><span class="secnum">4.4.3.3</span> Redlining BOMs, Manufacturers, and Attachment Files</h4>
+<p>When you redline a BOM, you change it in some ways. For example, you can add or delete parts and assemblies from the BOM or change quantities of existing parts. Likewise, when you redline an AML, you can change associated manufacturer parts information. When you redline an attachment file, you mark it up in the Viewer by adding new drawing lines, adding annotations, or adding measurements.</p>
+<p>Redlining activities begin on the <span class="bold">Affected Items</span> tab of an ECO (for BOMs, AMLs, or attachment files), SCO (for BOMs or AMLs), or MCO (for AMLs).</p>
+</div>
+<!-- class="sect3" -->
+<a id="BABEHICB" name="BABEHICB"></a>
+<div class="sect3"><!-- infolevel="all" infotype="General" -->
+<h4 class="sect3"><span class="secnum">4.4.3.4</span> Workflows</h4>
+<p>A workflow is a sequence of statuses that a routable object (such as a change) follows. Workflows automate many processes; for example, when a change is released, Agile users on the notification list receive automatic email with this information.</p>
+<p>Agile provides default workflows for routable objects, and your Agile administrator can create workflows. For each workflow made available to Agile users, the administrator specifies workflow name, ID number, names of the statuses, and the properties that define each status.</p>
+<p>Agile workflows are covered in detail in <a href="chapter_9.htm#BABJJGIF">Chapter 9, "Routing Objects with Workflows."</a></p>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref235" name="sthref235"></a>
+<h4 class="sect3"><span class="secnum">4.4.3.5</span> Change Control Process</h4>
+<p>The change control process includes all procedures that manage changes or requests for change to any part, document, step, or instruction in your company's manufacturing process.</p>
+</div>
+<!-- class="sect3" -->
+<div class="sect3"><!-- infolevel="all" infotype="General" --><a id="sthref236" name="sthref236"></a>
+<h4 class="sect3"><span class="secnum">4.4.3.6</span> A Typical Change Control Process</h4>
+<p>Agile supports change control processes, including default and custom Agile workflows.</p>
+<p>The following is an example of a typical change control process for a change using Agile workflows:</p>
+<ol>
+<li>
+<p>An Agile user creates a change (for example, an ECO or MCO), and then selects a workflow to route this change.</p>
+</li>
+<li>
+<p>The user selects approvers (members of the change control board) and observers for the change and then submits it to the routing manager.</p>
+</li>
+<li>
+<p>The routing manager switches the change to the next status, which routes the change to the specified approvers and observers.</p>
+</li>
+<li>
+<p>The members of the change control board, or CCB, enter their approval or rejection on the <span class="bold">Workflow</span> tab of the change.</p>
+</li>
+<li>
+<p>If all the approvers approve the change, it is automatically promoted to the next status (depending on the AutoPromote setting). If any approvers reject the change, the routing manager is notified. The routing manager may elect to do any of the following:</p>
+<ul>
+<li>
+<p>Cancel the change by switching the status to Canceled.</p>
+</li>
+<li>
+<p>Return the change to the originator by switching the status to Pending.</p>
+</li>
+<li>
+<p>Release the change despite the rejection.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>The following figure illustrates this change control process. Agile packages and content transfer orders can follow a similar process.</p>
+<div class="figure"><a id="sthref237" name="sthref237"></a>
+<p class="titleinfigure">Figure 4-3 Change control process diagram</p>
+<img src="img/chap4_html_m1efd39d9.png" alt="Flow diagram of the change control process" /><br /></div>
+<!-- class="figure" --></div>
+<!-- class="sect3" --></div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref238" name="sthref238"></a>
+<h2 class="sect1"><span class="secnum">4.5</span> Product Portfolio Management Process</h2>
+<p>Agile Product Portfolio Management (PPM) is a Web Client application for program management that lets you:</p>
+<ul>
+<li>
+<p>Plan a program in terms of its schedules, resources, and deliverables</p>
+</li>
+<li>
+<p>Execute and manage multiple related programs and projects in a collaborative environment</p>
+</li>
+<li>
+<p>Associate product deliverables (such as Items, RFQs, ECOs, and CAPAs) to tasks on a project plan</p>
+</li>
+<li>
+<p>Establish project plan templates for rolling out best-practice processes</p>
+</li>
+<li>
+<p>Allocate work to users or resource pools and monitor capacity and future demand</p>
+</li>
+<li>
+<p>Establish executive dashboards for cross-program rollups and quick access to high risk activities</p>
+</li>
+</ul>
+<p>The program management process involves:</p>
+<ul>
+<li>
+<p>Scheduling</p>
+</li>
+<li>
+<p>Task management</p>
+</li>
+<li>
+<p>Issue management</p>
+</li>
+<li>
+<p>Document management</p>
+</li>
+<li>
+<p>Phase/Gate management</p>
+</li>
+<li>
+<p>Resource management</p>
+</li>
+<li>
+<p>Deliverable management.</p>
+</li>
+</ul>
+<div class="sect2"><a id="sthref239" name="sthref239"></a>
+<h3 class="sect2"><span class="secnum">4.5.1</span> Common Terms in PPM</h3>
+<p>Listed below are some common terms used in PPM:</p>
+<ul>
+<li>
+<p>Program: A set of related activities and gates that is created to monitor and manage progress on a specific project.</p>
+</li>
+<li>
+<p>Project: A set of phases, tasks, and gates that is created to monitor and manage progress of a specific planned activity.</p>
+</li>
+<li>
+<p>Phase: A segment of a program, also referred to as a stage. Phases are often used to define the activities required to create a set of deliverables.</p>
+</li>
+<li>
+<p>Gates: Indicates the completion of a set of related activities, such as a phase. A gate's status is closed until all its deliverables are complete, at which time it opens.</p>
+</li>
+<li>
+<p>Task: A segment of work that one or more resources can complete within a time period. Tasks may be embedded in programs, phases or other tasks.</p>
+</li>
+<li>
+<p>Deliverable: An Agile PLM object whose state change can trigger a state change in the program element that contains it. The statuses of deliverables control the status of gates.</p>
+</li>
+<li>
+<p>Gantt Chart: A program management tool that helps you to plan, administer, and track programs from start to finish.</p>
+</li>
+<li>
+<p>Content: Contains all program-related content including deliverables.</p>
+</li>
+<li>
+<p>Activity: A program, task or phase.</p>
+</li>
+</ul>
+<p>For more information on PPM, see <span class="italic">Agile Product Portfolio Management User Guide.</span></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref240" name="sthref240"></a>
+<h2 class="sect1"><span class="secnum">4.6</span> Product Quality Tracking Process</h2>
+<p>The Agile Product Quality Management (PQM) solution consists of a comprehensive set of tools that allows companies to track and manage quality data across the enterprise. This includes customer complaints, field failures, product or manufacturing defects, and requests for enhancements or corrective and preventive actions. PQM unifies the company's organizations in customer service, field sales, manufacturing, and engineering, and links the organization to its customers and partners.</p>
+<p>PQM features offer these benefits:</p>
+<ul>
+<li>
+<p>Integration with external enterprise Customer Relations Management (CRM) systems &ndash; The ability to import customer complaints, manufacturing issues, and additional quality-related information from other enterprise applications streamlines the quality tracking process and offers a central repository for tracking product quality data.</p>
+</li>
+<li>
+<p>Improved product quality &ndash; Tracking defects, finding trends, and quickly determining the root causes of defects are the keys to effective defect reduction and improved product quality.</p>
+</li>
+<li>
+<p>Improved customer satisfaction &ndash; The ability to track problem reports and customer complaints lets you respond quickly to customers and resolve problems quickly.</p>
+</li>
+<li>
+<p>Lower production, repair costs, and warranty costs &ndash; Tracking and correcting defects can help reduce scrap, cycle time, and costs associated with rework and repair.</p>
+</li>
+<li>
+<p>New features enable compliance with ISO-9000, FDA, and other regulations.</p>
+</li>
+</ul>
+<p>The Agile PQM solution consists of Product Service Requests (PSRs) and Quality Change Request (QCRs). The two types of PSRs are Problem Reports and Non-Conformance Reports (NCRs). The two types of QCRs are Audits and Corrective and Preventive Actions (CAPAs). You can associate QCRs with problem reports.</p>
+<div class="sect2"><a id="sthref241" name="sthref241"></a>
+<h3 class="sect2"><span class="secnum">4.6.1</span> Common Terms in PQM</h3>
+<p>Listed below are some common terms used in PQM:</p>
+<ul>
+<li>
+<p>Product Service Request (PSR): You use a PSR to report a defect or a quality incident about a product. The PSR can be either a Problem Report or a Non-conformance Report.</p>
+<ul>
+<li>
+<p>Problem Report (PR): Contains a basic description of a problem, issue, or incident that occurred, from the customer's perspective.</p>
+</li>
+<li>
+<p>Non-Conformance Report (NCR): Reports a basic material deviation from specifications or requirements in one or more products.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Quality Change Request (QCR): Creates and manages quality records that aggregate problems related to products, documents, suppliers, and customers.</p>
+<ul>
+<li>
+<p>Audit: The pro-active process of verifying compliance with quality requirements.</p>
+</li>
+<li>
+<p>Corrective and Preventive Action (CAPA): A formal process of addressing any quality problem and analyzing the root cause to implement corrective and preventive action.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Related PSR: A list of all similar product service requests that are combined to form a single PSR.</p>
+</li>
+<li>
+<p>Affected Items: A list of items that are affected by the change in either a PSR or a QCR.</p>
+</li>
+<li>
+<p>Relationship tab: Creates a relationship with other Agile objects; the relationship is bi-directional.</p>
+</li>
+<li>
+<p>Relationship Rule: Specifying a rule for a relationship defines how the related Agile objects affect each other. Rules are optional; you can create a relationship between two objects without specifying a rule.</p>
+</li>
+<li>
+<p>Preview Pane: When you add a relationship to an object, the details of the Relationship are displayed in the Preview pane. It also displays the attributes and actions that can be performed on the relationship object.</p>
+</li>
+</ul>
+<p>For more information on PQM, see <span class="italic">Agile Product Quality Management User Guide.</span></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref242" name="sthref242"></a>
+<h2 class="sect1"><span class="secnum">4.7</span> Product Cost Management Process</h2>
+<p>The Agile Product Cost Management (PCM) solution consists of the Product Sourcing and Price Management components. They allow you to integrate and leverage price and cost information within your company's business processes in the Agile Web Client.</p>
+<p>A sourcing project holds the data you gather, such as items and assemblies, bills of material, and approved manufacturers lists. Using the project, multiple users can work as a team to complete sourcing and pricing activities, since the project lets multiple users view and modify the same components. Sourcing projects allow you to execute sourcing activities, including RFQs and analysis, on your Item Master content.</p>
+<p>The Price Management solution provides you with a single controlled process for managing price and terms information that can be leveraged across organizations, business processes, and key analysis.</p>
+<div class="sect2"><a id="sthref243" name="sthref243"></a>
+<h3 class="sect2"><span class="secnum">4.7.1</span> Common Terms in PCM</h3>
+<p>Listed below are some common terms used in PCM.</p>
+<ul>
+<li>
+<p>Approved Manufacturer's List (AML): Lists all the preferred or alternate manufacturer parts that correspond to an internal part.</p>
+</li>
+<li>
+<p>Sourcing Projects: An entry point for sourcing and pricing. Tracks data required for sourcing and pricing, to perform analysis for effective pricing.</p>
+</li>
+<li>
+<p>Item Master: The entire collection of Items - Parts, Documents, and other user-defined subclasses of the Items class maintained under change control in the Agile PCM system.</p>
+</li>
+<li>
+<p>Project Items: Items added to a project. These can be items that exist in the Item Master, created within the project or imported into the project.</p>
+</li>
+<li>
+<p>Project Data: Information about the supplier, item, manufacturer, manufacturer part number, revision, price information, RFQ response information of a project.</p>
+</li>
+<li>
+<p>Subscriptions: Subscribing to an object sets you up to receive notification of events that happen to the object.</p>
+</li>
+<li>
+<p>Target Price: The price you quote for an item with the standard cost in mind. Standard cost is the market cost per unit of the item or the manufacturer part.</p>
+</li>
+<li>
+<p>Commodities: Lets you categorize parts for sourcing and analysis process. By associating each item with a commodity, you can distribute RFQs to suppliers based on the commodities they offer.</p>
+</li>
+<li>
+<p>Request for Quotes (RFQs): Using RFQs, you request quotes for items involved in the project and suppliers respond to the Quote. RFQs can be sent to one or more suppliers.</p>
+</li>
+</ul>
+<p>For more information on PCM, see <span class="italic">Agile Product Cost Management User Guide</span>.</p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref244" name="sthref244"></a>
+<h2 class="sect1"><span class="secnum">4.8</span> Product Governance and Compliance Process</h2>
+<p>Agile Product Governance and Compliance (PG&amp;C) is designed to help OEM manufacturers audit the amount of regulated substances used in their products, and show that they responsibly dispose of, recycle, or reuse electronics containing those substances.</p>
+<p>PG&amp;C helps companies address the growing number of environmental specifications and policies that affect product definition, the import and export of products, and the disposal of restricted substances. It provides a solution that manages the entire product compliance process:</p>
+<ol>
+<li>
+<p>Collection of data from vendors through a Request For Information (RFI)</p>
+</li>
+<li>
+<p>Determination of compliance by analyzing data and comparing it to established standards</p>
+</li>
+<li>
+<p>Documentation of compliance by running reports</p>
+</li>
+</ol>
+<p>The RFI process is initiated by Compliance Manager, who creates a new declaration, or modifies an existing declaration, to specify the components for a parts assembly. An RFI consists of a Material Declaration, which lists the parts in a product assembly and shows the substances and materials that comprise those parts. It is linked to specifications which may restrict how much of a particular substance that product assembly may contain.</p>
+<div class="sect2"><a id="sthref245" name="sthref245"></a>
+<h3 class="sect2"><span class="secnum">4.8.1</span> Common Terms in PG&amp;C</h3>
+<p>Listed below are some terms used in PG&amp;C.</p>
+<ul>
+<li>
+<p>Specification: Tracks the different legislations with which an assembly or part must comply. Environmental specifications are substance-based, and contain a list of banned substances or substances of concern and their threshold values. Agile uses specifications to validate declarations and assess the compliance of parts by evaluating whether a given restricted substance in the composition of a part surpasses its specified threshold value.</p>
+</li>
+<li>
+<p>Declaration: A structured way of bringing information concerning the environmental compliance of parts into Agile PLM. Each declaration is for a single supplier.</p>
+</li>
+<li>
+<p>Composition: A composition represents the total collection of information contained in a completed declaration and is not a configurable "business object" in Agile PLM.</p>
+</li>
+<li>
+<p>Substance: A substance is any chemical element or compound that is tracked within Agile PLM.</p>
+</li>
+<li>
+<p>Bill of Substance (BOS): A way to manage compliance information-gathering regarding the parts and materials used in the manufacturing process.</p>
+</li>
+<li>
+<p>Alias: Informs Agile PG&amp;C of "substitute names" of substances. For example: When a supplier provides information about substances for a part, there is no guarantee that a substance with the same name exists in the buyer's system. Agile PG&amp;C adds the invalid substance as an alias to the substance. Whenever the same invalid substance is imported, it automatically maps to the objects.</p>
+</li>
+<li>
+<p>Supplier: A supplier is a company that provides compliance information about parts that are used in your company's manufacturing process.</p>
+</li>
+</ul>
+<p>For further information about PG&amp;C, see <span class="italic">Agile Product Governance &amp; Compliance User Guide.</span></p>
+</div>
+<!-- class="sect2" --></div>
+<!-- class="sect1" -->
+<div class="sect1"><a id="sthref246" name="sthref246"></a>
+<h2 class="sect1"><span class="secnum">4.9</span> Engineering Collaboration Process</h2>
+<p>Engineering Collaboration (EC) is an application that provides data and process integration between CAD applications and Agile PLM. It allows CAD designers and engineers to capture and control the data representing a primary source of the product record.</p>
+<p>See also <a href="chapter_12_a.htm#CHDFHJCA">Chapter 13, "Working with Design File Change Orders (DFCOs)."</a></p>
+</div>
+<!-- class="sect1" --></div>
+<!-- class="chapter" --></div>
+<!-- class="ind" -->
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<col width="33%" />
+<col width="*" />
+<col width="33%" />
+<tr>
+<td valign="bottom">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<col width="*" />
+<col width="48%" />
+<col width="48%" />
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center"><a href="chapter_3.htm"><img src="../../dcommon/gifs/leftnav.gif" alt="Previous" /><br />
+<span class="icon">Previous</span></a>&nbsp;</td>
+<td style="text-align:center"><a href="chapter_5.htm"><img src="../../dcommon/gifs/rightnav.gif" alt="Next" /><br />
+<span class="icon">Next</span></a></td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo"><img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /> <a href="../../dcommon/html/cpyr.htm"><br />
+<span class="copyrightlogo">Copyright&nbsp;&copy;&nbsp;2010, 2016,&nbsp;Oracle&nbsp;and/or&nbsp;its&nbsp;affiliates.&nbsp;All&nbsp;rights&nbsp;reserved.</span></a></td>
+<td valign="bottom" align="right">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr>
+<td>&nbsp;</td>
+<td style="text-align:center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" /><br />
+<span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+<!-- class="footer" -->
+</body>
+</html>
